@@ -1,0 +1,123 @@
+{
+  "$defs": {
+    "ModelSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "listing_count": {
+          "minimum": 0,
+          "title": "Listing Count",
+          "type": "integer"
+        },
+        "make": {
+          "title": "Make",
+          "type": "string"
+        },
+        "median_price_pkr": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Median Price Pkr"
+        },
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "priced_listing_count": {
+          "minimum": 0,
+          "title": "Priced Listing Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "make",
+        "model",
+        "listing_count",
+        "priced_listing_count",
+        "median_price_pkr"
+      ],
+      "title": "ModelSummary",
+      "type": "object"
+    },
+    "ModelsSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "models": {
+          "items": {
+            "$ref": "#/$defs/ModelSummary"
+          },
+          "title": "Models",
+          "type": "array"
+        },
+        "population": {
+          "const": "latest_active_nonduplicate",
+          "default": "latest_active_nonduplicate",
+          "title": "Population",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reason"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "reason",
+        "models",
+        "population"
+      ],
+      "title": "ModelsSummary",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/$defs/ModelsSummary"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "bundle_id",
+    "data"
+  ],
+  "title": "ModelsExport",
+  "type": "object"
+}

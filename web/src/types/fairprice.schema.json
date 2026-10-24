@@ -1,0 +1,211 @@
+{
+  "$defs": {
+    "FairModel": {
+      "additionalProperties": false,
+      "properties": {
+        "coefficients": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Coefficients",
+          "type": "object"
+        },
+        "defaults": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Defaults",
+          "type": "object"
+        },
+        "interval_multiplier": {
+          "default": 1.96,
+          "maximum": 1.96,
+          "minimum": 1.96,
+          "title": "Interval Multiplier",
+          "type": "number"
+        },
+        "point_estimate": {
+          "const": "conditional_median",
+          "default": "conditional_median",
+          "title": "Point Estimate",
+          "type": "string"
+        },
+        "ranges": {
+          "additionalProperties": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Ranges",
+          "type": "object"
+        },
+        "reference_year": {
+          "title": "Reference Year",
+          "type": "integer"
+        },
+        "residual_std_log": {
+          "minimum": 0.0,
+          "title": "Residual Std Log",
+          "type": "number"
+        },
+        "spec": {
+          "$ref": "#/$defs/PredictionSpec"
+        },
+        "transformations": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Transformations",
+          "type": "object"
+        },
+        "typical_error_percent": {
+          "minimum": 0.0,
+          "title": "Typical Error Percent",
+          "type": "number"
+        }
+      },
+      "required": [
+        "spec",
+        "coefficients",
+        "ranges",
+        "defaults",
+        "residual_std_log",
+        "typical_error_percent",
+        "reference_year",
+        "transformations",
+        "interval_multiplier",
+        "point_estimate"
+      ],
+      "title": "FairModel",
+      "type": "object"
+    },
+    "FairPriceSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FairModel"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reason"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "reason",
+        "model"
+      ],
+      "title": "FairPriceSummary",
+      "type": "object"
+    },
+    "PredictionSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Categories",
+          "type": "object"
+        },
+        "numeric": {
+          "items": {
+            "enum": [
+              "model_year",
+              "log_mileage",
+              "engine_litres"
+            ],
+            "type": "string"
+          },
+          "title": "Numeric",
+          "type": "array"
+        },
+        "terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Terms",
+          "type": "array"
+        }
+      },
+      "required": [
+        "numeric",
+        "categories",
+        "terms"
+      ],
+      "title": "PredictionSpec",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/$defs/FairPriceSummary"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "bundle_id",
+    "data"
+  ],
+  "title": "FairPriceExport",
+  "type": "object"
+}

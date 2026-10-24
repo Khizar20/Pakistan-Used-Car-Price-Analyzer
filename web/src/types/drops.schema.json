@@ -1,0 +1,249 @@
+{
+  "$defs": {
+    "DropSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "days_to_first_drop": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Days To First Drop",
+          "type": "array"
+        },
+        "drop_share": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Drop Share"
+        },
+        "drop_sizes_percent": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Drop Sizes Percent",
+          "type": "array"
+        },
+        "drop_sizes_pkr": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Drop Sizes Pkr",
+          "type": "array"
+        },
+        "eligible_listings": {
+          "minimum": 0,
+          "title": "Eligible Listings",
+          "type": "integer"
+        },
+        "median_drop_percent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Median Drop Percent"
+        },
+        "median_drop_pkr": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Median Drop Pkr"
+        },
+        "observed_listings": {
+          "minimum": 0,
+          "title": "Observed Listings",
+          "type": "integer"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reason"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "survival": {
+          "items": {
+            "$ref": "#/$defs/SurvivalCurve"
+          },
+          "title": "Survival",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "reason",
+        "observed_listings",
+        "eligible_listings",
+        "drop_share",
+        "median_drop_pkr",
+        "median_drop_percent",
+        "days_to_first_drop",
+        "drop_sizes_pkr",
+        "drop_sizes_percent",
+        "survival"
+      ],
+      "title": "DropSummary",
+      "type": "object"
+    },
+    "SurvivalCurve": {
+      "additionalProperties": false,
+      "properties": {
+        "dimension": {
+          "title": "Dimension",
+          "type": "string"
+        },
+        "events": {
+          "title": "Events",
+          "type": "integer"
+        },
+        "listings": {
+          "title": "Listings",
+          "type": "integer"
+        },
+        "median_days": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Median Days"
+        },
+        "outcome": {
+          "title": "Outcome",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/SurvivalPoint"
+          },
+          "title": "Points",
+          "type": "array"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "segment": {
+          "title": "Segment",
+          "type": "string"
+        },
+        "status": {
+          "default": "insufficient_data",
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "outcome",
+        "dimension",
+        "segment",
+        "listings",
+        "events"
+      ],
+      "title": "SurvivalCurve",
+      "type": "object"
+    },
+    "SurvivalPoint": {
+      "properties": {
+        "days": {
+          "title": "Days",
+          "type": "number"
+        },
+        "lower": {
+          "title": "Lower",
+          "type": "number"
+        },
+        "survival": {
+          "title": "Survival",
+          "type": "number"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "number"
+        }
+      },
+      "required": [
+        "days",
+        "survival",
+        "lower",
+        "upper"
+      ],
+      "title": "SurvivalPoint",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/$defs/DropSummary"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "bundle_id",
+    "data"
+  ],
+  "title": "DropsExport",
+  "type": "object"
+}

@@ -1,0 +1,333 @@
+{
+  "$defs": {
+    "CurvePoint": {
+      "properties": {
+        "price_pkr": {
+          "title": "Price Pkr",
+          "type": "number"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "price_pkr"
+      ],
+      "title": "CurvePoint",
+      "type": "object"
+    },
+    "DriverSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_metrics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Metrics"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "boosting_metrics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Metrics"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "coefficients": {
+          "items": {
+            "$ref": "#/$defs/PublicCoefficient"
+          },
+          "title": "Coefficients",
+          "type": "array"
+        },
+        "dependence": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/$defs/CurvePoint"
+            },
+            "type": "array"
+          },
+          "title": "Dependence",
+          "type": "object"
+        },
+        "diagnostics": {
+          "items": {
+            "$ref": "#/$defs/Residual"
+          },
+          "maxItems": 200,
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "diagnostics_by_make": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Metrics"
+          },
+          "title": "Diagnostics By Make",
+          "type": "object"
+        },
+        "diagnostics_total": {
+          "minimum": 0,
+          "title": "Diagnostics Total",
+          "type": "integer"
+        },
+        "linear_metrics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Metrics"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "listings_used": {
+          "minimum": 0,
+          "title": "Listings Used",
+          "type": "integer"
+        },
+        "omitted_predictors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Omitted Predictors",
+          "type": "array"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reason"
+        },
+        "shap_effects": {
+          "items": {
+            "$ref": "#/$defs/ShapEffect"
+          },
+          "title": "Shap Effects",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "reason",
+        "listings_used",
+        "omitted_predictors",
+        "coefficients",
+        "linear_metrics",
+        "boosting_metrics",
+        "baseline_metrics",
+        "diagnostics",
+        "diagnostics_total",
+        "diagnostics_by_make",
+        "shap_effects",
+        "dependence"
+      ],
+      "title": "DriverSummary",
+      "type": "object"
+    },
+    "Metrics": {
+      "properties": {
+        "mae_pkr": {
+          "title": "Mae Pkr",
+          "type": "number"
+        },
+        "mape_percent": {
+          "title": "Mape Percent",
+          "type": "number"
+        },
+        "r_squared": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "R Squared"
+        }
+      },
+      "required": [
+        "mae_pkr",
+        "mape_percent",
+        "r_squared"
+      ],
+      "title": "Metrics",
+      "type": "object"
+    },
+    "PublicCoefficient": {
+      "additionalProperties": false,
+      "properties": {
+        "coefficient": {
+          "title": "Coefficient",
+          "type": "number"
+        },
+        "effect_percent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Effect Percent"
+        },
+        "lower": {
+          "title": "Lower",
+          "type": "number"
+        },
+        "lower_percent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Lower Percent"
+        },
+        "term": {
+          "title": "Term",
+          "type": "string"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "number"
+        },
+        "upper_percent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Upper Percent"
+        }
+      },
+      "required": [
+        "term",
+        "coefficient",
+        "lower",
+        "upper",
+        "effect_percent",
+        "lower_percent",
+        "upper_percent"
+      ],
+      "title": "PublicCoefficient",
+      "type": "object"
+    },
+    "Residual": {
+      "additionalProperties": false,
+      "properties": {
+        "actual_pkr": {
+          "title": "Actual Pkr",
+          "type": "number"
+        },
+        "fitted_pkr": {
+          "title": "Fitted Pkr",
+          "type": "number"
+        },
+        "listing_hash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Listing Hash",
+          "type": "string"
+        },
+        "make": {
+          "title": "Make",
+          "type": "string"
+        },
+        "residual_log": {
+          "title": "Residual Log",
+          "type": "number"
+        },
+        "residual_pkr": {
+          "title": "Residual Pkr",
+          "type": "number"
+        }
+      },
+      "required": [
+        "listing_hash",
+        "make",
+        "fitted_pkr",
+        "actual_pkr",
+        "residual_pkr",
+        "residual_log"
+      ],
+      "title": "Residual",
+      "type": "object"
+    },
+    "ShapEffect": {
+      "properties": {
+        "feature": {
+          "title": "Feature",
+          "type": "string"
+        },
+        "mean_absolute_log_effect": {
+          "title": "Mean Absolute Log Effect",
+          "type": "number"
+        }
+      },
+      "required": [
+        "feature",
+        "mean_absolute_log_effect"
+      ],
+      "title": "ShapEffect",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/$defs/DriverSummary"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "bundle_id",
+    "data"
+  ],
+  "title": "DriversExport",
+  "type": "object"
+}

@@ -286,3 +286,19 @@ new private directory; refuse any existing output directory. Insufficient data i
 a valid result, not a CLI failure. Report it without creating findings. Bundles
 include internal IDs, are ignored by Git and are separate from the Phase 6 public
 export contract. Make enforces at least 90% coverage over the analysis package.
+
+## 2026-10-25: Versioned public contracts and generated frontend declarations
+
+Each of eight public files has a version-1.0.0 envelope, generation timestamp and
+common content digest so consumers can detect mixed bundles. Public driver
+coefficients use `term`, and prediction encodings use `terms`; internal identity
+fields are excluded from contracts. Residual/sample identities must be SHA-256
+hex digests. Samples are capped at 100 rows and diagnostics at 200. Public numeric
+values must be finite and each serialized data file must stay below 500,000 bytes.
+
+Generate JSON Schema draft 2020-12 and TypeScript declarations directly from the
+Pydantic serialization schemas. A deliberately small schema translator supports
+the constructs emitted by these contracts and refuses unsupported constructs.
+Tests validate schemas with pinned jsonschema tooling and compare generated
+artifacts byte-for-byte with committed files. TypeScript carries structural types;
+runtime constraints such as numeric ranges remain in JSON Schema.

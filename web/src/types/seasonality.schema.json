@@ -1,0 +1,253 @@
+{
+  "$defs": {
+    "Decomposition": {
+      "additionalProperties": false,
+      "properties": {
+        "month_components": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Month Components",
+          "type": "object"
+        },
+        "period_weeks": {
+          "default": 52,
+          "title": "Period Weeks",
+          "type": "integer"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/SeasonalPoint"
+          },
+          "title": "Points",
+          "type": "array"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "status": {
+          "default": "insufficient_data",
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "weeks_available": {
+          "default": 0,
+          "title": "Weeks Available",
+          "type": "integer"
+        },
+        "weeks_remaining": {
+          "default": 79,
+          "title": "Weeks Remaining",
+          "type": "integer"
+        },
+        "weeks_required": {
+          "default": 79,
+          "title": "Weeks Required",
+          "type": "integer"
+        }
+      },
+      "title": "Decomposition",
+      "type": "object"
+    },
+    "SeasonalPoint": {
+      "properties": {
+        "observed": {
+          "title": "Observed",
+          "type": "number"
+        },
+        "residual": {
+          "title": "Residual",
+          "type": "number"
+        },
+        "seasonal": {
+          "title": "Seasonal",
+          "type": "number"
+        },
+        "trend": {
+          "title": "Trend",
+          "type": "number"
+        },
+        "week": {
+          "title": "Week",
+          "type": "string"
+        }
+      },
+      "required": [
+        "week",
+        "observed",
+        "trend",
+        "seasonal",
+        "residual"
+      ],
+      "title": "SeasonalPoint",
+      "type": "object"
+    },
+    "SeasonalityResult": {
+      "additionalProperties": false,
+      "properties": {
+        "caveat": {
+          "default": "First-observed counts are not actual posting volume; collection is a selected page window.",
+          "title": "Caveat",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "seasonal": {
+          "$ref": "#/$defs/Decomposition"
+        },
+        "status": {
+          "default": "insufficient_data",
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "volume_basis": {
+          "default": "first_observed",
+          "title": "Volume Basis",
+          "type": "string"
+        },
+        "volume_trend": {
+          "items": {
+            "$ref": "#/$defs/VolumePoint"
+          },
+          "title": "Volume Trend",
+          "type": "array"
+        },
+        "weekdays": {
+          "items": {
+            "$ref": "#/$defs/WeekdayPoint"
+          },
+          "title": "Weekdays",
+          "type": "array"
+        }
+      },
+      "title": "SeasonalityResult",
+      "type": "object"
+    },
+    "VolumePoint": {
+      "properties": {
+        "date": {
+          "title": "Date",
+          "type": "string"
+        },
+        "listings": {
+          "title": "Listings",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "date",
+        "listings"
+      ],
+      "title": "VolumePoint",
+      "type": "object"
+    },
+    "WeekdayPoint": {
+      "properties": {
+        "change_rate": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Change Rate"
+        },
+        "comparable_pairs": {
+          "title": "Comparable Pairs",
+          "type": "integer"
+        },
+        "listings_per_observed_day": {
+          "title": "Listings Per Observed Day",
+          "type": "number"
+        },
+        "new_listings": {
+          "title": "New Listings",
+          "type": "integer"
+        },
+        "observed_days": {
+          "title": "Observed Days",
+          "type": "integer"
+        },
+        "price_changes": {
+          "title": "Price Changes",
+          "type": "integer"
+        },
+        "weekday": {
+          "title": "Weekday",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "weekday",
+        "observed_days",
+        "new_listings",
+        "listings_per_observed_day",
+        "comparable_pairs",
+        "price_changes",
+        "change_rate"
+      ],
+      "title": "WeekdayPoint",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/$defs/SeasonalityResult"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "bundle_id",
+    "data"
+  ],
+  "title": "SeasonalityExport",
+  "type": "object"
+}

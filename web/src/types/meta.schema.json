@@ -1,0 +1,105 @@
+{
+  "$defs": {
+    "Metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "caveats": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Caveats",
+          "type": "array"
+        },
+        "date_end": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Date End"
+        },
+        "date_start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Date Start"
+        },
+        "listing_count": {
+          "minimum": 0,
+          "title": "Listing Count",
+          "type": "integer"
+        },
+        "observation_count": {
+          "minimum": 0,
+          "title": "Observation Count",
+          "type": "integer"
+        },
+        "run_count": {
+          "minimum": 0,
+          "title": "Run Count",
+          "type": "integer"
+        },
+        "scope_count": {
+          "minimum": 0,
+          "title": "Scope Count",
+          "type": "integer"
+        },
+        "seasonal_series_basis": {
+          "title": "Seasonal Series Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "date_start",
+        "date_end",
+        "run_count",
+        "listing_count",
+        "observation_count",
+        "scope_count",
+        "seasonal_series_basis",
+        "caveats"
+      ],
+      "title": "Metadata",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/$defs/Metadata"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "bundle_id",
+    "data"
+  ],
+  "title": "MetaExport",
+  "type": "object"
+}

@@ -1,0 +1,198 @@
+{
+  "$defs": {
+    "CohortPoint": {
+      "properties": {
+        "listings": {
+          "title": "Listings",
+          "type": "integer"
+        },
+        "make": {
+          "title": "Make",
+          "type": "string"
+        },
+        "median_price_pkr": {
+          "title": "Median Price Pkr",
+          "type": "number"
+        },
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "model_year": {
+          "title": "Model Year",
+          "type": "integer"
+        },
+        "week": {
+          "title": "Week",
+          "type": "string"
+        }
+      },
+      "required": [
+        "week",
+        "make",
+        "model",
+        "model_year",
+        "median_price_pkr",
+        "listings"
+      ],
+      "title": "CohortPoint",
+      "type": "object"
+    },
+    "IndexPoint": {
+      "properties": {
+        "lower": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lower"
+        },
+        "upper": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Upper"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "week": {
+          "title": "Week",
+          "type": "string"
+        }
+      },
+      "required": [
+        "week",
+        "value"
+      ],
+      "title": "IndexPoint",
+      "type": "object"
+    },
+    "IndexResult": {
+      "additionalProperties": false,
+      "properties": {
+        "cohorts": {
+          "items": {
+            "$ref": "#/$defs/CohortPoint"
+          },
+          "title": "Cohorts",
+          "type": "array"
+        },
+        "per_make": {
+          "additionalProperties": {
+            "$ref": "#/$defs/IndexSeries"
+          },
+          "title": "Per Make",
+          "type": "object"
+        },
+        "quality_adjusted": {
+          "$ref": "#/$defs/IndexSeries"
+        },
+        "raw": {
+          "$ref": "#/$defs/IndexSeries"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "status": {
+          "default": "insufficient_data",
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "title": "IndexResult",
+      "type": "object"
+    },
+    "IndexSeries": {
+      "additionalProperties": false,
+      "properties": {
+        "points": {
+          "items": {
+            "$ref": "#/$defs/IndexPoint"
+          },
+          "title": "Points",
+          "type": "array"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "status": {
+          "default": "insufficient_data",
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "title": "IndexSeries",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/$defs/IndexResult"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "bundle_id",
+    "data"
+  ],
+  "title": "IndexExport",
+  "type": "object"
+}

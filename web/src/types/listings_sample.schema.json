@@ -1,0 +1,180 @@
+{
+  "$defs": {
+    "ListingSample": {
+      "additionalProperties": false,
+      "properties": {
+        "city": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "City"
+        },
+        "days_listed": {
+          "title": "Days Listed",
+          "type": "number"
+        },
+        "drop_percent": {
+          "title": "Drop Percent",
+          "type": "number"
+        },
+        "drop_pkr": {
+          "title": "Drop Pkr",
+          "type": "number"
+        },
+        "listing_hash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Listing Hash",
+          "type": "string"
+        },
+        "make": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Make"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Model"
+        },
+        "model_year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Model Year"
+        },
+        "new_price_pkr": {
+          "title": "New Price Pkr",
+          "type": "number"
+        },
+        "observed_at": {
+          "title": "Observed At",
+          "type": "string"
+        },
+        "old_price_pkr": {
+          "title": "Old Price Pkr",
+          "type": "number"
+        }
+      },
+      "required": [
+        "listing_hash",
+        "make",
+        "model",
+        "model_year",
+        "city",
+        "observed_at",
+        "old_price_pkr",
+        "new_price_pkr",
+        "drop_pkr",
+        "drop_percent",
+        "days_listed"
+      ],
+      "title": "ListingSample",
+      "type": "object"
+    },
+    "SampleSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "limit": {
+          "const": 100,
+          "default": 100,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reason"
+        },
+        "rows": {
+          "items": {
+            "$ref": "#/$defs/ListingSample"
+          },
+          "maxItems": 100,
+          "title": "Rows",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "total_events": {
+          "minimum": 0,
+          "title": "Total Events",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "status",
+        "reason",
+        "total_events",
+        "limit",
+        "rows"
+      ],
+      "title": "SampleSummary",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/$defs/SampleSummary"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "bundle_id",
+    "data"
+  ],
+  "title": "SampleExport",
+  "type": "object"
+}
