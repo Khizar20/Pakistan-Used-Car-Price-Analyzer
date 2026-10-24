@@ -154,9 +154,7 @@ def test_empty_or_broken_pages_raise(html: str) -> None:
         parse_list_page(html)
 
 
-@pytest.mark.parametrize(
-    "selector", ['link[rel="canonical"]', 'script[type="application/ld+json"]']
-)
+@pytest.mark.parametrize("selector", ['link[rel="canonical"]'])
 def test_detail_missing_primary_identity_raises(
     detail_html: str, selector: str
 ) -> None:
@@ -210,6 +208,30 @@ def test_string_price_and_year_are_accepted(list_html: str) -> None:
     data["modelDate"] = "2024"
     script.string = json.dumps(data)
     assert parse_list_page(str(tree))[0].price_pkr == 5900000
+
+
+def test_numeric_dom_price_survives_cache_when_json_is_empty(list_html: str) -> None:
+    tree = BeautifulSoup(list_html, "html.parser")
+    card = tree.select_one("li.classified-listing")
+    card.select_one("script").string = "{}"
+    card.append(
+        BeautifulSoup(
+            '<button data-price="5900000">Show Phone No.</button>', "html.parser"
+        )
+    )
+    assert parse_list_page(sanitize_html(str(tree)))[0].price_pkr == 5900000
+
+
+def test_real_model_search_numeric_prices() -> None:
+    html = (FIXTURES / "pakwheels_model_list.html").read_text(encoding="utf-8")
+    first, second = parse_list_page(html)
+    assert (first.model_year, first.price_pkr, first.mileage_text) == (
+        2016,
+        4500000,
+        "83,500 km",
+    )
+    assert (second.model_year, second.price_pkr) == (2025, 7700000)
+    assert parse_list_page(sanitize_html(html)) == [first, second]
 
 
 def test_detail_fallback_labels_and_missing_features(detail_html: str) -> None:
@@ -348,3 +370,29 @@ def test_sanitizer_empty_card_and_scope_without_group() -> None:
         "<h3>Other</h3><h3>View Cars by Model</h3></div>"
     )
     assert "classified-listing" in sanitize_html(html)
+
+
+def test_real_detail_without_primary_schema_never_uses_related_car() -> None:
+    html = (FIXTURES / "pakwheels_detail_missing_schema.html").read_text(
+        encoding="utf-8"
+    )
+    record = parse_detail_page(html)
+    assert record.source_listing_id == "900005"
+    assert record.price_pkr is None
+    assert record.make is None
+    assert record.body_type == "Sedan"
+    assert record.color == "Black"
+    assert record.assembly == "Local"
+    assert len(record.features) == 10
+
+
+@pytest.mark.parametrize("selector", ["h1", "#scroll_car_detail"])
+def test_partial_detail_requires_visible_identity(selector: str) -> None:
+    html = (FIXTURES / "pakwheels_detail_missing_schema.html").read_text(
+        encoding="utf-8"
+    )
+    tree = BeautifulSoup(html, "html.parser")
+    for node in tree.select(selector):
+        node.decompose()
+    with pytest.raises(ParseError, match="identity"):
+        parse_detail_page(str(tree))

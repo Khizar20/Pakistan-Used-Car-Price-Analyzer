@@ -106,6 +106,11 @@ def sanitize_html(html: str) -> str:
                 {key: value for key, value in metadata.items() if key in EVENT_FIELDS}
             )
             saved.append(button)
+        price = card.select_one("[data-price]")
+        if price:
+            numeric = output.new_tag("span")
+            numeric["data-price"] = str(price.get("data-price", ""))
+            saved.append(numeric)
         body.append(saved)
     # Detail schema can include related cars: preserve all, match canonical later.
     for node in source.select('script[type="application/ld+json"]'):
@@ -143,6 +148,7 @@ def sanitize_html(html: str) -> str:
                 "type",
                 "data-listing-id",
                 "data-ga4-event",
+                "data-price",
             }
         }
     # Parse-only documents are deliberately not rendered as pages.

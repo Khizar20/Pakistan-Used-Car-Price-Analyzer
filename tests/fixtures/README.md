@@ -11,6 +11,12 @@ Captured on 2026-10-24 from public PakWheels pages using
 - `html/pakwheels_missing_fields.html`: a fault-injection derivative of the real
   list fixture with price, schema, and technical attributes removed. This is not
   represented as a separate captured live page.
+- `html/pakwheels_model_list.html`: two real cards captured from
+  `/used-cars/toyota-corolla/688` on the same date. These cover numeric `data-price`
+  attributes on model-search pages, where vehicle JSON can be empty.
+- `html/pakwheels_detail_missing_schema.html`: a real Honda City 2019 detail
+  page from the same live run, with visible attributes and listing identity but
+  no primary vehicle schema. Related cars still have JSON and must be ignored.
 
 Fixtures retain original parser-relevant structure and vehicle values, but discard
 contact UI, free-text descriptions, images, scripts other than vehicle JSON,

@@ -60,7 +60,7 @@ def _record(
     if not match:
         raise ParseError("Missing or invalid public listing URL")
     data = _product(node, url)
-    event_node = node.select_one("[data-ga4-event]")
+    event_node = node.select_one("[data-ga4-event]") if not detail else None
     event = load_object(str(event_node.get("data-ga4-event", ""))) if event_node else {}
     make = _string(object_dict(data.get("brand")).get("name")) or _string(
         event.get("item_category2")
@@ -105,6 +105,9 @@ def _record(
         elif value in {"Petrol", "Diesel", "Hybrid", "PHEV", "Electric", "CNG", "LPG"}:
             fuel = fuel or value
     price = _integer(object_dict(data.get("offers")).get("price"))
+    numeric = node.select_one("[data-price]") if not detail else None
+    if price is None and numeric is not None:
+        price = _integer(numeric.get("data-price"))
     photo_text = _text(node.select_one(".total-pictures-bar"))
     features = [_text(item) for item in node.select(".car-feature-list li")]
     values: dict[str, object] = {
@@ -177,8 +180,22 @@ def parse_detail_page(html: str) -> RawListing:
     tree = BeautifulSoup(html, "html.parser")
     canonical = tree.select_one('link[rel="canonical"]')
     url = str(canonical.get("href", "")) if canonical else ""
-    if not LISTING_URL.fullmatch(url) or not _product(tree, url):
+    match = LISTING_URL.fullmatch(url)
+    if not match:
         raise ParseError("Primary vehicle schema or canonical URL is missing")
+    if not _product(tree, url):
+        # Some detail pages omit primary JSON while recommendations have it.
+        # Require two independent visible identity signals before partial recovery.
+        reference = next(
+            (
+                label.find_next_sibling("li")
+                for label in tree.select("#scroll_car_detail li.ad-data")
+                if _text(label) == "Ad Ref #"
+            ),
+            None,
+        )
+        if tree.select_one("h1") is None or _text(reference) != match[1]:
+            raise ParseError("Primary vehicle identity could not be verified")
     return _record(tree, url, detail=True)
 
 

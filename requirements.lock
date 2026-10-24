@@ -59,6 +59,7 @@ ruff==0.9.9
 scikit-learn==1.6.1
 scipy==1.15.3
 selectolax==0.3.28
+setuptools==75.8.0
 shellingham==1.5.4
 six==1.17.0
 sortedcontainers==2.4.0
@@ -72,3 +73,4 @@ typing_extensions==4.16.0
 tzdata==2026.5
 virtualenv==21.14.13
 wrapt==2.5.1
+wheel==0.45.1

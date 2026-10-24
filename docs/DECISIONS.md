@@ -39,8 +39,8 @@ with injected clock, sleep, random jitter, and date providers.
 ## 2026-10-24: Preserve raw attribute strings until Phase 3
 
 The source record keeps mileage, engine capacity, and displayed price as strings.
-`price_pkr` is filled only from the site's numeric structured offer, never guessed
-from a title. Display-only and call-for-price listings retain `price_text` with a
+`price_pkr` is filled from the site's numeric structured offer or observed numeric
+`data-price` attribute, never guessed from a title. Display-only and call-for-price listings retain `price_text` with a
 null numeric price. Full currency parsing and normalization belong to Phase 3.
 Unknown seller type remains null rather than inferring it from featured status.
 
@@ -64,3 +64,35 @@ stored without full URLs; a URL hash is retained, and the current search-page UR
 is used when rehydrating a record. These tables preserve source strings for later
 cleaning and are not the final listings/snapshots schema. Inactivity detection,
 scheduled runs, and normalized migrations remain Phase 4 work.
+
+## 2026-10-24: Detail budgets and partial results are explicit
+
+The scrape command normally fetches details for every previously unseen listing.
+An optional `--max-new-details` budget saves remaining summaries without claiming
+their details were fetched. Missing or malformed detail pages retain summaries and
+are retried on a later run; the command reports partial success with exit status 1.
+Access blocks and server failures stop the run. Completed pages remain committed,
+while an interrupted current page is rolled back. Successful known listings reuse
+detail attributes and always take the current price (including null) from the list.
+
+## 2026-10-24: Version the minimized cache after a live-markup regression
+
+A live model-search run revealed empty JSON offers with valid numeric `data-price`
+attributes. The sanitizer now retains this vehicle field, with real model-search
+fixtures and a regression test. New runs use `raw/cache/v2` to avoid reusing older
+same-day minimized pages that discarded the attribute.
+
+## 2026-10-24: Pin the build backend in the installation lock
+
+The earlier `pip freeze` output omitted setuptools and wheel, even though editable
+installation disables build isolation. Both build requirements are now pinned in
+the installation lock, with a regression test comparing the lock against package
+metadata so a fresh setup does not rely on build tools left in a developer's venv.
+
+## 2026-10-24: Recover verified detail pages with absent primary JSON
+
+A real detail page omitted primary structured data while retaining JSON for
+recommended cars. The parser may recover visible attributes only when a validated
+canonical listing URL, heading, and matching visible "Ad Ref #" establish primary
+identity. Unavailable fields remain null and are merged with that listing's search
+summary. Recommended cars' offers and event metadata are never used as fallbacks.

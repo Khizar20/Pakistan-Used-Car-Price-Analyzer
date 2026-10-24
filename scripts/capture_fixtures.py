@@ -12,6 +12,12 @@ from tracker.scraping.markup import anonymize_fixture, sanitize_html
 from tracker.scraping.pakwheels import SEARCH_URL
 
 
+def _save_fixture(path: Path, html: str) -> None:
+    text = "\n".join(line.rstrip() for line in html.splitlines()).rstrip() + "\n"
+    with path.open("w", encoding="utf-8", newline="\n") as output:
+        output.write(text)
+
+
 def capture(destination: Path, contact_email: str) -> None:
     """Fetch a search page and one detail page; minimize before saving anything."""
     destination.mkdir(parents=True, exist_ok=True)
@@ -34,16 +40,12 @@ def capture(destination: Path, contact_email: str) -> None:
     for card in cards[3:]:
         card.decompose()
     minimized = anonymize_fixture(str(tree))
-    (destination / "pakwheels_list.html").write_text(minimized, encoding="utf-8")
-    (destination / "pakwheels_detail.html").write_text(
-        anonymize_fixture(detail), encoding="utf-8"
-    )
+    _save_fixture(destination / "pakwheels_list.html", minimized)
+    _save_fixture(destination / "pakwheels_detail.html", anonymize_fixture(detail))
     edge = BeautifulSoup(minimized, "html.parser")
     for node in edge.select("script,.search-vehicle-info-2,.price-details"):
         node.decompose()
-    (destination / "pakwheels_missing_fields.html").write_text(
-        str(edge), encoding="utf-8"
-    )
+    _save_fixture(destination / "pakwheels_missing_fields.html", str(edge))
 
 
 def main() -> None:
