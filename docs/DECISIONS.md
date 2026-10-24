@@ -239,3 +239,15 @@ Kaplan-Meier curves use lifelines with confidence intervals and minimum segment
 sizes. Unreached median survival is null, never infinity in JSON. Pricing buckets
 require a supplied positive `fair_price_pkr`; without one they are unknown, not
 invented from the listing's own asking price or an in-sample prediction.
+
+## 2026-10-25: Exposure-aware local weekdays and gated seasonality
+
+Weekday volume uses Asia/Karachi dates and divides by actually observed days of
+each weekday, requiring at least two of every weekday. Price-change rates divide
+by adjacent usable comparisons, not all listings. Without complete posting-date
+metadata, volume is explicitly first-observed counts, not true posting volume.
+Metadata trends describe only observed listings and remain selection-biased.
+STL with period 52 activates after 79 finite contiguous weekly points, covering at
+least 18 months; gaps are not interpolated. Monthly summaries of the weekly
+seasonal component are exploratory associations in the input series' units, not
+reliable causal monthly effects. Short histories return weeks needed and a reason.
