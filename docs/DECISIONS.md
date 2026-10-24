@@ -121,3 +121,14 @@ Mileage accepts whole kilometres only. Engine size accepts cc or explicitly
 labelled litres, converted exactly to whole cc. Unsupported units and negative
 or fractional output values become null. Free labels preserve their spelling
 after Unicode and whitespace normalization; raw inputs are never overwritten.
+
+## 2026-10-24: Reposts are conservative candidates, not deletions
+
+Candidate keys require known make, model, model year, exact mileage, city and seller
+type. Missing keys are not wildcards; absent seller type therefore prevents a
+match. Usable prices must differ by no more than 5% of the smaller value. Known
+variant/transmission/engine/fuel/assembly/body conflicts veto a match. Stable roots
+are chosen by lexicographic `source:listing_id`, since source records lack original
+posting dates. Compare with roots only to avoid transitive chains. `duplicate_of`
+uses this qualified identity and `possible_duplicate` is a quality flag. Retain
+every row and expose the heuristic's uncertainty; it is not proof of a repost.
