@@ -1,6 +1,7 @@
 .venv/
 .env
 .env.*
+GitAccessToken.txt
 !.env.example
 raw/
 data/*.db
