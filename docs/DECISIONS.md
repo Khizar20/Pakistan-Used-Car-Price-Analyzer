@@ -201,3 +201,16 @@ model paths for reproducible scope. Recovery is explicit after a killed process.
 Status, backup, migration and interrupted-run recovery are CLI operations. Scheduling
 is documentation-only: no task, cron entry, notification, Git commit or live scrape
 is installed automatically. The Makefile enforces 90% aggregate storage coverage.
+
+## 2026-10-25: Pure analysis contracts and model encoding
+
+Analysis functions consume observation DataFrames and return validated result
+objects with explicit `ok` or `insufficient_data` status. Invalid observation
+identities/times fail visibly; missing or flagged prices remain in longitudinal
+inputs but are excluded from price estimation. Repost candidates are excluded.
+Numeric regression terms are model year minus 2000, log(1 + mileage), and engine
+litres; category levels and their baseline are explicit and deterministic.
+Regression requires full column rank and finite uncertainty. HC3 errors are used
+for cross-sectional models and listing-clustered errors for repeated observations.
+Typed protocols isolate untyped third-party APIs without weakening strict mypy.
+SHAP and its new runtime dependencies are pinned for Python 3.10 reproducibility.
