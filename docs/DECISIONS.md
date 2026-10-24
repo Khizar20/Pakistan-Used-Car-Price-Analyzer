@@ -214,3 +214,14 @@ Regression requires full column rank and finite uncertainty. HC3 errors are used
 for cross-sectional models and listing-clustered errors for repeated observations.
 Typed protocols isolate untyped third-party APIs without weakening strict mypy.
 SHAP and its new runtime dependencies are pinned for Python 3.10 reproducibility.
+
+## 2026-10-25: Weekly indexes require connected support
+
+Use the latest valid observation per listing/week, then a median in each exact
+make/model/year cohort with at least five listings. The chain link is the weighted
+mean of matched cohort price ratios, using previous-week listing counts as weights.
+Missing calendar weeks or no common supported cohorts break the index instead of
+being interpolated. Per-make series apply the same rule. Quality adjustment fits
+log prices on the common attributes and week dummies with listing-clustered errors,
+normalizing the first week to 100. Unsupported adjustment returns its own status
+while a supported raw index remains available. Effects are associations, not causes.
