@@ -251,3 +251,22 @@ STL with period 52 activates after 79 finite contiguous weekly points, covering 
 least 18 months; gaps are not interpolated. Monthly summaries of the weekly
 seasonal component are exploratory associations in the input series' units, not
 reliable causal monthly effects. Short histories return weeks needed and a reason.
+
+## 2026-10-25: Validated price models and a portable prediction contract
+
+Driver models use one latest observation per listing, complete usable attributes,
+HC3 linear uncertainty, and deterministic grouped cross-validation. Each fold
+learns its encoding, coefficients, boosting model and median-by-model baseline
+only from training listings. Report held-out PKR MAE, percentage MAPE and R squared.
+Optional predictors require complete coverage; rare categorical levels, deficient
+rank and insufficient observations yield explicit insufficient-data results.
+Tree SHAP values explain log-price predictions; dependence curves average over
+observed cars. These describe associations within the selected sample.
+
+The Fair Price contract includes transformations, category baselines, coefficients,
+numeric ranges, explicit defaults and residual log standard deviation. Predictions
+reject unknown categories and numeric extrapolation. The reported range uses
+1.96 residual standard deviations and assumes approximately Gaussian log errors;
+it is not a calibrated guarantee. The point estimate is a conditional median,
+without a retransformation correction. Twenty reference cars test exact formula
+parity. No historical fair-value buckets are inferred from in-sample predictions.
