@@ -178,3 +178,12 @@ eligible missing runs mark a listing inactive and create a null-price inactive
 snapshot; an absent price is not carried forward as if freshly observed. Bounded
 page windows cannot prove a sale or removal: inactivity means disappearance from
 the tracked window and may simply mean that an ad moved beyond that window.
+
+## 2026-10-24: Read-only status and consistent backups
+
+Status opens existing databases read-only and does not create files or migrate
+them. It can also report the legacy staging-only state. Backups use SQLite's
+online backup API, include committed WAL data, verify integrity, and exclusively
+create a new destination rather than overwriting a file. A failed copy removes
+only its newly created incomplete destination. Database journal sidecars and
+default backups are ignored by Git along with the database itself.
