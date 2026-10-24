@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Protocol
@@ -28,6 +29,15 @@ class ScrapeResult:
     listings_seen: int
     detail_errors: int
     model_paths: tuple[str, ...]
+    records: tuple[RawListing, ...] = ()
+
+
+@dataclass(frozen=True)
+class ScrapeProgress:
+    scope_pages: tuple[str, ...]
+    pages_fetched: int
+    listings_seen: int
+    errors: int
 
 
 def _merge(summary: RawListing, detail: RawListing) -> RawListing:
@@ -51,17 +61,23 @@ def run_scrape(
     filters: ScrapeFilters,
     observed_at: datetime,
     max_new_details: int | None = None,
+    progress: Callable[[ScrapeProgress], None] | None = None,
 ) -> ScrapeResult:
     """Discover model scope, parse bounded pages, and reuse successful details."""
     if max_new_details is not None and max_new_details < 0:
         raise ValueError("max_new_details must be nonnegative")
     if observed_at.utcoffset() is None:
         raise ValueError("observed_at must be timezone-aware")
+    discovery_pages = int(not filters.model_paths)
     paths = filters.model_paths or discover_model_paths(client.get(SEARCH_URL))
     filters = filters.model_copy(update={"model_paths": paths})
+    pages = tuple(adapter.iter_listing_pages(filters))
     seen: set[tuple[str, str]] = set()
     search_pages = detail_pages = errors = 0
-    for url in adapter.iter_listing_pages(filters):
+    collected: list[RawListing] = []
+    if progress:
+        progress(ScrapeProgress(pages, discovery_pages, 0, 0))
+    for url in pages:
         summaries = adapter.parse_list_page(client.get(url))
         search_pages += 1
         batch: list[tuple[RawListing, bool]] = []
@@ -97,4 +113,16 @@ def run_scrape(
                     )
             batch.append((record, detail_fetched))
         store.save_batch(batch, observed_at)
-    return ScrapeResult(search_pages, detail_pages, len(seen), errors, paths)
+        collected.extend(record for record, _ in batch)
+        if progress:
+            progress(
+                ScrapeProgress(
+                    pages,
+                    search_pages + detail_pages + discovery_pages,
+                    len(collected),
+                    errors,
+                )
+            )
+    return ScrapeResult(
+        search_pages, detail_pages, len(seen), errors, paths, tuple(collected)
+    )

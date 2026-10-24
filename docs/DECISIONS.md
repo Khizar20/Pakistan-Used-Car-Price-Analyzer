@@ -187,3 +187,17 @@ online backup API, include committed WAL data, verify integrity, and exclusively
 create a new destination rather than overwriting a file. A failed copy removes
 only its newly created incomplete destination. Database journal sidecars and
 default backups are ignored by Git along with the database itself.
+
+## 2026-10-24: Audit and publish complete scrape results
+
+The collector reports its exact ordered page scope and committed raw-page progress
+to the normalized run record. Once collection finishes, the entire run is cleaned
+as one batch and published atomically. Detail failures yield a partial run that
+retains summaries without advancing absences; other failures retain raw progress
+but publish no normalized rows. Counters describe logical page reads, including
+cache hits and discovery, not individual HTTP attempts. `--model-path` pins observed
+model paths for reproducible scope. Recovery is explicit after a killed process.
+
+Status, backup, migration and interrupted-run recovery are CLI operations. Scheduling
+is documentation-only: no task, cron entry, notification, Git commit or live scrape
+is installed automatically. The Makefile enforces 90% aggregate storage coverage.

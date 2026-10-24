@@ -2,7 +2,7 @@
 
 What drives used-car asking prices in Pakistan, and how do those prices change
 over time? This project collects original observations for educational analysis.
-The scraper and cleaning layer are implemented; analysis, exports, and the
+The scraper, cleaning layer, and normalized storage are implemented; analysis, exports, and the
 dashboard are planned phases. No market findings or deployed dashboard are
 available yet.
 
@@ -13,7 +13,9 @@ available yet.
   source staging, and the scrape CLI implemented.
 - Phase 3: exact price/attribute normalization, quality flags, conservative repost
   candidate marking, and a validated nullable DataFrame contract complete.
-- Next: Phase 4 normalized storage and scheduling, then Phase 5 analysis,
+- Phase 4: versioned normalized storage, run auditing, status/backup/recovery
+  commands, scoped inactivity handling, and scheduling documentation complete.
+- Next: Phase 5 analysis,
   Phase 6 exports, and Phases 7–8 dashboard.
 
 ## Setup
@@ -63,19 +65,26 @@ in small batches, so this is not a representative market sample.
 
 Local outputs (all ignored by Git):
 
-- `data/tracker.sqlite3`: `raw_vehicles` and `raw_observations` staging tables.
+- `data/tracker.sqlite3`: raw staging plus normalized `listings`, `snapshots`, and
+  `scrape_runs` tables.
+- `data/backups/`: local SQLite backups; never published or committed.
 - `raw/cache/v2/`: URL-hashed, same-day vehicle-only HTML cache.
 
 Staging preserves raw source strings. The separate Phase 3 cleaner normalizes
 these source values without overwriting them. Staging numeric prices come from
 structured offers or numeric HTML attributes; display-only or call-for-price
 listings have a null numeric price at that stage. Daily staging
-observations keep the latest value on reruns; final normalized snapshots and
-inactivity detection are Phase 4 work.
+observations keep the latest value on reruns. Normalized snapshots keep the first
+observation per listing per UTC day, so later same-day changes do not overwrite
+that day's history. A price change on the next day creates a new snapshot.
 
 Missing or malformed details retain the list summary and produce a nonzero exit
 status with an error count. Access challenges or server failures stop collection.
-Completed pages remain saved; a page interrupted before its commit is not saved.
+Completed raw pages remain saved; a page interrupted before its commit is not saved.
+Normalized listings, snapshots and activity changes are published together only
+after the scrape and cleaning step finish. Failed runs publish no partial normalized
+observations. Partial runs with detail errors retain their successfully parsed
+summaries and do not advance absence counters.
 Same-day cached results do not represent a new live observation of the website.
 
 ## Clean a fixture batch offline
@@ -112,8 +121,42 @@ not match. Known technical conflicts veto matches. `duplicate_of` identifies a
 stable candidate root using `source:listing_id`; every row remains available.
 These are heuristic candidates, not proof that two advertisements are the same car.
 
-Phase 3 is an offline transformation API. Integrating cleaned records into the
-normalized database and scheduled scrape workflow belongs to Phase 4.
+The scrape workflow uses this cleaner before normalized publication. Raw staging
+remains intact for debugging; old staging history is not silently backfilled into
+invented normalized runs.
+
+## Storage, status and backups
+
+```powershell
+.venv/Scripts/python.exe -m tracker.cli backup
+.venv/Scripts/python.exe -m tracker.cli migrate
+.venv/Scripts/python.exe -m tracker.cli status
+.venv/Scripts/python.exe -m tracker.cli status --json
+```
+
+Back up an existing database before a manual migration. Fresh scrapes also apply
+pending schema initialization automatically. Migrations preserve raw staging,
+record the schema version, and reject newer or inconsistent normalized schemas.
+Status is read-only and never creates or migrates a database. Backups use SQLite's
+online backup API, include committed WAL data, verify integrity and refuse to
+overwrite existing destinations. Use `--database PATH` and `--destination PATH`
+to select explicit source and backup files.
+
+A listing becomes inactive after three successful missing UTC days in the same
+exact source/page scope. Failed/partial runs and same-day repeats do not count.
+Reappearing listings reactivate. A bounded page window cannot establish that a
+vehicle sold: a listing may simply have moved beyond that window. The inactive
+transition records a null-price snapshot, not an invented carried-forward price.
+
+Only one scrape may run at a time. If a process was killed, inspect status, verify
+that it has stopped, and explicitly close its run before retrying:
+
+```powershell
+.venv/Scripts/python.exe -m tracker.cli recover-run RUN_ID
+```
+
+See [daily scheduling and restore instructions](docs/SCHEDULING.md). No scheduled
+task is installed automatically.
 
 ## Quality gates
 
@@ -123,7 +166,8 @@ make test
 ```
 
 The check target runs Ruff lint/format checks, strict mypy on `src/`, and pytest
-with an 85% backend coverage floor and a 95% cleaning coverage gate. Default tests block socket connections and use
+with an 85% backend coverage floor, a 95% cleaning gate, and a 90% storage gate.
+Default tests block socket connections and use
 captured HTML or HTTPX mock transports. See [fixture documentation](tests/fixtures/README.md)
 for capture provenance, deliberate refreshes, and the opt-in live smoke test.
 
@@ -131,7 +175,7 @@ for capture provenance, deliberate refreshes, and the opt-in live smoke test.
 
 Public HTML → typed source records → SQLite staging → normalization → normalized
 listings and daily snapshots → analysis → aggregate JSON → static React dashboard.
-Normalized storage and stages after cleaning remain to be implemented.
+Stages after normalized storage remain to be implemented.
 
 Asking prices are not transaction prices. A disappeared listing will be treated as
 a proxy for removal or sale, never proof of a sale. One-platform sampling and a

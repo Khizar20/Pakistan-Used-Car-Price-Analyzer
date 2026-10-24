@@ -6,7 +6,7 @@ PYTHON ?= .venv/bin/python
 PYTHON310 ?= python3.10
 endif
 
-.PHONY: setup scrape analyze export test lint typecheck check
+.PHONY: setup scrape analyze export status backup migrate test lint typecheck check
 
 setup:
 	$(PYTHON310) -m venv .venv
@@ -24,9 +24,19 @@ analyze:
 export:
 	$(PYTHON) -m tracker.cli export
 
+status:
+	$(PYTHON) -m tracker.cli status
+
+backup:
+	$(PYTHON) -m tracker.cli backup
+
+migrate:
+	$(PYTHON) -m tracker.cli migrate
+
 test:
 	$(PYTHON) -m pytest
 	$(PYTHON) -m coverage report --include="*/tracker/cleaning/*" --fail-under=95
+	$(PYTHON) -m coverage report --include="*/tracker/storage/*" --fail-under=90
 
 lint:
 	$(PYTHON) -m ruff check .
