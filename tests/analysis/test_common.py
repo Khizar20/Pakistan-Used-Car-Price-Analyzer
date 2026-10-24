@@ -2,12 +2,21 @@
 
 from __future__ import annotations
 
+import json
+
 import numpy as np
 import pandas as pd
 import pytest
 
 from tests.analysis.synthetic import market
-from tracker.analysis.common import design, design_spec, fit_linear, model_rows, prepare
+from tracker.analysis.common import (
+    DesignSpec,
+    design,
+    design_spec,
+    fit_linear,
+    model_rows,
+    prepare,
+)
 
 REQUIRED = ["listing_id", "observed_at", "price_pkr"]
 
@@ -44,6 +53,17 @@ def test_quality_flags_and_duplicate_exclusion() -> None:
     frame.at[1, "duplicate_of"] = "0"
     frame.at[2, "quality_flag"] = "invalid serialized flags"
     assert prepare(frame, REQUIRED)[0]._valid_price.sum() == 1
+
+
+def test_serialized_category_order_does_not_change_design_columns() -> None:
+    data = model_rows(prepare(market(30, 1), REQUIRED)[0])
+    spec = design_spec(data, ["transmission", "make_model", "city"])
+    reloaded = DesignSpec.model_validate_json(
+        json.dumps(spec.model_dump(), sort_keys=True)
+    )
+    np.testing.assert_array_equal(design(data, spec), design(data, reloaded))
+    with pytest.raises(ValueError, match="terms do not match"):
+        design(data, spec.model_copy(update={"names": ["intercept"]}))
 
 
 def test_design_and_robust_regression_recover_truth() -> None:

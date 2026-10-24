@@ -125,16 +125,21 @@ def design_spec(
 
 
 def design(frame: pd.DataFrame, spec: DesignSpec) -> FloatArray:
-    columns: list[FloatArray] = [np.ones(len(frame))]
-    columns.extend(numeric_values(frame, name) for name in spec.numeric)
+    columns: dict[str, FloatArray] = {"intercept": np.ones(len(frame))}
+    columns.update({name: numeric_values(frame, name) for name in spec.numeric})
     for column, levels in spec.categories.items():
         values = frame[column].astype(str)
         if not values.isin(levels).all():
             raise ValueError(f"Unknown category for {column}")
-        columns.extend(
-            np.asarray(values.eq(level), dtype=float) for level in levels[1:]
+        columns.update(
+            {
+                f"{column}={level}": np.asarray(values.eq(level), dtype=float)
+                for level in levels[1:]
+            }
         )
-    return np.column_stack(columns)
+    if len(spec.names) != len(columns) or set(spec.names) != set(columns):
+        raise ValueError("Prediction terms do not match numeric and category encoding")
+    return np.column_stack([columns[name] for name in spec.names])
 
 
 class LinearFit(Protocol):
