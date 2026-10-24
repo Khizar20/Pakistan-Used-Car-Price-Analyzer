@@ -150,3 +150,14 @@ are flagged as well. Free variant/body/color labels use lowercase normalized tex
 The golden fixture is independently authored and compares the complete typed frame.
 Pandas stubs are pinned for strict mypy. The Makefile additionally enforces 95%
 aggregate cleaning coverage. Normalized storage integration remains Phase 4 work.
+
+## 2026-10-24: Versioned SQLite schema for Phase 4
+
+Migration `001_initial.sql` creates normalized listings, daily snapshots and run
+bookkeeping without rewriting raw staging. SQLite `user_version` records the
+migration level; newer or inconsistent normalized schemas fail visibly. The SQL
+migration is packaged with the Python distribution. Timestamp mappings preserve
+explicit UTC offsets. Database constraints enforce source identity, one snapshot
+per listing/UTC date, foreign keys, nonnegative counts and one running scrape.
+Quality flags are stored on listings and snapshots so historical price-quality
+context is retained. No historical normalized runs are invented from raw staging.
