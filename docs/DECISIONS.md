@@ -35,3 +35,21 @@ location are sufficient; seller contact information is unnecessary.
 The polite-client tests use `httpx.MockTransport` instead of adding a separate HTTP
 mocking library. It exercises the real HTTPX request/response path without sockets,
 with injected clock, sleep, random jitter, and date providers.
+
+## 2026-10-24: Preserve raw attribute strings until Phase 3
+
+The source record keeps mileage, engine capacity, and displayed price as strings.
+`price_pkr` is filled only from the site's numeric structured offer, never guessed
+from a title. Display-only and call-for-price listings retain `price_text` with a
+null numeric price. Full currency parsing and normalization belong to Phase 3.
+Unknown seller type remains null rather than inferring it from featured status.
+
+## 2026-10-24: Minimized real HTML and observed model scope
+
+BeautifulSoup's typed parser is used for the observed server-rendered markup; no
+browser automation is needed. Caches retain only the vehicle markup needed by the
+adapter. Fixture identifiers are replaced and descriptions/contact UI removed.
+The initial ten models are ranked from the site's displayed approximate counts in
+"View Cars by Model". A global page budget is allocated round-robin across these
+model links, rather than fetching the budget for every model. The discovery page
+does not count toward this budget. Scope discovery fails visibly if markup changes.
