@@ -17,6 +17,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from tracker.analysis.runner import analyze_frame, load_observations, write_analysis
 from tracker.config import ScrapeSettings
+from tracker.export.writer import build_exports, write_exports
 from tracker.scraping.base import ScrapeFilters
 from tracker.scraping.http import AccessBlockedError, PoliteClient
 from tracker.scraping.markup import sanitize_html
@@ -36,12 +37,6 @@ app = typer.Typer(
 
 def _now() -> datetime:
     return datetime.now(timezone.utc)
-
-
-def _future_phase(command: str, phase: int) -> None:
-    """Explain why a pipeline command is not available in this phase."""
-    typer.echo(f"'{command}' will be implemented in Phase {phase}.", err=True)
-    raise typer.Exit(code=2)
 
 
 @app.command()
@@ -282,9 +277,30 @@ def analyze(
 
 
 @app.command(name="export")
-def export_data() -> None:
-    """Export dashboard-ready aggregate data."""
-    _future_phase("export", 6)
+def export_data(
+    database: Annotated[
+        Path, typer.Option(help="Existing normalized database (read-only).")
+    ] = Path("data/tracker.sqlite3"),
+    output: Annotated[Path, typer.Option(help="Public JSON output directory.")] = Path(
+        "web/public/data"
+    ),
+    types_directory: Annotated[
+        Path, typer.Option(help="Generated JSON Schemas and TypeScript directory.")
+    ] = Path("web/src/types"),
+) -> None:
+    """Export eight versioned public files with privacy and size validation."""
+    try:
+        exports = build_exports(load_observations(database), generated_at=_now())
+        saved = write_exports(exports, output=output, types_directory=types_directory)
+    except (OSError, sqlite3.Error, ValueError) as exc:
+        typer.echo(
+            f"Export failed ({type(exc).__name__}). Check the database, "
+            "privacy validation, file budget and output paths.",
+            err=True,
+        )
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Exported 8 public JSON files to {output}; schema version 1.0.0.")
+    typer.echo(f"Generated {len(saved) - 8} contract artifacts in {types_directory}.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,113 @@
+{
+  "bundle_id": "272b42f3f06ba67e3939f18469c9a129eb3a33f63c5a1a62eca9c4008175b165",
+  "data": {
+    "days_to_first_drop": [
+      1.0
+    ],
+    "drop_share": null,
+    "drop_sizes_percent": [
+      1.694915254237288
+    ],
+    "drop_sizes_pkr": [
+      100000.0
+    ],
+    "eligible_listings": 1,
+    "median_drop_percent": null,
+    "median_drop_pkr": null,
+    "observed_listings": 1,
+    "reason": "Too few listings with consecutive usable price observations",
+    "status": "insufficient_data",
+    "survival": [
+      {
+        "dimension": "all",
+        "events": 1,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "drop",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "all",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "bucket",
+        "events": 1,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "drop",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "unknown",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "seller_type",
+        "events": 1,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "drop",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "unknown",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 1,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "drop",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Karachi",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "all",
+        "events": 0,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "all",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "bucket",
+        "events": 0,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "unknown",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "seller_type",
+        "events": 0,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "unknown",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Karachi",
+        "status": "insufficient_data"
+      }
+    ]
+  },
+  "generated_at": "2026-10-24T00:00:00Z",
+  "schema_version": "1.0.0"
+}

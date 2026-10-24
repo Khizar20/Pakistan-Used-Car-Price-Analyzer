@@ -3,7 +3,8 @@
 What drives used-car asking prices in Pakistan, and how do those prices change
 over time? This project collects original observations for educational analysis.
 The scraper, cleaning layer, normalized storage, and analysis are implemented.
-Public exports and the dashboard are planned phases. No market findings or deployed dashboard are
+Versioned public exports are implemented; the dashboard is a planned phase.
+No market findings or deployed dashboard are
 available yet.
 
 ## Current status
@@ -17,7 +18,9 @@ available yet.
   commands, scoped inactivity handling, and scheduling documentation complete.
 - Phase 5: matched-cohort and quality-adjusted indexes, observed price drops and
   survival, gated seasonality, validated price drivers, and private analysis CLI complete.
-- Next: Phase 6 public exports, then Phases 7–8 dashboard.
+- Phase 6: eight public JSON contracts, privacy/size validation, schema-derived
+  TypeScript declarations, fixture snapshots, and export CLI complete.
+- Next: Phases 7–8 dashboard.
 
 ## Setup
 
@@ -104,8 +107,31 @@ an identifiable regression; a listing count alone does not establish support.
 
 See [analysis methods](docs/METHODS.md) for filters, weights, censoring, model
 validation and prediction assumptions. Private bundles contain internal listing
-identifiers and diagnostics. Phase 6 will implement the public export contract;
-these bundles are not dashboard-ready public data.
+identifiers and diagnostics. Use the public export command below to prepare data
+for the dashboard.
+
+## Export public data
+
+```powershell
+.venv/Scripts/tracker.exe export --database data/tracker.sqlite3
+```
+
+This reads the database without modifying it, analyzes one consistent observation
+snapshot and writes eight versioned files to `web/public/data/`. It also regenerates
+JSON Schemas and TypeScript declarations in `web/src/types/`. No separate private
+analysis bundle is required, so exports cannot silently reuse a stale report.
+
+Only declared public fields are included. Listing IDs are hashed, recent drop rows
+are capped at 100, and residual diagnostics at 200. Contact-pattern and sensitive-field
+checks and a strict 500,000-byte budget run before writing any files. Invalid or
+oversized exports fail explicitly. Empty/insufficient results remain valid public
+files with reasons. Generated files share a digest so consumers can reject mixed
+refreshes. Existing generated files are refreshed; unrelated files are retained.
+
+See [the public data contract](docs/EXPORTS.md) for filenames, schema regeneration,
+digest checks, population definitions and publication review. The current committed
+data describes the small available sample and its insufficient-data states; it
+does not claim market findings. Dashboard implementation remains in Phases 7–8.
 
 Missing or malformed details retain the list summary and produce a nonzero exit
 status with an error count. Access challenges or server failures stop collection.

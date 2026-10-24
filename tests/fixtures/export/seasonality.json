@@ -1,0 +1,28 @@
+{
+  "bundle_id": "272b42f3f06ba67e3939f18469c9a129eb3a33f63c5a1a62eca9c4008175b165",
+  "data": {
+    "caveat": "First-observed counts are not actual posting volume; collection is a selected page window.",
+    "reason": "Need at least two observed days of every weekday",
+    "seasonal": {
+      "month_components": {},
+      "period_weeks": 52,
+      "points": [],
+      "reason": "At least 18 months of continuous weekly data are required",
+      "status": "insufficient_data",
+      "weeks_available": 0,
+      "weeks_remaining": 79,
+      "weeks_required": 79
+    },
+    "status": "insufficient_data",
+    "volume_basis": "first_observed",
+    "volume_trend": [
+      {
+        "date": "2026-10-24",
+        "listings": 1
+      }
+    ],
+    "weekdays": []
+  },
+  "generated_at": "2026-10-24T00:00:00Z",
+  "schema_version": "1.0.0"
+}

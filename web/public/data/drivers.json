@@ -1,0 +1,23 @@
+{
+  "bundle_id": "68369024cfc6a9a96596cdc3e42c4e50181bfbaf57ca09f8aac3c1c6a8d68d0b",
+  "data": {
+    "baseline_metrics": null,
+    "boosting_metrics": null,
+    "coefficients": [],
+    "dependence": {},
+    "diagnostics": [],
+    "diagnostics_by_make": {},
+    "diagnostics_total": 0,
+    "linear_metrics": null,
+    "listings_used": 89,
+    "omitted_predictors": [
+      "seller_type",
+      "body_type"
+    ],
+    "reason": "Categorical levels need at least five distinct listings",
+    "shap_effects": [],
+    "status": "insufficient_data"
+  },
+  "generated_at": "2026-10-24T22:18:29.093374Z",
+  "schema_version": "1.0.0"
+}

@@ -7,7 +7,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-import pytest
 from typer.testing import CliRunner
 
 import tracker
@@ -40,13 +39,8 @@ def test_tracker_help() -> None:
     assert "export" in result.stdout
 
 
-@pytest.mark.parametrize(
-    ("command", "phase"),
-    [("export", 6)],
-)
-def test_future_phase_commands_are_explicit(command: str, phase: int) -> None:
-    """Scaffold commands fail clearly until their implementation phase."""
-    result = runner.invoke(app, [command])
-
-    assert result.exit_code == 2
-    assert f"'{command}' will be implemented in Phase {phase}." in result.output
+def test_export_help_exposes_public_destinations() -> None:
+    result = runner.invoke(app, ["export", "--help"])
+    assert result.exit_code == 0
+    assert "--types-directory" in result.output
+    assert "--output" in result.output

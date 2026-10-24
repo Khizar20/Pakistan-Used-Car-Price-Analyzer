@@ -1,0 +1,10 @@
+{
+  "bundle_id": "272b42f3f06ba67e3939f18469c9a129eb3a33f63c5a1a62eca9c4008175b165",
+  "data": {
+    "model": null,
+    "reason": "Too few distinct complete current listings",
+    "status": "insufficient_data"
+  },
+  "generated_at": "2026-10-24T00:00:00Z",
+  "schema_version": "1.0.0"
+}

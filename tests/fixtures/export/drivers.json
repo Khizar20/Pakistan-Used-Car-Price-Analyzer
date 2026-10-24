@@ -1,0 +1,20 @@
+{
+  "bundle_id": "272b42f3f06ba67e3939f18469c9a129eb3a33f63c5a1a62eca9c4008175b165",
+  "data": {
+    "baseline_metrics": null,
+    "boosting_metrics": null,
+    "coefficients": [],
+    "dependence": {},
+    "diagnostics": [],
+    "diagnostics_by_make": {},
+    "diagnostics_total": 0,
+    "linear_metrics": null,
+    "listings_used": 1,
+    "omitted_predictors": [],
+    "reason": "Too few distinct complete current listings",
+    "shap_effects": [],
+    "status": "insufficient_data"
+  },
+  "generated_at": "2026-10-24T00:00:00Z",
+  "schema_version": "1.0.0"
+}

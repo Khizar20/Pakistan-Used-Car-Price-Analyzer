@@ -1,0 +1,217 @@
+{
+  "bundle_id": "68369024cfc6a9a96596cdc3e42c4e50181bfbaf57ca09f8aac3c1c6a8d68d0b",
+  "data": {
+    "days_to_first_drop": [],
+    "drop_share": null,
+    "drop_sizes_percent": [],
+    "drop_sizes_pkr": [],
+    "eligible_listings": 0,
+    "median_drop_percent": null,
+    "median_drop_pkr": null,
+    "observed_listings": 90,
+    "reason": "Too few listings with consecutive usable price observations",
+    "status": "insufficient_data",
+    "survival": [
+      {
+        "dimension": "all",
+        "events": 0,
+        "listings": 0,
+        "median_days": null,
+        "outcome": "drop",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "all",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "all",
+        "events": 0,
+        "listings": 90,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "all",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "bucket",
+        "events": 0,
+        "listings": 90,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "unknown",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "seller_type",
+        "events": 0,
+        "listings": 90,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "unknown",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Abbottabad",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Bahawalpur",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 5,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Faisalabad",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 2,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Gujranwala",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 3,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Hyderabad",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 16,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Islamabad",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 19,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Karachi",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 22,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Lahore",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 2,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Malakwal",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 1,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Mirpur Khas",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 5,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Multan",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 2,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Peshawar",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 8,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Rawalpindi",
+        "status": "insufficient_data"
+      },
+      {
+        "dimension": "city",
+        "events": 0,
+        "listings": 3,
+        "median_days": null,
+        "outcome": "disappearance",
+        "points": [],
+        "reason": "Too few listings or no positive follow-up time",
+        "segment": "Sialkot",
+        "status": "insufficient_data"
+      }
+    ]
+  },
+  "generated_at": "2026-10-24T22:18:29.093374Z",
+  "schema_version": "1.0.0"
+}

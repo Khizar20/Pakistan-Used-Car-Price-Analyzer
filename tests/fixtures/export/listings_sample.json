@@ -1,0 +1,26 @@
+{
+  "bundle_id": "272b42f3f06ba67e3939f18469c9a129eb3a33f63c5a1a62eca9c4008175b165",
+  "data": {
+    "limit": 100,
+    "reason": null,
+    "rows": [
+      {
+        "city": "Karachi",
+        "days_listed": 1.0,
+        "drop_percent": 1.694915254237288,
+        "drop_pkr": 100000.0,
+        "listing_hash": "b6a730ed2fa522fe921e592d369953f4b66f82c91a17775b0fa82724ae64a32b",
+        "make": "Honda",
+        "model": "BR-V",
+        "model_year": 2024,
+        "new_price_pkr": 5800000.0,
+        "observed_at": "2026-10-25T00:00:00+00:00",
+        "old_price_pkr": 5900000.0
+      }
+    ],
+    "status": "ok",
+    "total_events": 1
+  },
+  "generated_at": "2026-10-24T00:00:00Z",
+  "schema_version": "1.0.0"
+}

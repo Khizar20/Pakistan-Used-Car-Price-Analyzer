@@ -302,3 +302,26 @@ the constructs emitted by these contracts and refuses unsupported constructs.
 Tests validate schemas with pinned jsonschema tooling and compare generated
 artifacts byte-for-byte with committed files. TypeScript carries structural types;
 runtime constraints such as numeric ranges remain in JSON Schema.
+
+## 2026-10-25: Public projection, complete-bundle preflight and write recovery
+
+Recompute analysis from one read-only observation snapshot when exporting, avoiding
+stale report/database joins. Project only declared fields. Hash internal identities
+with a versioned database-local namespace; treat hashes as enumerable pseudonyms,
+not a privacy guarantee. Exclude seller identities and URLs; scan keys and strings
+for sensitive/contact patterns before writes. Bound phone patterns and use literal
+email/URL markers so long benign labels do not cause regex backtracking.
+
+Latest-active nonduplicate models and all-history metadata have explicitly different
+populations. Keep complete aggregate distributions or fail the strict 500,000-byte
+file budget, rather than silently truncating statistics. Cap recent drop rows at
+100 and residual rows at 200 with full population totals. Preflight all eight files,
+schema artifacts and a common public-body digest, stage replacements, publish meta
+last and restore old files on caught failures. Abrupt termination is detected by
+comparing bundle identities; only one exporter should run at a time.
+
+Sorted JSON exposed a predictor-order defect: category mapping order could differ
+from coefficient term order after serialization. The shared design evaluator now
+builds named columns and selects the explicit ordered terms, rejecting mismatches.
+A failing-then-fixed regression and independent 20-car public-contract prediction
+test cover this case. Object key order is never part of the prediction contract.

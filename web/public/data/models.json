@@ -1,0 +1,33 @@
+{
+  "bundle_id": "68369024cfc6a9a96596cdc3e42c4e50181bfbaf57ca09f8aac3c1c6a8d68d0b",
+  "data": {
+    "models": [
+      {
+        "listing_count": 30,
+        "make": "Honda",
+        "median_price_pkr": 3300000.0,
+        "model": "City",
+        "priced_listing_count": 29
+      },
+      {
+        "listing_count": 30,
+        "make": "Honda",
+        "median_price_pkr": 3625000.0,
+        "model": "Civic",
+        "priced_listing_count": 30
+      },
+      {
+        "listing_count": 30,
+        "make": "Toyota",
+        "median_price_pkr": 3812500.0,
+        "model": "Corolla",
+        "priced_listing_count": 30
+      }
+    ],
+    "population": "latest_active_nonduplicate",
+    "reason": null,
+    "status": "ok"
+  },
+  "generated_at": "2026-10-24T22:18:29.093374Z",
+  "schema_version": "1.0.0"
+}

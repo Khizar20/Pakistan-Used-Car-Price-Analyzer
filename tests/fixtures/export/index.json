@@ -1,0 +1,21 @@
+{
+  "bundle_id": "272b42f3f06ba67e3939f18469c9a129eb3a33f63c5a1a62eca9c4008175b165",
+  "data": {
+    "cohorts": [],
+    "per_make": {},
+    "quality_adjusted": {
+      "points": [],
+      "reason": "At least two supported weeks are required",
+      "status": "insufficient_data"
+    },
+    "raw": {
+      "points": [],
+      "reason": "At least two supported weeks are required",
+      "status": "insufficient_data"
+    },
+    "reason": "At least two supported weeks are required",
+    "status": "insufficient_data"
+  },
+  "generated_at": "2026-10-24T00:00:00Z",
+  "schema_version": "1.0.0"
+}

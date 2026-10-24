@@ -1,0 +1,36 @@
+{
+  "bundle_id": "68369024cfc6a9a96596cdc3e42c4e50181bfbaf57ca09f8aac3c1c6a8d68d0b",
+  "data": {
+    "cohorts": [
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 4000000.0,
+        "model": "Corolla",
+        "model_year": 2018,
+        "week": "2026-10-19"
+      }
+    ],
+    "per_make": {
+      "Toyota": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      }
+    },
+    "quality_adjusted": {
+      "points": [],
+      "reason": "At least two supported weeks are required",
+      "status": "insufficient_data"
+    },
+    "raw": {
+      "points": [],
+      "reason": "At least two supported weeks are required",
+      "status": "insufficient_data"
+    },
+    "reason": "At least two supported weeks are required",
+    "status": "insufficient_data"
+  },
+  "generated_at": "2026-10-24T22:18:29.093374Z",
+  "schema_version": "1.0.0"
+}
