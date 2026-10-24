@@ -1,0 +1,25 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: Ruff check
+        entry: .venv/Scripts/python.exe -m ruff check --fix
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: Ruff format
+        entry: .venv/Scripts/python.exe -m ruff format
+        language: system
+        types: [python]
+      - id: mypy
+        name: mypy
+        entry: .venv/Scripts/python.exe -m mypy src
+        language: system
+        pass_filenames: false
+        types: [python]
+      - id: pytest
+        name: pytest
+        entry: .venv/Scripts/python.exe -m pytest
+        language: system
+        pass_filenames: false
+        stages: [pre-push]

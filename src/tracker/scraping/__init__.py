@@ -1,0 +1,1 @@
+"""Public-page scraping adapters."""

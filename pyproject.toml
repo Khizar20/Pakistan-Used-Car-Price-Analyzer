@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools==75.8.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pakistan-used-car-price-tracker"
+version = "0.1.0"
+description = "A longitudinal Pakistan used-car asking-price analysis pipeline."
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4==4.13.3",
+    "httpx==0.28.1",
+    "lifelines==0.30.0",
+    "numpy==2.2.3",
+    "pandas==2.2.3",
+    "pydantic==2.10.6",
+    "scikit-learn==1.6.1",
+    "selectolax==0.3.28",
+    "SQLAlchemy==2.0.38",
+    "statsmodels==0.14.4",
+    "typer==0.15.1",
+]
+
+[project.scripts]
+tracker = "tracker.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "RUF", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src"]
+pretty = true
+show_error_codes = true
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers -m 'not live' --cov=tracker --cov-report=term-missing --cov-report=xml --cov-fail-under=85"
+testpaths = ["tests"]
+markers = ["live: opt-in tests that access a live public website"]
+
+[tool.coverage.run]
+branch = true
+source = ["tracker"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_also = ["if __name__ == .__main__.:"]

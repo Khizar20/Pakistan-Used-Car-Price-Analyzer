@@ -1,0 +1,1 @@
+"""Transactional listing repository operations."""
