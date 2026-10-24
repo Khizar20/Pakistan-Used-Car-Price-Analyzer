@@ -135,7 +135,7 @@ def normalize_model(make: object, value: object) -> str | None:
     brand = normalize_make(make)
     if not text:
         return None
-    if brand and text.casefold().startswith(brand.casefold() + " "):
+    while brand and text.casefold().startswith(brand.casefold() + " "):
         text = text[len(brand) :].strip()
     return MODELS.get(brand or "", {}).get(_key(text), text.title())
 

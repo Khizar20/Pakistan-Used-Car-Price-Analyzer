@@ -132,3 +132,21 @@ are chosen by lexicographic `source:listing_id`, since source records lack origi
 posting dates. Compare with roots only to avoid transitive chains. `duplicate_of`
 uses this qualified identity and `possible_duplicate` is a quality flag. Retain
 every row and expose the heuristic's uncertainty; it is not proof of a repost.
+
+## 2026-10-24: Phase 3 batch contract and source-price precedence
+
+`clean_batch` accepts raw records, validated clean records, or its own complete
+ordered DataFrame schema. Every row is validated with `CleanListing`; integers,
+booleans, and strings use explicit nullable pandas dtypes. Features and the plural
+set of quality labels are immutable tuples under the plan's `quality_flag` column
+name. Statistical and duplicate flags are recomputed, so cleaning is idempotent
+and a changed policy does not accumulate stale price flags. Raw source records
+are never mutated; cleaned rows retain source identity and URL hashes only.
+
+Valid structured prices take precedence; display text is parsed when the structured
+value is absent or unusable. Conflicts and unusable structured values are visible
+flags. Invalid attributes become null with flags; missing required cohort fields
+are flagged as well. Free variant/body/color labels use lowercase normalized text.
+The golden fixture is independently authored and compares the complete typed frame.
+Pandas stubs are pinned for strict mypy. The Makefile additionally enforces 95%
+aggregate cleaning coverage. Normalized storage integration remains Phase 4 work.

@@ -128,6 +128,7 @@ def test_labels(
     "make,value,expected",
     [
         ("Toyota", "TOYOTA CORROLA", "Corolla"),
+        ("Toyota", "Toyota Toyota Corolla", "Corolla"),
         ("Toyotta", "Corolla GLi", "Corolla"),
         ("Suzki", "wagonr", "Wagon R"),
         ("Honda", "BRV", "BR-V"),

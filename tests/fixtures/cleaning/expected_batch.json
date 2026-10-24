@@ -1,0 +1,77 @@
+{
+  "dtypes": {
+    "source": "string", "source_listing_id": "string", "url_hash": "string",
+    "make": "string", "model": "string", "variant": "string",
+    "model_year": "Int64", "price_pkr": "Int64", "mileage_km": "Int64", "engine_cc": "Int64",
+    "transmission": "string", "fuel_type": "string", "assembly": "string", "body_type": "string",
+    "color": "string", "city": "string", "registered_city": "string", "seller_type": "string",
+    "is_featured": "boolean", "has_photos_count": "Int64", "features": "object",
+    "quality_flag": "object", "duplicate_of": "string"
+  },
+  "rows": [
+    {
+      "source": "pakwheels", "source_listing_id": "910001",
+      "url_hash": "f52c16aef53e0d433c16a0ce2a5b5580e813d5f28f9e9af76edb1ca103ed06de",
+      "make": "Toyota", "model": "Corolla", "variant": "gli", "model_year": 2020,
+      "price_pkr": 3500000, "mileage_km": 45000, "engine_cc": 1300,
+      "transmission": "automatic", "fuel_type": "petrol", "assembly": "local",
+      "body_type": "sedan", "color": "white", "city": "Lahore", "registered_city": "Lahore",
+      "seller_type": "individual", "is_featured": true, "has_photos_count": 3,
+      "features": ["ABS", "Air Bags"], "quality_flag": []
+    },
+    {
+      "source": "pakwheels", "source_listing_id": "910002",
+      "url_hash": "8da25c082cec0fcd2ae012e7873e8865d58f61848b6781d0b99f915ba8394687",
+      "make": "Toyota", "model": "Corolla", "variant": "gli", "model_year": 2020,
+      "price_pkr": 3550000, "mileage_km": 45000, "engine_cc": 1300,
+      "transmission": "automatic", "fuel_type": "petrol", "city": "Lahore", "seller_type": "individual",
+      "quality_flag": ["possible_duplicate"], "duplicate_of": "pakwheels:910001"
+    },
+    {
+      "source": "pakwheels", "source_listing_id": "910003",
+      "url_hash": "c2a12ad4f3c069556482fc19e451e7a6866e64b74f312412a57754a2ee637ac0",
+      "make": "Toyota", "model": "Corolla", "model_year": 2020,
+      "price_pkr": 3600000, "mileage_km": 60000, "engine_cc": 1500,
+      "transmission": "automatic", "fuel_type": "petrol", "city": "Lahore", "seller_type": "dealer",
+      "quality_flag": []
+    },
+    {
+      "source": "pakwheels", "source_listing_id": "910004",
+      "url_hash": "355e03d96fa4ecf68ec0c8a1d96d15f3de8ad334e15c528709d68ec0befeada9",
+      "make": "Toyota", "model": "Corolla", "model_year": 2020,
+      "price_pkr": 3700000, "mileage_km": 75000, "engine_cc": 1500,
+      "transmission": "automatic", "fuel_type": "petrol", "city": "Lahore", "seller_type": "dealer",
+      "quality_flag": []
+    },
+    {
+      "source": "pakwheels", "source_listing_id": "910005",
+      "url_hash": "cb4b56f7a4cbdfedbc869237565be1ec46886d690a6476bcf66ecaab12ba3209",
+      "make": "Toyota", "model": "Corolla", "model_year": 2020,
+      "price_pkr": 9000000, "mileage_km": 80000, "engine_cc": 1500,
+      "transmission": "automatic", "fuel_type": "petrol", "city": "Lahore", "seller_type": "dealer",
+      "quality_flag": ["price_outlier_mad"]
+    },
+    {
+      "source": "pakwheels", "source_listing_id": "910006",
+      "url_hash": "2bd12946a89d8f5e26c7847d9bfcc4fc56a02b93e70b4770ef526e512154c302",
+      "make": "Toyota", "model": "Corolla", "model_year": 2020,
+      "price_pkr": 1, "engine_cc": 1300, "fuel_type": "petrol", "city": "Karachi",
+      "quality_flag": ["below_price_floor", "invalid_mileage", "placeholder_price", "unknown_transmission"]
+    },
+    {
+      "source": "pakwheels", "source_listing_id": "910007",
+      "url_hash": "83be6044d212cf09cd79f96af72056f7d9ed28a7eb080a12ac996f80ec7ee2c2",
+      "make": "Honda", "model": "City", "model_year": 2019,
+      "engine_cc": 1300, "transmission": "manual", "fuel_type": "petrol", "city": "Islamabad",
+      "quality_flag": ["missing_price", "unknown_assembly"]
+    },
+    {
+      "source": "pakwheels", "source_listing_id": "910008",
+      "url_hash": "b919d122db1a4f57c9660a5d8fc34827493929bcfa88dc0277ba465fbf1cf157",
+      "make": "Suzuki", "model": "Wagon R", "model_year": 2018,
+      "price_pkr": 2000000, "engine_cc": 998, "transmission": "manual", "fuel_type": "cng",
+      "assembly": "imported", "city": "Rawalpindi",
+      "quality_flag": ["invalid_mileage", "price_conflict"]
+    }
+  ]
+}

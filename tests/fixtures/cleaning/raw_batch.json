@@ -1,0 +1,62 @@
+[
+  {
+    "source_listing_id": "910001",
+    "url": "https://www.pakwheels.com/used-cars/toyota-corolla-2020-for-sale-in-lahore-910001",
+    "make": " toyotta ", "model": "corrola", "variant": "GLi", "model_year": 2020,
+    "price_text": "PKR 35 lakh", "mileage_text": "45,000 km", "engine_text": "1.3 L",
+    "transmission": "CVT", "fuel_type": "Petrol", "assembly": "CKD",
+    "body_type": "Sedan", "color": " White ", "city": "LAHORE", "registered_city": " lhr ",
+    "seller_type": "individual", "is_featured": true, "has_photos_count": 3,
+    "features": ["ABS", " ABS ", "Air Bags"]
+  },
+  {
+    "source_listing_id": "910002",
+    "url": "https://www.pakwheels.com/used-cars/toyota-corolla-2020-for-sale-in-lahore-910002",
+    "make": "Toyota", "model": "Corolla GLi", "variant": "gli", "model_year": 2020,
+    "price_text": "Rs 3,550,000", "mileage_text": "45000 km", "engine_text": "1300cc",
+    "transmission": "A/T", "fuel_type": "Gasoline", "city": "Lhr", "seller_type": "individual"
+  },
+  {
+    "source_listing_id": "910003",
+    "url": "https://www.pakwheels.com/used-cars/toyota-corolla-2020-for-sale-in-lahore-910003",
+    "make": "Toyota", "model": "Corolla", "model_year": 2020,
+    "price_text": "36 lacs", "mileage_text": "60,000 km", "engine_text": "1500 cc",
+    "transmission": "Automatic", "fuel_type": "Petrol", "city": "Lahore", "seller_type": "dealer"
+  },
+  {
+    "source_listing_id": "910004",
+    "url": "https://www.pakwheels.com/used-cars/toyota-corolla-2020-for-sale-in-lahore-910004",
+    "make": "Toyota", "model": "Corolla", "model_year": 2020,
+    "price_text": "PKR 37 lakh", "mileage_text": "75000 km", "engine_text": "1500 cc",
+    "transmission": "Automatic", "fuel_type": "Petrol", "city": "Lahore", "seller_type": "dealer"
+  },
+  {
+    "source_listing_id": "910005",
+    "url": "https://www.pakwheels.com/used-cars/toyota-corolla-2020-for-sale-in-lahore-910005",
+    "make": "Toyota", "model": "Corolla", "model_year": 2020,
+    "price_text": "0.9 crore", "mileage_text": "80000 km", "engine_text": "1500 cc",
+    "transmission": "Automatic", "fuel_type": "Petrol", "city": "Lahore", "seller_type": "dealer"
+  },
+  {
+    "source_listing_id": "910006",
+    "url": "https://www.pakwheels.com/used-cars/toyota-corolla-2020-for-sale-in-karachi-910006",
+    "make": "Toyota", "model": "Corolla", "model_year": 2020,
+    "price_text": "Rs 1", "mileage_text": "-5 km", "engine_text": "1300 cc",
+    "transmission": "mystery", "fuel_type": "Petrol", "city": "Khi"
+  },
+  {
+    "source_listing_id": "910007",
+    "url": "https://www.pakwheels.com/used-cars/honda-city-2019-for-sale-in-islamabad-910007",
+    "make": "Honda", "model": "City", "model_year": 2019,
+    "price_text": "Call for price", "engine_text": "1300 cc",
+    "transmission": "Manual", "fuel_type": "Petrol", "assembly": "Japanese", "city": "ISB"
+  },
+  {
+    "source_listing_id": "910008",
+    "url": "https://www.pakwheels.com/used-cars/suzuki-wagon-r-2018-for-sale-in-rawalpindi-910008",
+    "make": "Suzki", "model": "WagonR", "model_year": 2018,
+    "price_pkr": 2000000, "price_text": "Rs 2,100,000", "mileage_text": "10,000 miles",
+    "engine_text": "998cc", "transmission": "M/T", "fuel_type": "CNG",
+    "assembly": "CBU", "city": "RWP"
+  }
+]

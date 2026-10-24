@@ -26,6 +26,7 @@ export:
 
 test:
 	$(PYTHON) -m pytest
+	$(PYTHON) -m coverage report --include="*/tracker/cleaning/*" --fail-under=95
 
 lint:
 	$(PYTHON) -m ruff check .

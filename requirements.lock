@@ -39,6 +39,7 @@ nodeenv==1.11.0
 numpy==2.2.3
 packaging==26.3
 pandas==2.2.3
+pandas-stubs==2.2.3.250308
 patsy==1.0.3
 pillow==12.3.0
 platformdirs==4.12.4
@@ -69,6 +70,7 @@ statsmodels==0.14.4
 threadpoolctl==3.7.0
 tomli==2.5.0
 typer==0.15.1
+types-pytz==2026.5.0.20261006
 typing_extensions==4.16.0
 tzdata==2026.5
 virtualenv==21.14.13
