@@ -2,8 +2,8 @@
 
 What drives used-car asking prices in Pakistan, and how do those prices change
 over time? This project collects original observations for educational analysis.
-The scraper, cleaning layer, and normalized storage are implemented; analysis, exports, and the
-dashboard are planned phases. No market findings or deployed dashboard are
+The scraper, cleaning layer, normalized storage, and analysis are implemented.
+Public exports and the dashboard are planned phases. No market findings or deployed dashboard are
 available yet.
 
 ## Current status
@@ -15,8 +15,9 @@ available yet.
   candidate marking, and a validated nullable DataFrame contract complete.
 - Phase 4: versioned normalized storage, run auditing, status/backup/recovery
   commands, scoped inactivity handling, and scheduling documentation complete.
-- Next: Phase 5 analysis,
-  Phase 6 exports, and Phases 7–8 dashboard.
+- Phase 5: matched-cohort and quality-adjusted indexes, observed price drops and
+  survival, gated seasonality, validated price drivers, and private analysis CLI complete.
+- Next: Phase 6 public exports, then Phases 7–8 dashboard.
 
 ## Setup
 
@@ -68,6 +69,7 @@ Local outputs (all ignored by Git):
 - `data/tracker.sqlite3`: raw staging plus normalized `listings`, `snapshots`, and
   `scrape_runs` tables.
 - `data/backups/`: local SQLite backups; never published or committed.
+- `data/analysis/`: private typed analysis bundles; never published or committed.
 - `raw/cache/v2/`: URL-hashed, same-day vehicle-only HTML cache.
 
 Staging preserves raw source strings. The separate Phase 3 cleaner normalizes
@@ -77,6 +79,33 @@ listings have a null numeric price at that stage. Daily staging
 observations keep the latest value on reruns. Normalized snapshots keep the first
 observation per listing per UTC day, so later same-day changes do not overwrite
 that day's history. A price change on the next day creates a new snapshot.
+
+## Analyze the observations
+
+```powershell
+.venv/Scripts/tracker.exe analyze --database data/tracker.sqlite3
+# Optional: choose a new output directory (existing directories are refused).
+.venv/Scripts/tracker.exe analyze --output data/analysis/review
+```
+
+The command reads a consistent SQLite snapshot without modifying or migrating it.
+It writes `analysis.json` in a new timestamped directory beneath `data/analysis/`,
+containing all four typed results, source counts, dates and assumptions. A valid
+analysis with insufficient data exits successfully and explains each unavailable
+result. Missing/corrupt databases and existing output paths fail explicitly.
+
+The local sample currently has 90 listings on one observation day. It cannot
+establish a price trend, price-drop rate, weekday effect or monthly seasonality.
+Synthetic tests verify the methods against known effects; they are not market
+findings. More daily observations and adequate attribute coverage are required.
+Monthly decomposition needs at least 79 contiguous supported weekly points.
+Driver models also require enough complete listings, supported categories and
+an identifiable regression; a listing count alone does not establish support.
+
+See [analysis methods](docs/METHODS.md) for filters, weights, censoring, model
+validation and prediction assumptions. Private bundles contain internal listing
+identifiers and diagnostics. Phase 6 will implement the public export contract;
+these bundles are not dashboard-ready public data.
 
 Missing or malformed details retain the list summary and produce a nonzero exit
 status with an error count. Access challenges or server failures stop collection.

@@ -42,7 +42,7 @@ def test_tracker_help() -> None:
 
 @pytest.mark.parametrize(
     ("command", "phase"),
-    [("analyze", 5), ("export", 6)],
+    [("export", 6)],
 )
 def test_future_phase_commands_are_explicit(command: str, phase: int) -> None:
     """Scaffold commands fail clearly until their implementation phase."""

@@ -15,6 +15,7 @@ import typer
 from pydantic import ValidationError
 from sqlalchemy.exc import SQLAlchemyError
 
+from tracker.analysis.runner import analyze_frame, load_observations, write_analysis
 from tracker.config import ScrapeSettings
 from tracker.scraping.base import ScrapeFilters
 from tracker.scraping.http import AccessBlockedError, PoliteClient
@@ -252,9 +253,32 @@ def recover_run(
 
 
 @app.command()
-def analyze() -> None:
-    """Analyze stored price observations."""
-    _future_phase("analyze", 5)
+def analyze(
+    database: Annotated[
+        Path, typer.Option(help="Existing normalized database.")
+    ] = Path("data/tracker.sqlite3"),
+    output: Annotated[
+        Path | None,
+        typer.Option(help="New private output directory; never overwritten."),
+    ] = None,
+) -> None:
+    """Analyze committed observations without modifying the source database."""
+    stamp = _now()
+    destination = output or Path("data/analysis") / f"{stamp:%Y%m%dT%H%M%S%fZ}"
+    try:
+        report = analyze_frame(load_observations(database), generated_at=stamp)
+        saved = write_analysis(report, destination)
+    except (OSError, sqlite3.Error, ValueError) as exc:
+        typer.echo(f"Analysis failed ({type(exc).__name__}): {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Private analysis saved: {saved}")
+    typer.echo(f"Observations: {report.observations}; listings: {report.listings}")
+    for name in ("index", "drops", "seasonality", "drivers"):
+        result = getattr(report, name)
+        typer.echo(
+            f"{name}: {result.status}"
+            + (f" — {result.reason}" if result.reason else "")
+        )
 
 
 @app.command(name="export")

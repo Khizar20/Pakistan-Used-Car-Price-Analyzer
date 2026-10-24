@@ -270,3 +270,19 @@ reject unknown categories and numeric extrapolation. The reported range uses
 it is not a calibrated guarantee. The point estimate is a conditional median,
 without a retransformation correction. Twenty reference cars test exact formula
 parity. No historical fair-value buckets are inferred from in-sample predictions.
+
+## 2026-10-25: Read-only analysis and private result bundles
+
+Analysis opens existing schema-version-1 SQLite databases in URI read-only mode
+and reads committed success/partial observations in a consistent transaction.
+It does not initialize or migrate storage. Decode and validate JSON list fields
+before passing observations to pure analysis functions. The attribute-history
+limitation is explicit: current listing attributes join historical price snapshots.
+For seasonal decomposition prefer the supported adjusted index, then matched
+cohorts; do not substitute an unsupported changing-composition raw median series.
+
+Write all four typed results and provenance together to one finite JSON file in a
+new private directory; refuse any existing output directory. Insufficient data is
+a valid result, not a CLI failure. Report it without creating findings. Bundles
+include internal IDs, are ignored by Git and are separate from the Phase 6 public
+export contract. Make enforces at least 90% coverage over the analysis package.

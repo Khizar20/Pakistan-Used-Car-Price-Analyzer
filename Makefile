@@ -37,6 +37,7 @@ test:
 	$(PYTHON) -m pytest
 	$(PYTHON) -m coverage report --include="*/tracker/cleaning/*" --fail-under=95
 	$(PYTHON) -m coverage report --include="*/tracker/storage/*" --fail-under=90
+	$(PYTHON) -m coverage report --include="*/tracker/analysis/*" --fail-under=90
 
 lint:
 	$(PYTHON) -m ruff check .
