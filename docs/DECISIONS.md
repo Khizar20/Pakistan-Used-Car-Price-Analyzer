@@ -96,3 +96,16 @@ recommended cars. The parser may recover visible attributes only when a validate
 canonical listing URL, heading, and matching visible "Ad Ref #" establish primary
 identity. Unavailable fields remain null and are merged with that listing's search
 summary. Recommended cars' offers and event metadata are never used as fallbacks.
+
+## 2026-10-24: Phase 3 price quality policy
+
+Currency parsing uses exact decimal arithmetic, accepts common lakh/lac/crore
+spellings and Western/Indian comma grouping, and rejects negative values,
+fractional rupees, ambiguous prose, or values beyond signed SQLite integers.
+Prices are retained and flagged, not deleted. Defaults are a PKR 100,000 floor,
+the three placeholder values specified in the plan, and strictly greater than
+five raw MADs within an exact make/model/year cohort of at least five usable
+prices. Missing/junk prices do not define the cohort distribution. Small or
+incomplete cohorts skip the statistical check. When MAD is zero, any nonmedian
+price is flagged; a constant cohort is unflagged. These are configurable quality
+rules, not fair-value estimates. Source values remain available in raw staging.
