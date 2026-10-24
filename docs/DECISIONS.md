@@ -161,3 +161,20 @@ explicit UTC offsets. Database constraints enforce source identity, one snapshot
 per listing/UTC date, foreign keys, nonnegative counts and one running scrape.
 Quality flags are stored on listings and snapshots so historical price-quality
 context is retained. No historical normalized runs are invented from raw staging.
+
+## 2026-10-24: Daily snapshots and scoped disappearance semantics
+
+Normalized snapshots keep the first observation per listing per UTC day; same-day
+reruns may refresh listing attributes but never overwrite that day's snapshot.
+Run publication (listings, snapshots, activity state and successful run closure)
+is one transaction. Raw staging remains recoverable per-page progress. A run left
+running after a crash must be explicitly recovered before another run starts.
+
+Absences count only on distinct successful UTC days for the same source and exact
+ordered search-page scope. Failures and partial runs do not advance absence
+counters; a sighting resets them and reactivates a listing. A sighting under a
+different scope protects the listing from the old scope's absence counts. Three
+eligible missing runs mark a listing inactive and create a null-price inactive
+snapshot; an absent price is not carried forward as if freshly observed. Bounded
+page windows cannot prove a sale or removal: inactivity means disappearance from
+the tracked window and may simply mean that an ad moved beyond that window.
