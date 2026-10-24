@@ -225,3 +225,17 @@ being interpolated. Per-make series apply the same rule. Quality adjustment fits
 log prices on the common attributes and week dummies with listing-clustered errors,
 normalizing the first week to 100. Unsupported adjustment returns its own status
 while a supported raw index remains available. Effects are associations, not causes.
+
+## 2026-10-25: Observed drops, censoring and unknown fair-value buckets
+
+Drop shares use listings with at least one adjacent pair of usable prices. Unknown
+or flagged observations break price comparisons. Drop sizes are event-weighted
+medians; shares count each listing once. Event times are the first detection, not
+the unobserved exact moment of change. Survival starts at the first observation
+in the input window; drop risk requires an initially usable price and is censored
+at the last usable price. Disappearance uses the first inactive observation and
+otherwise censors at last observation, preserving the bounded-scope caveat.
+Kaplan-Meier curves use lifelines with confidence intervals and minimum segment
+sizes. Unreached median survival is null, never infinity in JSON. Pricing buckets
+require a supplied positive `fair_price_pkr`; without one they are unknown, not
+invented from the listing's own asking price or an in-sample prediction.
