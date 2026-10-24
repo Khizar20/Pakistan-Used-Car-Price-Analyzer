@@ -109,3 +109,15 @@ prices. Missing/junk prices do not define the cohort distribution. Small or
 incomplete cohorts skip the statistical check. When MAD is zero, any nonmedian
 price is flagged; a constant cohort is unflagged. These are configurable quality
 rules, not fair-value estimates. Source values remain available in raw staging.
+
+## 2026-10-24: Conservative attribute normalization
+
+Known make/model spellings use explicit, make-scoped alias maps rather than fuzzy
+matching. Unknown make/model/city labels retain a normalized title-case label;
+unknown closed categories (transmission, fuel, assembly) become null and are
+flagged by the batch cleaner. CVT, DCT and AGS map to automatic for the intended
+automatic-versus-manual analysis. Nationality alone does not establish assembly.
+Mileage accepts whole kilometres only. Engine size accepts cc or explicitly
+labelled litres, converted exactly to whole cc. Unsupported units and negative
+or fractional output values become null. Free labels preserve their spelling
+after Unicode and whitespace normalization; raw inputs are never overwritten.
