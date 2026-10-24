@@ -53,3 +53,14 @@ The initial ten models are ranked from the site's displayed approximate counts i
 "View Cars by Model". A global page budget is allocated round-robin across these
 model links, rather than fetching the budget for every model. The discovery page
 does not count toward this budget. Scope discovery fails visibly if markup changes.
+
+## 2026-10-24: Phase 2 writes raw staging tables, not Phase 4's schema
+
+Phase 2 requires local persistence before Phase 3 cleaning and Phase 4 normalized
+storage exist. `raw_vehicles` holds the latest validated source attributes and a
+successful-detail-fetch flag; `raw_observations` holds the latest observation per
+listing per UTC day. Whole pages are committed atomically. Source attributes are
+stored without full URLs; a URL hash is retained, and the current search-page URL
+is used when rehydrating a record. These tables preserve source strings for later
+cleaning and are not the final listings/snapshots schema. Inactivity detection,
+scheduled runs, and normalized migrations remain Phase 4 work.
