@@ -9,6 +9,8 @@ from typing import cast
 
 from bs4 import BeautifulSoup, Tag
 
+from tracker.models import PHOTO_URL
+
 SCHEMA_FIELDS = {
     "@context",
     "@type",
@@ -112,6 +114,12 @@ def sanitize_html(html: str) -> str:
             numeric["data-price"] = str(price.get("data-price", ""))
             saved.append(numeric)
         body.append(saved)
+        for photo in card.select("img[src]"):
+            value = str(photo.get("src", ""))
+            if PHOTO_URL.fullmatch(value):
+                image = output.new_tag("img", src=value)
+                saved.append(image)
+                break
     # Detail schema can include related cars: preserve all, match canonical later.
     for node in source.select('script[type="application/ld+json"]'):
         data = load_object(node.get_text())
@@ -133,7 +141,9 @@ def sanitize_html(html: str) -> str:
     for element in list(output.find_all(True)):
         if not isinstance(element, Tag):
             continue
-        if element.name == "img":
+        if element.name == "img" and not PHOTO_URL.fullmatch(
+            str(element.get("src", ""))
+        ):
             element.decompose()
             continue
         element.attrs = {
@@ -149,6 +159,7 @@ def sanitize_html(html: str) -> str:
                 "data-listing-id",
                 "data-ga4-event",
                 "data-price",
+                "src",
             }
         }
     # Parse-only documents are deliberately not rendered as pages.

@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup, Tag
 from bs4.element import PageElement
 from pydantic import ValidationError
 
-from tracker.models import LISTING_URL, RawListing
+from tracker.models import LISTING_URL, PHOTO_URL, RawListing
 from tracker.scraping.base import ScrapeFilters
 from tracker.scraping.markup import load_object, object_dict
 
@@ -137,6 +137,14 @@ def _record(
         if detail
         else "featured-listing" in node.get_attribute_list("class"),
         "has_photos_count": _integer(photo_text),
+        "photo": next(
+            (
+                str(photo.get("src"))
+                for photo in node.select("img[src]")
+                if PHOTO_URL.fullmatch(str(photo.get("src", "")))
+            ),
+            None,
+        ),
     }
     for field in (
         "make",

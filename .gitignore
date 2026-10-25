@@ -15,6 +15,7 @@ data/*.sqlite3
 *.db-*
 data/backups/
 data/analysis/
+data/daily/
 data/*.log
 data/*.lock
 node_modules/

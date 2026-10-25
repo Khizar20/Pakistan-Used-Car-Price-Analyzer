@@ -140,7 +140,7 @@ class PoliteClient:
             )
         return f"{parts.scheme}://{parts.netloc}"
 
-    def _request(self, url: str) -> httpx.Response:
+    def _request(self, url: str, *, max_bytes: int | None = None) -> httpx.Response:
         origin = self._origin(url)
         for attempt in range(self.retries + 1):
             if origin in self._last:
@@ -149,7 +149,21 @@ class PoliteClient:
                 if wait > 0:
                     self.sleep(wait)
             self._last[origin] = self.clock()
-            response = self._client.get(url)
+            if max_bytes is None:
+                response = self._client.get(url)
+            else:
+                with self._client.stream("GET", url) as streamed:
+                    body = bytearray()
+                    for chunk in streamed.iter_bytes():
+                        body.extend(chunk)
+                        if len(body) > max_bytes:
+                            raise ValueError("Thumbnail exceeds download limit")
+                    response = httpx.Response(
+                        streamed.status_code,
+                        headers=streamed.headers,
+                        content=bytes(body),
+                        request=streamed.request,
+                    )
             if response.status_code not in {429, 500, 502, 503, 504}:
                 return response
             if attempt == self.retries:
@@ -191,6 +205,25 @@ class PoliteClient:
             raise AccessBlockedError(
                 "robots.txt disallows this page; collection stopped."
             )
+
+    def get_photo(self, url: str) -> bytes:
+        """Download an allowlisted thumbnail with robots, throttling and size limits."""
+        from tracker.models import PHOTO_URL
+
+        if not PHOTO_URL.fullmatch(url):
+            raise ValueError("Only observed source thumbnails are supported")
+        self._check_robots(url)
+        response = self._request(url, max_bytes=2_000_000)
+        if response.status_code in {401, 403} or response.is_redirect:
+            raise AccessBlockedError("Photo access denied; collection stopped.")
+        response.raise_for_status()
+        if response.headers.get("content-type", "").split(";")[0] not in {
+            "image/webp",
+            "image/jpeg",
+            "image/png",
+        }:
+            raise ValueError("Expected a vehicle thumbnail image")
+        return response.content
 
     def get(self, url: str) -> str:
         """Fetch a permitted page or reuse its same-day, URL-keyed cache."""

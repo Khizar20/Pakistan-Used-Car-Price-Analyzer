@@ -11,6 +11,9 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 LISTING_URL = re.compile(
     r"https://www\.pakwheels\.com/used-cars/[a-z0-9-]+-for-sale-in-[a-z0-9-]+-(\d+)$"
 )
+PHOTO_URL = re.compile(
+    r"https://cache[12]\.pakwheels\.com/ad_pictures/\d+/tn_[A-Za-z0-9_-]+\.(?:webp|jpe?g|png)$"
+)
 
 
 class RawListing(BaseModel):
@@ -40,6 +43,14 @@ class RawListing(BaseModel):
     is_featured: bool | None = None
     has_photos_count: int | None = Field(default=None, ge=0)
     features: list[str] | None = None
+    photo: str | None = None
+
+    @field_validator("photo")
+    @classmethod
+    def validate_photo(cls, value: str | None) -> str | None:
+        if value is not None and not PHOTO_URL.fullmatch(value):
+            raise ValueError("Expected an observed PakWheels vehicle thumbnail")
+        return value
 
     @field_validator("url")
     @classmethod

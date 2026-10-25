@@ -17,7 +17,10 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from tracker.analysis.runner import analyze_frame, load_observations, write_analysis
 from tracker.config import ScrapeSettings
+from tracker.daily import DailySettings, refresh
+from tracker.export.schema import SCHEMA_VERSION as EXPORT_VERSION
 from tracker.export.writer import build_exports, write_exports
+from tracker.photos import collect_photos, publish_photo
 from tracker.scraping.base import ScrapeFilters
 from tracker.scraping.http import AccessBlockedError, PoliteClient
 from tracker.scraping.markup import sanitize_html
@@ -57,7 +60,7 @@ def scrape(
     ] = Path("data/tracker.sqlite3"),
     cache_dir: Annotated[
         Path, typer.Option(help="Same-day vehicle-only HTML cache.")
-    ] = Path("raw/cache/v2"),
+    ] = Path("raw/cache/v3"),
     max_new_details: Annotated[
         int | None,
         typer.Option(
@@ -299,8 +302,61 @@ def export_data(
             err=True,
         )
         raise typer.Exit(code=1) from exc
-    typer.echo(f"Exported 8 public JSON files to {output}; schema version 1.0.0.")
+    typer.echo(
+        f"Exported 8 public JSON files to {output}; schema version {EXPORT_VERSION}."
+    )
     typer.echo(f"Generated {len(saved) - 8} contract artifacts in {types_directory}.")
+
+
+@app.command(name="refresh")
+def daily_refresh(
+    config: Annotated[Path, typer.Option(help="Private daily settings JSON.")],
+    force: Annotated[
+        bool, typer.Option(help="Repeat even after today's success.")
+    ] = False,
+) -> None:
+    """Back up, collect four cities, then refresh the local dashboard exports."""
+    try:
+        settings = DailySettings.model_validate_json(
+            config.read_text(encoding="utf-8-sig")
+        )
+        result = refresh(Path.cwd(), settings, force=force)
+    except Exception as exc:
+        typer.echo(
+            f"Daily refresh failed ({type(exc).__name__}); "
+            "see data/daily/status.json and tracker status.",
+            err=True,
+        )
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Daily refresh: {result}.")
+
+
+@app.command(name="photos")
+def photo_collection(
+    contact_email: Annotated[str, typer.Option(envvar="TRACKER_CONTACT_EMAIL")],
+    limit: Annotated[int, typer.Option(min=1, max=30)] = 12,
+) -> None:
+    """Collect source-permitted thumbnails into private raw/photos for visual review."""
+    try:
+        with PoliteClient(
+            contact_email=contact_email, cache_dir=Path("raw/cache/v3")
+        ) as client:
+            count = collect_photos(Path.cwd(), client, limit=limit)
+    except Exception as exc:
+        typer.echo(f"Photo collection stopped ({type(exc).__name__}).", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Queued {count} model photos for private visual review.")
+
+
+@app.command(name="approve-photo")
+def approve_photo(digest: Annotated[str, typer.Argument()]) -> None:
+    """Publish after checking for contact details, people and registration plates."""
+    try:
+        filename = publish_photo(Path.cwd(), digest)
+    except Exception as exc:
+        typer.echo(f"Photo approval failed ({type(exc).__name__}).", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Published reviewed model reference: {filename}")
 
 
 if __name__ == "__main__":

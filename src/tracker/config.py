@@ -13,4 +13,4 @@ class ScrapeSettings(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     contact_email: str = Field(pattern=r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
     database: Path = Path("data/tracker.sqlite3")
-    cache_dir: Path = Path("raw/cache/v2")
+    cache_dir: Path = Path("raw/cache/v3")

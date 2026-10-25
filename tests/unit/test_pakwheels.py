@@ -67,6 +67,7 @@ def test_exact_list_records(list_html: str) -> None:
         "is_featured": True,
         "has_photos_count": 14,
         "features": None,
+        "photo": None,
     }
     assert (second.make, second.model, second.price_pkr, second.fuel_type) == (
         "Suzuki",
