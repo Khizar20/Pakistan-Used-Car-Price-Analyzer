@@ -325,3 +325,28 @@ from coefficient term order after serialization. The shared design evaluator now
 builds named columns and selects the explicit ordered terms, rejecting mismatches.
 A failing-then-fixed regression and independent 20-car public-contract prediction
 test cover this case. Object key order is never part of the prediction contract.
+
+## 2026-10-25: Dashboard implementation follows the completed design handoff
+
+Complete the Phase 7 handoff, canonical tokens and contrast gate before building
+the Phase 8 React frontend. Use hash routes and a relative Vite asset base for
+static project hosting. The six pages use the actual public bundle, never substitute
+synthetic observations, and explain unsupported estimates. Model-specific raw
+indexes reproduce matched links from exported cohorts; adjusted filtering remains
+limited to the all-model series instead of implying unavailable model estimates.
+
+Generate standalone draft-2020-12 validators from the public schemas before dev,
+types, tests and builds; check complete bundle identity before rendering. Keep failed
+loads retryable. Self-host the variable font; defer chart code and offscreen plots,
+reserve their dimensions, preserve keyboard focus, and contain failed chunk downloads.
+Use actual confidence bounds, stepwise Kaplan-Meier curves and a residual scatterplot.
+Portable Fair Price evaluation follows explicit terms, bounds and exported defaults.
+
+All default unit/component tests remain offline. Twenty synthetic reference cars
+are checked in Python and TypeScript. Production browser checks include real and
+supported fixtures, all six pages, both themes, 360px, axe, keyboard use, storage
+failure, retry, mixed refreshes, chart-download failure and visual comparisons.
+Windows browser CI matches the screenshot platform; Linux CI runs the combined
+Python/frontend gate. Performance audits use a compressed local static build and
+default Lighthouse mobile simulation. Pin the isolated Lighthouse/Node audit tools
+separately so the app remains usable on the existing Node 20.19 installation.

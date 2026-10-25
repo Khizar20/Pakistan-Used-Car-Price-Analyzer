@@ -1,0 +1,26 @@
+{
+  "bundle_id": "e607458c335404dee0a10cf0805941235fb35a86f75f1ad90c3867210b1b8e52",
+  "data": {
+    "caveats": [
+      "Asking prices are not transaction prices; associations are not causal effects.",
+      "Latest listing attributes are joined to historical prices; attribute history was not collected and is not reconstructed.",
+      "Disappearance means absence from a bounded collection scope, not a proven sale.",
+      "Selected pages and changing scopes can bias composition and observed volume.",
+      "Fair-value survival buckets require an independent supplied fair_price_pkr; database observations have no such reference and remain unknown.",
+      "Posting dates are unavailable in normalized storage; volume uses first observation.",
+      "Run count includes published runs represented by observations only.",
+      "Listing hashes are database-local pseudonyms; hashing is not proof of anonymization.",
+      "Public samples contain at most 100 recent drop events; residuals at most 200 cars.",
+      "Fair-price estimates are conditional medians with approximate residual ranges."
+    ],
+    "date_end": "2025-02-10",
+    "date_start": "2025-01-06",
+    "listing_count": 240,
+    "observation_count": 1440,
+    "run_count": 0,
+    "scope_count": 0,
+    "seasonal_series_basis": "quality_adjusted_index"
+  },
+  "generated_at": "2026-10-25T00:00:00Z",
+  "schema_version": "1.0.0"
+}

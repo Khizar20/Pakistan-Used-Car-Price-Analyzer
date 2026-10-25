@@ -1,0 +1,1940 @@
+{
+  "bundle_id": "e607458c335404dee0a10cf0805941235fb35a86f75f1ad90c3867210b1b8e52",
+  "data": {
+    "baseline_metrics": {
+      "mae_pkr": 423113.0575360488,
+      "mape_percent": 31.821045404010366,
+      "r_squared": -0.033860610032103944
+    },
+    "boosting_metrics": {
+      "mae_pkr": 134252.63835772726,
+      "mape_percent": 9.33280054035651,
+      "r_squared": 0.864207486506777
+    },
+    "coefficients": [
+      {
+        "coefficient": 14.202627743639042,
+        "effect_percent": null,
+        "lower": 14.183108627816766,
+        "lower_percent": null,
+        "term": "intercept",
+        "upper": 14.222146859461317,
+        "upper_percent": null
+      },
+      {
+        "coefficient": 0.05974550581426076,
+        "effect_percent": 6.156634970127964,
+        "lower": 0.05947179823908377,
+        "lower_percent": 6.127583071025141,
+        "term": "model_year",
+        "upper": 0.06001921338943775,
+        "upper_percent": 6.185694822043968
+      },
+      {
+        "coefficient": -0.12024598206520565,
+        "effect_percent": -11.329770297321357,
+        "lower": -0.12188803330367416,
+        "lower_percent": -11.475251881023695,
+        "term": "log_mileage",
+        "upper": -0.11860393082673713,
+        "upper_percent": -11.184049629163587
+      },
+      {
+        "coefficient": 0.2995098398893594,
+        "effect_percent": 34.91973227635107,
+        "lower": 0.2966149030592248,
+        "lower_percent": 34.52971298725945,
+        "term": "engine_litres",
+        "upper": 0.30240477671949406,
+        "upper_percent": 35.31088228253476
+      },
+      {
+        "coefficient": -0.0994139566756771,
+        "effect_percent": -9.463215262349705,
+        "lower": -0.1020222707437934,
+        "lower_percent": -9.69905592469629,
+        "term": "make_model=Toyota / Corolla",
+        "upper": -0.09680564260756079,
+        "upper_percent": -9.226758650540068
+      },
+      {
+        "coefficient": -0.14951299819201225,
+        "effect_percent": -13.887275515031982,
+        "lower": -0.15215579803587814,
+        "lower_percent": -14.114553752127643,
+        "term": "transmission=manual",
+        "upper": -0.14687019834814635,
+        "upper_percent": -13.659395832647112
+      },
+      {
+        "coefficient": -0.07766152498522394,
+        "effect_percent": -7.47224431181106,
+        "lower": -0.08022485596516343,
+        "lower_percent": -7.7091198495662265,
+        "term": "city=Lahore",
+        "upper": -0.07509819400528445,
+        "upper_percent": -7.2347608047712235
+      },
+      {
+        "coefficient": -0.0690143826861975,
+        "effect_percent": -6.668674357002308,
+        "lower": -0.07159073087915856,
+        "lower_percent": -6.908818868398992,
+        "term": "assembly=local",
+        "upper": -0.06643803449323644,
+        "upper_percent": -6.427910352054751
+      },
+      {
+        "coefficient": -0.033849204225950835,
+        "effect_percent": -3.3282729474113903,
+        "lower": -0.036465382237195934,
+        "lower_percent": -3.5808528529750747,
+        "term": "seller_type=individual",
+        "upper": -0.03123302621470574,
+        "upper_percent": -3.075031382721047
+      },
+      {
+        "coefficient": 0.050553093079156564,
+        "effect_percent": 5.1852707971594265,
+        "lower": 0.04790305992780949,
+        "lower_percent": 4.906895357497031,
+        "term": "feature:ABS=1",
+        "upper": 0.05320312623050364,
+        "upper_percent": 5.464384919299681
+      }
+    ],
+    "dependence": {
+      "age": [
+        {
+          "price_pkr": 1872207.683092828,
+          "x": 2.0
+        },
+        {
+          "price_pkr": 1857743.0210745344,
+          "x": 2.789473684210634
+        },
+        {
+          "price_pkr": 1837410.257437936,
+          "x": 3.5789473684210407
+        },
+        {
+          "price_pkr": 1837410.257437936,
+          "x": 4.368421052631675
+        },
+        {
+          "price_pkr": 1798766.7477930617,
+          "x": 5.157894736842081
+        },
+        {
+          "price_pkr": 1725209.1111483306,
+          "x": 5.947368421052715
+        },
+        {
+          "price_pkr": 1589849.3626743206,
+          "x": 6.736842105263122
+        },
+        {
+          "price_pkr": 1421349.4568449273,
+          "x": 7.526315789473756
+        },
+        {
+          "price_pkr": 1421349.4568449273,
+          "x": 8.315789473684163
+        },
+        {
+          "price_pkr": 1340244.6472907516,
+          "x": 9.105263157894797
+        },
+        {
+          "price_pkr": 1340244.6472907516,
+          "x": 9.894736842105203
+        },
+        {
+          "price_pkr": 1144732.2934033948,
+          "x": 10.684210526315837
+        },
+        {
+          "price_pkr": 1144732.2934033948,
+          "x": 11.473684210526244
+        },
+        {
+          "price_pkr": 1123015.816111247,
+          "x": 12.263157894736878
+        },
+        {
+          "price_pkr": 1101528.280541849,
+          "x": 13.052631578947285
+        },
+        {
+          "price_pkr": 1031790.0404945638,
+          "x": 13.842105263157919
+        },
+        {
+          "price_pkr": 948903.2963551143,
+          "x": 14.631578947368325
+        },
+        {
+          "price_pkr": 948903.2963551143,
+          "x": 15.42105263157896
+        },
+        {
+          "price_pkr": 933124.9484754144,
+          "x": 16.210526315789366
+        },
+        {
+          "price_pkr": 922440.575194314,
+          "x": 17.0
+        }
+      ],
+      "mileage_km": [
+        {
+          "price_pkr": 1538827.7713471365,
+          "x": 5243.0
+        },
+        {
+          "price_pkr": 1538827.7713471365,
+          "x": 12860.947368421053
+        },
+        {
+          "price_pkr": 1512211.4617829632,
+          "x": 20478.894736842107
+        },
+        {
+          "price_pkr": 1504079.1011963766,
+          "x": 28096.842105263157
+        },
+        {
+          "price_pkr": 1504079.1011963766,
+          "x": 35714.78947368421
+        },
+        {
+          "price_pkr": 1423854.9751481854,
+          "x": 43332.73684210526
+        },
+        {
+          "price_pkr": 1414975.299386246,
+          "x": 50950.68421052631
+        },
+        {
+          "price_pkr": 1355773.027279495,
+          "x": 58568.63157894737
+        },
+        {
+          "price_pkr": 1344466.9801134912,
+          "x": 66186.57894736843
+        },
+        {
+          "price_pkr": 1343218.1029495099,
+          "x": 73804.52631578947
+        },
+        {
+          "price_pkr": 1339227.0493336532,
+          "x": 81422.47368421052
+        },
+        {
+          "price_pkr": 1339227.0493336532,
+          "x": 89040.42105263157
+        },
+        {
+          "price_pkr": 1330663.9042266547,
+          "x": 96658.36842105263
+        },
+        {
+          "price_pkr": 1330663.9042266547,
+          "x": 104276.31578947368
+        },
+        {
+          "price_pkr": 1323367.8344567125,
+          "x": 111894.26315789473
+        },
+        {
+          "price_pkr": 1323367.8344567125,
+          "x": 119512.21052631579
+        },
+        {
+          "price_pkr": 1323367.8344567125,
+          "x": 127130.15789473684
+        },
+        {
+          "price_pkr": 1323367.8344567125,
+          "x": 134748.1052631579
+        },
+        {
+          "price_pkr": 1323367.8344567125,
+          "x": 142366.05263157893
+        },
+        {
+          "price_pkr": 1323367.8344567125,
+          "x": 149984.0
+        }
+      ]
+    },
+    "diagnostics": [
+      {
+        "actual_pkr": 1260380.68308294,
+        "fitted_pkr": 1278567.4736235812,
+        "listing_hash": "00f692bfc89052f9f5bf4b2ddfaced097c83b39ee1375e7328fc11676c07072a",
+        "make": "Honda",
+        "residual_log": -0.01432648520898113,
+        "residual_pkr": -18186.790540641174
+      },
+      {
+        "actual_pkr": 858631.3065320465,
+        "fitted_pkr": 865697.1065617846,
+        "listing_hash": "03182abae46ce80df668b60116d267c41501d630b4599878d9c0a920c8922f79",
+        "make": "Toyota",
+        "residual_log": -0.008195468478422872,
+        "residual_pkr": -7065.800029738108
+      },
+      {
+        "actual_pkr": 1205293.9314837796,
+        "fitted_pkr": 1201254.031007197,
+        "listing_hash": "03644717d3eaa4fee6e345542cec22dad693630c2f991c329a4d916c8bc8b2bd",
+        "make": "Honda",
+        "residual_log": 0.0033574267660297923,
+        "residual_pkr": 4039.900476582581
+      },
+      {
+        "actual_pkr": 1922010.9652938028,
+        "fitted_pkr": 1908228.1190132736,
+        "listing_hash": "03995f493fe9b182e59e237d071de6ad812cd3744b0a0df5dc852ecf1f18de9e",
+        "make": "Honda",
+        "residual_log": 0.007196890568751504,
+        "residual_pkr": 13782.846280529164
+      },
+      {
+        "actual_pkr": 890052.5890815026,
+        "fitted_pkr": 913639.5574763323,
+        "listing_hash": "085492f482a2f390f1a1eef8493051cd23fff01932a1efbf9a2611c40303ba82",
+        "make": "Toyota",
+        "residual_log": -0.02615558659185167,
+        "residual_pkr": -23586.96839482966
+      },
+      {
+        "actual_pkr": 1532440.699326832,
+        "fitted_pkr": 1547160.952893815,
+        "listing_hash": "08602648e0ae0e372371c0a3cb46ddc77dced93f51f913e7d0d228ffb8cf2fe9",
+        "make": "Toyota",
+        "residual_log": -0.00955991542972963,
+        "residual_pkr": -14720.253566982923
+      },
+      {
+        "actual_pkr": 1462716.7131030934,
+        "fitted_pkr": 1479046.5112026571,
+        "listing_hash": "0882e5957b26d0887857f811abcbd45c67e50c732e20218f5b3f12422d5b5802",
+        "make": "Honda",
+        "residual_log": -0.011102161925077013,
+        "residual_pkr": -16329.79809956369
+      },
+      {
+        "actual_pkr": 1930676.2015745647,
+        "fitted_pkr": 1936233.1572529497,
+        "listing_hash": "089e55d5ac4d87989ba04f03a9c344066845d9e143307a3d025e462875bef9ff",
+        "make": "Honda",
+        "residual_log": -0.002874109004375439,
+        "residual_pkr": -5556.955678384984
+      },
+      {
+        "actual_pkr": 757496.0235118018,
+        "fitted_pkr": 767331.1262152997,
+        "listing_hash": "0a682909ef343db49c319ab2916bd57cd72409642673dc14e19de4cee875fa8e",
+        "make": "Honda",
+        "residual_log": -0.012900136380769967,
+        "residual_pkr": -9835.102703497862
+      },
+      {
+        "actual_pkr": 1083723.1304241174,
+        "fitted_pkr": 1067833.0625575602,
+        "listing_hash": "0bf33337a7da707c36c949e66b6da02e46bfd342ab2a5d44299a1cb426476611",
+        "make": "Toyota",
+        "residual_log": 0.014771035801798421,
+        "residual_pkr": 15890.067866557278
+      },
+      {
+        "actual_pkr": 1230238.2478949486,
+        "fitted_pkr": 1230892.7597326597,
+        "listing_hash": "0e99854bcd8255ca79aac50a8aa053f05149ac950b571a5838777deb1d4920aa",
+        "make": "Toyota",
+        "residual_log": -0.0005318789216115967,
+        "residual_pkr": -654.5118377110921
+      },
+      {
+        "actual_pkr": 2104377.9034044375,
+        "fitted_pkr": 2082936.5513214935,
+        "listing_hash": "0ea1ffe17fb4350881501d75609d8a1eb28d61f4fe44f0aa8ccf88e02ac7fbf2",
+        "make": "Honda",
+        "residual_log": 0.010241189055827493,
+        "residual_pkr": 21441.35208294401
+      },
+      {
+        "actual_pkr": 566832.6331611825,
+        "fitted_pkr": 573621.0270595603,
+        "listing_hash": "0fb8b20857ade45c763008f60679e5c75c46d50b420b8513f3338f8e6db0542d",
+        "make": "Toyota",
+        "residual_log": -0.011904866123378667,
+        "residual_pkr": -6788.393898377777
+      },
+      {
+        "actual_pkr": 1130704.8636215571,
+        "fitted_pkr": 1112767.870241304,
+        "listing_hash": "101cc9a1560548ade403f12537bb6a8ad78e1fb44d79eade671046ec681bf283",
+        "make": "Honda",
+        "residual_log": 0.015990723060843547,
+        "residual_pkr": 17936.993380253203
+      },
+      {
+        "actual_pkr": 1033849.9259129943,
+        "fitted_pkr": 1015834.7720242179,
+        "listing_hash": "10b04b802431c328d8a6732b7afebe5225246ee3b815455fd57552ae154795ab",
+        "make": "Toyota",
+        "residual_log": 0.017578916232528365,
+        "residual_pkr": 18015.153888776433
+      },
+      {
+        "actual_pkr": 2467321.461781165,
+        "fitted_pkr": 2505583.6170797436,
+        "listing_hash": "114b59eafaa8b378b6204023e2edb11ddba1826c694bfca7db9fed1481880691",
+        "make": "Toyota",
+        "residual_log": -0.015388554477894266,
+        "residual_pkr": -38262.15529857855
+      },
+      {
+        "actual_pkr": 1534956.1840018858,
+        "fitted_pkr": 1530768.9845405992,
+        "listing_hash": "1346e37cfd46d507e753bbed7613eb5ce48775665551f5f8714ba06dddfefe3f",
+        "make": "Toyota",
+        "residual_log": 0.002731622591554213,
+        "residual_pkr": 4187.199461286655
+      },
+      {
+        "actual_pkr": 925170.2264271186,
+        "fitted_pkr": 930235.4848089552,
+        "listing_hash": "1380fda75a699c2a8ba09f344a76dc221b5b4e6c3912fc9f626ebbe432329661",
+        "make": "Toyota",
+        "residual_log": -0.005460014416085457,
+        "residual_pkr": -5065.258381836582
+      },
+      {
+        "actual_pkr": 2170992.004858486,
+        "fitted_pkr": 2167918.9014236936,
+        "listing_hash": "13ed7bce6165dfd219253f19fb5667fc41b61e52b7f44af5af05e5cb40cf796d",
+        "make": "Honda",
+        "residual_log": 0.0014165324041145518,
+        "residual_pkr": 3073.103434792254
+      },
+      {
+        "actual_pkr": 2605853.5597245023,
+        "fitted_pkr": 2601979.789620221,
+        "listing_hash": "159c603931919a286106ae2ede1d3d7e89e4efaacccc84895aa45c4dfbbfd449",
+        "make": "Honda",
+        "residual_log": 0.0014876708062133454,
+        "residual_pkr": 3873.7701042811386
+      },
+      {
+        "actual_pkr": 1672035.2262146836,
+        "fitted_pkr": 1710751.4136488214,
+        "listing_hash": "15f6f13a653a81c20d9db65dcaef0c657821abbc61538750d33cd5315af0330b",
+        "make": "Honda",
+        "residual_log": -0.022891114432125607,
+        "residual_pkr": -38716.1874341378
+      },
+      {
+        "actual_pkr": 555921.8566837559,
+        "fitted_pkr": 556679.8019140972,
+        "listing_hash": "17050860b5d71f0d2e6be371dd10385e5947b9ead46c1e78fb489ed4175e5356",
+        "make": "Toyota",
+        "residual_log": -0.0013624738768526906,
+        "residual_pkr": -757.9452303412836
+      },
+      {
+        "actual_pkr": 1883916.4416021865,
+        "fitted_pkr": 1872677.5857852737,
+        "listing_hash": "18ba019e2d0198460705355c52f85ae0e3bf981f99248a6e8c2708fd17ddfb8e",
+        "make": "Toyota",
+        "residual_log": 0.005983552796458123,
+        "residual_pkr": 11238.855816912837
+      },
+      {
+        "actual_pkr": 1271375.474087071,
+        "fitted_pkr": 1275874.27446341,
+        "listing_hash": "19948fc757ebb23e0094cb01699844734e33a0e7bd4acf7f49a005d11b010218",
+        "make": "Honda",
+        "residual_log": -0.0035322842265764452,
+        "residual_pkr": -4498.800376339117
+      },
+      {
+        "actual_pkr": 1711884.6257618694,
+        "fitted_pkr": 1698606.0667707932,
+        "listing_hash": "1abd93611a9ff9b1e7ca782079c1c8921a36b07678a91115e22c33f9640919b2",
+        "make": "Honda",
+        "residual_log": 0.0077869299669685995,
+        "residual_pkr": 13278.558991076192
+      },
+      {
+        "actual_pkr": 1098540.9063492531,
+        "fitted_pkr": 1087901.6235035902,
+        "listing_hash": "1b5272e9381f2a0cb0a8a73916a310a2439921a40fd1fd72d50eaccaf0b9dc89",
+        "make": "Toyota",
+        "residual_log": 0.009732125747273546,
+        "residual_pkr": 10639.282845662907
+      },
+      {
+        "actual_pkr": 1374366.0069599703,
+        "fitted_pkr": 1377640.7296339427,
+        "listing_hash": "1e27fa9d8dec9fd69a939173383bda914a0ecd85806d0392041286d84120a572",
+        "make": "Honda",
+        "residual_log": -0.002379880961809592,
+        "residual_pkr": -3274.72267397237
+      },
+      {
+        "actual_pkr": 1009659.2927190446,
+        "fitted_pkr": 1013139.2118454322,
+        "listing_hash": "2108c3700b8ac7175c3d24535fc402f666c2fc37e161de71910804b90e709554",
+        "make": "Toyota",
+        "residual_log": -0.0034407011391373657,
+        "residual_pkr": -3479.919126387569
+      },
+      {
+        "actual_pkr": 789456.4910539764,
+        "fitted_pkr": 793155.214822084,
+        "listing_hash": "212f51e938c8a255f2a686f32e2efa2766eff1aaeb77126613cd4a5f2966a46f",
+        "make": "Honda",
+        "residual_log": -0.004674210974924213,
+        "residual_pkr": -3698.723768107593
+      },
+      {
+        "actual_pkr": 1716764.0973460667,
+        "fitted_pkr": 1683926.0016169574,
+        "listing_hash": "213cce57e2316362eb16fa935960c59ae33daab5055b1225eaae71e4fef0b879",
+        "make": "Honda",
+        "residual_log": 0.019313207310592273,
+        "residual_pkr": 32838.095729109365
+      },
+      {
+        "actual_pkr": 1063919.6994954078,
+        "fitted_pkr": 1070933.8935441244,
+        "listing_hash": "221b02d3a6b1f3b9134f7a5a56464f412a413329fbe1be2e010dd49dbf45f37f",
+        "make": "Honda",
+        "residual_log": -0.006571147839801758,
+        "residual_pkr": -7014.194048716687
+      },
+      {
+        "actual_pkr": 1837477.1544805865,
+        "fitted_pkr": 1830553.2531111047,
+        "listing_hash": "226062e514b55457844b12b5cedf88274352c89ecd8360081fcf034e09b06c28",
+        "make": "Honda",
+        "residual_log": 0.0037752738247948956,
+        "residual_pkr": 6923.901369481813
+      },
+      {
+        "actual_pkr": 880589.3423736979,
+        "fitted_pkr": 886704.0581296497,
+        "listing_hash": "22b000f9407ef907260ceace052c8f83721c626efc4a624d51a3745237e2289c",
+        "make": "Toyota",
+        "residual_log": -0.006919892480116297,
+        "residual_pkr": -6114.715755951824
+      },
+      {
+        "actual_pkr": 757499.7121707001,
+        "fitted_pkr": 755175.3044032925,
+        "listing_hash": "2319c1057eff3473b61b86d6e6a2c96412fa5af9c961a56c8e68d07d2d36ebf9",
+        "make": "Honda",
+        "residual_log": 0.003073243851334358,
+        "residual_pkr": 2324.407767407596
+      },
+      {
+        "actual_pkr": 946120.1676021643,
+        "fitted_pkr": 934154.7903561107,
+        "listing_hash": "243a4f23ddaea702347c0e0511049055ded8a723bdab9097d311ac6f84fd3c85",
+        "make": "Honda",
+        "residual_log": 0.01272743511815288,
+        "residual_pkr": 11965.377246053657
+      },
+      {
+        "actual_pkr": 705597.3235586451,
+        "fitted_pkr": 718975.4008550616,
+        "listing_hash": "24a0538916f6019ddde762fea7357d82e56c989524671bc63fa18c4fba3a7c4a",
+        "make": "Honda",
+        "residual_log": -0.018782432595758323,
+        "residual_pkr": -13378.077296416508
+      },
+      {
+        "actual_pkr": 975079.0886197117,
+        "fitted_pkr": 966285.4566287899,
+        "listing_hash": "24f10825ae8b3725e7dac182f881868d90e1446f2d0a1e776999cf343cb479ee",
+        "make": "Toyota",
+        "residual_log": 0.009059289924723157,
+        "residual_pkr": 8793.6319909218
+      },
+      {
+        "actual_pkr": 1320326.4918717092,
+        "fitted_pkr": 1308296.0639198057,
+        "listing_hash": "2606362c85676ce5f3c2221b8f7a494237bb6f98aad859eb57cd31d3c878c101",
+        "make": "Honda",
+        "residual_log": 0.009153472356683151,
+        "residual_pkr": 12030.427951903548
+      },
+      {
+        "actual_pkr": 1199708.938947746,
+        "fitted_pkr": 1205261.2246530754,
+        "listing_hash": "26e11404a8f14209636e2dcb172c3475007ebae0f6291d18ca2e0f630597377f",
+        "make": "Toyota",
+        "residual_log": -0.004617350895980292,
+        "residual_pkr": -5552.285705329385
+      },
+      {
+        "actual_pkr": 1358030.6007784356,
+        "fitted_pkr": 1361840.6876048467,
+        "listing_hash": "28dd9afad1e120450e4c0be3c81a651c0a272c7570688b68f5dae7acbe2cbb5c",
+        "make": "Honda",
+        "residual_log": -0.0028016688399254133,
+        "residual_pkr": -3810.086826411076
+      },
+      {
+        "actual_pkr": 1446697.1227195254,
+        "fitted_pkr": 1469051.3599227336,
+        "listing_hash": "2a85a5ce091a5b687ce09fb7ca218d97350fb5f2748ac5f7fe1ffcffb340ad2b",
+        "make": "Honda",
+        "residual_log": -0.015333747293830384,
+        "residual_pkr": -22354.237203208264
+      },
+      {
+        "actual_pkr": 1639191.7610962214,
+        "fitted_pkr": 1642788.4704724466,
+        "listing_hash": "2ceb98fbfb86b3b5b7ec9a7524d430742a262e0b364408b0d9829edd261626c4",
+        "make": "Toyota",
+        "residual_log": -0.0021917931019198853,
+        "residual_pkr": -3596.709376225248
+      },
+      {
+        "actual_pkr": 2735770.558461484,
+        "fitted_pkr": 2764519.2530282545,
+        "listing_hash": "2d959a02b299b6999f6b20caaef4ecebccc3e2d524d246a9b173632c09801eb7",
+        "make": "Honda",
+        "residual_log": -0.010453615119113012,
+        "residual_pkr": -28748.694566770457
+      },
+      {
+        "actual_pkr": 1103694.633081942,
+        "fitted_pkr": 1107547.870995962,
+        "listing_hash": "2dff1d8e353154aff43abfad84db8123343917ae6fa65a8461d957f142033ec1",
+        "make": "Toyota",
+        "residual_log": -0.003485137253910816,
+        "residual_pkr": -3853.237914019963
+      },
+      {
+        "actual_pkr": 880112.89109821,
+        "fitted_pkr": 883323.2190209599,
+        "listing_hash": "2fdb2a8d4ba90f0f65a4927893a4fa0ba2d56064a88596443514bac1536ce51b",
+        "make": "Honda",
+        "residual_log": -0.0036409954983867413,
+        "residual_pkr": -3210.327922749915
+      },
+      {
+        "actual_pkr": 2013041.069863438,
+        "fitted_pkr": 2017051.3407656972,
+        "listing_hash": "30b5af82bea60e4705be1f7fcc396781c7e3b2c5be7481bee8806091c54a30d7",
+        "make": "Toyota",
+        "residual_log": -0.0019901639055834915,
+        "residual_pkr": -4010.2709022592753
+      },
+      {
+        "actual_pkr": 2232496.834483196,
+        "fitted_pkr": 2243642.14821243,
+        "listing_hash": "33565055a65606f32f97cf3f92702b3d7e4da0ab43aa4138fc51903ebb9478e2",
+        "make": "Honda",
+        "residual_log": -0.004979888607257639,
+        "residual_pkr": -11145.31372923404
+      },
+      {
+        "actual_pkr": 1988947.6063801963,
+        "fitted_pkr": 1994558.451196207,
+        "listing_hash": "345a969eaa3f433979da9a17cde2c2e65fbbe24063ba515f45426bcecbe2a244",
+        "make": "Toyota",
+        "residual_log": -0.0028170402883382307,
+        "residual_pkr": -5610.844816010678
+      },
+      {
+        "actual_pkr": 1423483.8865462886,
+        "fitted_pkr": 1422245.2050164652,
+        "listing_hash": "355895a41e471b3221174cb8571e218677009e79abd86edc818de3d94f78a39e",
+        "make": "Honda",
+        "residual_log": 0.0008705548337159877,
+        "residual_pkr": 1238.6815298234578
+      },
+      {
+        "actual_pkr": 1860501.1662747147,
+        "fitted_pkr": 1823401.39556255,
+        "listing_hash": "364a8715ab617293578770c9b7ee3761c278ef393611c5909752b81722fea272",
+        "make": "Honda",
+        "residual_log": 0.020142240134065386,
+        "residual_pkr": 37099.770712164696
+      },
+      {
+        "actual_pkr": 1153598.7001073323,
+        "fitted_pkr": 1138216.5124180194,
+        "listing_hash": "395a6ab0fe6e1b33da2f05cc03883943757ef303f4910cc63c97557258f984ab",
+        "make": "Honda",
+        "residual_log": 0.013423786168463282,
+        "residual_pkr": 15382.187689312967
+      },
+      {
+        "actual_pkr": 1229739.267562009,
+        "fitted_pkr": 1234649.5901037925,
+        "listing_hash": "39622c75f80ad512fc78b53a018dfacf4dcc1bc9e0989cc88bf6148a7203ed7a",
+        "make": "Honda",
+        "residual_log": -0.003985027788681772,
+        "residual_pkr": -4910.322541783564
+      },
+      {
+        "actual_pkr": 1924166.4927686676,
+        "fitted_pkr": 1907279.2609905326,
+        "listing_hash": "39c81240750a5a48814938c01a77dafe7f78b7c371cdfc04bf29081c8b9b36f7",
+        "make": "Honda",
+        "residual_log": 0.00881512735256958,
+        "residual_pkr": 16887.231778135058
+      },
+      {
+        "actual_pkr": 1947055.9781872563,
+        "fitted_pkr": 1974363.3933769106,
+        "listing_hash": "3b51391635ef5fe57377ef621a18e87fb34613cff00e057b2ac1719d4f404f72",
+        "make": "Honda",
+        "residual_log": -0.01392753695366622,
+        "residual_pkr": -27307.415189654334
+      },
+      {
+        "actual_pkr": 1598437.3271109224,
+        "fitted_pkr": 1591706.6479361209,
+        "listing_hash": "3ca4a00ab5cd81838c14b0ac0163d485153c0e48903a07371b0ffc0991cc248b",
+        "make": "Toyota",
+        "residual_log": 0.004219677365329244,
+        "residual_pkr": 6730.679174801568
+      },
+      {
+        "actual_pkr": 604967.1724801464,
+        "fitted_pkr": 603494.3486284531,
+        "listing_hash": "3e3b7e76e5bf7b361902d04ef4cbc21de3e18235b9afb131bc9bce060c862389",
+        "make": "Toyota",
+        "residual_log": 0.0024375200288951713,
+        "residual_pkr": 1472.8238516933052
+      },
+      {
+        "actual_pkr": 2170789.2050576457,
+        "fitted_pkr": 2161765.9713218207,
+        "listing_hash": "3eb9b90d4f13aea43477eb65d6ea9595217b523e344da48cf3bc3e6958235acf",
+        "make": "Toyota",
+        "residual_log": 0.004165323424406153,
+        "residual_pkr": 9023.233735824935
+      },
+      {
+        "actual_pkr": 676264.0866196293,
+        "fitted_pkr": 674700.9065341819,
+        "listing_hash": "3fd1a628e8657adecd3a0684e3abfa73ea92cf9dc6f06593285c8512b76fbf43",
+        "make": "Toyota",
+        "residual_log": 0.002314169191633347,
+        "residual_pkr": 1563.180085447384
+      },
+      {
+        "actual_pkr": 661299.0807298387,
+        "fitted_pkr": 663733.6602013324,
+        "listing_hash": "42041df9681182db641238d63c5b04c4c776b8e22e640d528c60964ae7465189",
+        "make": "Toyota",
+        "residual_log": -0.0036747502698732722,
+        "residual_pkr": -2434.579471493722
+      },
+      {
+        "actual_pkr": 1878169.3836323093,
+        "fitted_pkr": 1879701.3435675495,
+        "listing_hash": "44cb7fa267ce442a3787c66a96340917f1e83953f9706dfb3e39203fb45d78be",
+        "make": "Toyota",
+        "residual_log": -0.0008153340715093798,
+        "residual_pkr": -1531.9599352402147
+      },
+      {
+        "actual_pkr": 1263627.2818677064,
+        "fitted_pkr": 1278357.5853975099,
+        "listing_hash": "463caa36071d58efc235cb030825bb2617ef182d145fde7c233a26b6de441d81",
+        "make": "Honda",
+        "residual_log": -0.011589737297647718,
+        "residual_pkr": -14730.303529803408
+      },
+      {
+        "actual_pkr": 2077111.916299329,
+        "fitted_pkr": 2094831.3994596198,
+        "listing_hash": "46f876ce87114d36c9263c63dd6e02f009fd57a8c77a13b1d6a7ffaeb3b5cd08",
+        "make": "Honda",
+        "residual_log": -0.008494645478482046,
+        "residual_pkr": -17719.483160290867
+      },
+      {
+        "actual_pkr": 1604982.2603135395,
+        "fitted_pkr": 1617568.997217053,
+        "listing_hash": "48225b57acca799534fd5e4d99b5b7cb1a8b0b7cc7d777d5e492608c04601138",
+        "make": "Toyota",
+        "residual_log": -0.007811699429369575,
+        "residual_pkr": -12586.736903513549
+      },
+      {
+        "actual_pkr": 1747949.2450571847,
+        "fitted_pkr": 1770410.104518689,
+        "listing_hash": "4844d8c377f2e39b20c52274337a75e800d9c2de9275d285f19d0fff6f8b9a17",
+        "make": "Toyota",
+        "residual_log": -0.012767976412895534,
+        "residual_pkr": -22460.859461504268
+      },
+      {
+        "actual_pkr": 1307803.4019114205,
+        "fitted_pkr": 1310159.8232667998,
+        "listing_hash": "48adb43b6c864b3792eebcf17c8d15f02a293da084be6f758a63b24eb21533f9",
+        "make": "Toyota",
+        "residual_log": -0.0018001948759921009,
+        "residual_pkr": -2356.4213553792797
+      },
+      {
+        "actual_pkr": 864849.016348975,
+        "fitted_pkr": 861023.6938185357,
+        "listing_hash": "48fd2e554863403a387ad29196da46460fbccb4e56de9d7571e890358e474f8d",
+        "make": "Toyota",
+        "residual_log": 0.0044329211211450005,
+        "residual_pkr": 3825.3225304393563
+      },
+      {
+        "actual_pkr": 1204972.7034880982,
+        "fitted_pkr": 1204143.3943010971,
+        "listing_hash": "490e5a7031aa71e616b3e6b3be741028cd0679ca762208a3ed4f604169cc5093",
+        "make": "Honda",
+        "residual_log": 0.0006884759273492276,
+        "residual_pkr": 829.309187001083
+      },
+      {
+        "actual_pkr": 1888398.1593634356,
+        "fitted_pkr": 1876826.9957904094,
+        "listing_hash": "493854dd4ca2bd4c3f499cad40be9ab5e7cc03d0a6fe83968d09c4f5988d2e20",
+        "make": "Honda",
+        "residual_log": 0.006146352222668122,
+        "residual_pkr": 11571.163573026191
+      },
+      {
+        "actual_pkr": 1885498.722726553,
+        "fitted_pkr": 1880466.9997572058,
+        "listing_hash": "4977f588f70987f05810f8bdda7c5e91bdec76e2e006e6a666c7d18dcd267e34",
+        "make": "Toyota",
+        "residual_log": 0.0026722101762519327,
+        "residual_pkr": 5031.722969347145
+      },
+      {
+        "actual_pkr": 985841.1500952072,
+        "fitted_pkr": 998021.5696022565,
+        "listing_hash": "499858a08441d80f5876e24d7a85f9ed80444edcb6cde82f5cdcc28ad2fc86c7",
+        "make": "Honda",
+        "residual_log": -0.012279652662167339,
+        "residual_pkr": -12180.419507049373
+      },
+      {
+        "actual_pkr": 940993.8310405505,
+        "fitted_pkr": 935886.2453125078,
+        "listing_hash": "499f371235fd5fa1a0faaf7ed0baff7ceb695c68bc5abd1fa11cd78ff198df4e",
+        "make": "Toyota",
+        "residual_log": 0.005442647509170222,
+        "residual_pkr": 5107.585728042643
+      },
+      {
+        "actual_pkr": 1859600.7497002813,
+        "fitted_pkr": 1865214.5682277265,
+        "listing_hash": "4af9c289a42ec8c36b8f8076066834df15eee741f0d5e655039eb8dc75c4c969",
+        "make": "Honda",
+        "residual_log": -0.0030142824805157453,
+        "residual_pkr": -5613.818527445197
+      },
+      {
+        "actual_pkr": 796907.9650415913,
+        "fitted_pkr": 805376.4622085994,
+        "listing_hash": "4b8d86a9e10e00a381d33d7bf9d2249454092ce865ce2e6bdc6447183e1c3e3f",
+        "make": "Honda",
+        "residual_log": -0.010570627633104035,
+        "residual_pkr": -8468.497167008114
+      },
+      {
+        "actual_pkr": 1612488.3200378888,
+        "fitted_pkr": 1606866.3807928986,
+        "listing_hash": "4c2dabf1e7eef2ec709b425298b7117f64a4efd3e1a71ff22603b04943df0d85",
+        "make": "Toyota",
+        "residual_log": 0.0034925912067595433,
+        "residual_pkr": 5621.939244990237
+      },
+      {
+        "actual_pkr": 746892.7621389518,
+        "fitted_pkr": 744617.7692479448,
+        "listing_hash": "4c5461830a2d738240a51a41e8be21114b1fd55b1e436ef716a874ffff0b33d9",
+        "make": "Toyota",
+        "residual_log": 0.0030505914740927894,
+        "residual_pkr": 2274.9928910069866
+      },
+      {
+        "actual_pkr": 843449.1988007829,
+        "fitted_pkr": 845842.0501118363,
+        "listing_hash": "4e95e16f08565a596b3f4be07d79e8b6fc0a24531da8987def89569fb88e8227",
+        "make": "Honda",
+        "residual_log": -0.002832966681088675,
+        "residual_pkr": -2392.8513110533822
+      },
+      {
+        "actual_pkr": 1725171.8793364544,
+        "fitted_pkr": 1733000.0499429647,
+        "listing_hash": "5016d941edc20deb4ae2775a29f95c0f4f2571d9e2f8b713b381376a11724382",
+        "make": "Toyota",
+        "residual_log": -0.004527353837644929,
+        "residual_pkr": -7828.170606510248
+      },
+      {
+        "actual_pkr": 1457748.5938548485,
+        "fitted_pkr": 1460983.9812425633,
+        "listing_hash": "501f671ce6bdfd4b1b0150c6382e7b2f841f385c7b594e4e9708d4a3500cee1a",
+        "make": "Honda",
+        "residual_log": -0.002216981946535419,
+        "residual_pkr": -3235.3873877148144
+      },
+      {
+        "actual_pkr": 2837953.473632712,
+        "fitted_pkr": 2859942.8421827415,
+        "listing_hash": "514fcbe203d519e968e8ba14b81cc929525f9a1477ddf9679534e6f6e85e676d",
+        "make": "Toyota",
+        "residual_log": -0.007718454846608965,
+        "residual_pkr": -21989.368550029583
+      },
+      {
+        "actual_pkr": 1773032.329323223,
+        "fitted_pkr": 1751181.3291236488,
+        "listing_hash": "5314d61ab7c2958cf8c737bcd07fa9dddca576ad46b6ef921abd4cff18675f3a",
+        "make": "Honda",
+        "residual_log": 0.012400655766285143,
+        "residual_pkr": 21851.00019957428
+      },
+      {
+        "actual_pkr": 2499094.6423342507,
+        "fitted_pkr": 2515336.621162911,
+        "listing_hash": "5377dd83dd3ab164fc68ab9e42a5ed72c1d79adbc0bab2b0419b504b0bd08470",
+        "make": "Honda",
+        "residual_log": -0.0064781167697952535,
+        "residual_pkr": -16241.978828660212
+      },
+      {
+        "actual_pkr": 847568.9554994949,
+        "fitted_pkr": 837494.8836363815,
+        "listing_hash": "5605857131fde9a031bded6c6c9a2b0a2270276f16329061493140800e06556d",
+        "make": "Toyota",
+        "residual_log": 0.011957044776341604,
+        "residual_pkr": 10074.071863113437
+      },
+      {
+        "actual_pkr": 1510203.5523131257,
+        "fitted_pkr": 1501279.9161671586,
+        "listing_hash": "59282fef4bf6fad676795b5b5381e889364177985fc8c1b1611f5cff7808fb82",
+        "make": "Toyota",
+        "residual_log": 0.005926422879428011,
+        "residual_pkr": 8923.636145967059
+      },
+      {
+        "actual_pkr": 812733.2386735256,
+        "fitted_pkr": 811949.175960669,
+        "listing_hash": "597935d8c7996416d78e56b99890169d71db11fb171e0829ff2021ea30e00db6",
+        "make": "Toyota",
+        "residual_log": 0.0009651889706727896,
+        "residual_pkr": 784.0627128566848
+      },
+      {
+        "actual_pkr": 1022664.409874912,
+        "fitted_pkr": 1013561.9614796286,
+        "listing_hash": "59ca81339af27bb28246527212adc44f05db75297cae5933b194453d9ca3e517",
+        "make": "Toyota",
+        "residual_log": 0.008940566879971447,
+        "residual_pkr": 9102.448395283427
+      },
+      {
+        "actual_pkr": 1395911.5498232695,
+        "fitted_pkr": 1396637.4447140004,
+        "listing_hash": "5afdf4c35291bef068c107ad334fe409871cf4e7b3f31ec08c74acc79011d474",
+        "make": "Honda",
+        "residual_log": -0.0005198798004978023,
+        "residual_pkr": -725.8948907309677
+      },
+      {
+        "actual_pkr": 671820.7063353722,
+        "fitted_pkr": 668866.4043639231,
+        "listing_hash": "5b7b84c3fd3f1cdcddd1a905f109fc68093723b4328f7b7eb9dc11822f7f60ae",
+        "make": "Toyota",
+        "residual_log": 0.004407153212191857,
+        "residual_pkr": 2954.301971449051
+      },
+      {
+        "actual_pkr": 1122897.906445279,
+        "fitted_pkr": 1117874.4103324395,
+        "listing_hash": "5be6ebe32b383b9b30a25fc7630851ebc2f56af2caeb6d21a65ba0ae65286eee",
+        "make": "Toyota",
+        "residual_log": 0.004483725982483383,
+        "residual_pkr": 5023.496112839552
+      },
+      {
+        "actual_pkr": 1111496.6728946024,
+        "fitted_pkr": 1117878.5742317108,
+        "listing_hash": "5cca05e04861ae9d049184eeed4a128ed4745d018eff41778059f686eb462fdf",
+        "make": "Toyota",
+        "residual_log": -0.005725297953352568,
+        "residual_pkr": -6381.901337108342
+      },
+      {
+        "actual_pkr": 903810.7587682788,
+        "fitted_pkr": 896072.5745540493,
+        "listing_hash": "5e001ba7592085df4d74954cd880d810a092f5def21b7daf6f89198d10e11dc0",
+        "make": "Toyota",
+        "residual_log": 0.008598592751329777,
+        "residual_pkr": 7738.184214229463
+      },
+      {
+        "actual_pkr": 1660668.0245755732,
+        "fitted_pkr": 1660475.659623576,
+        "listing_hash": "5ea8b5e4812cfdc714122850f99a87d61490e77936f7f65ac5d5e72f8a8cf4c3",
+        "make": "Honda",
+        "residual_log": 0.00011584259550543501,
+        "residual_pkr": 192.36495199706405
+      },
+      {
+        "actual_pkr": 1733261.2146043081,
+        "fitted_pkr": 1747070.7641917868,
+        "listing_hash": "5ee5277fbdd194311cf2a42be29be5e231b24d155ad6f372347e5b6c5f01bfce",
+        "make": "Toyota",
+        "residual_log": -0.007935807357027341,
+        "residual_pkr": -13809.549587478628
+      },
+      {
+        "actual_pkr": 2108848.7189961625,
+        "fitted_pkr": 2099547.963297282,
+        "listing_hash": "5f62e3a7aa2f04d32f6d7d22932db0550198877cf9d6d9317623f1be3d3bac01",
+        "make": "Honda",
+        "residual_log": 0.0044201017839623925,
+        "residual_pkr": 9300.755698880646
+      },
+      {
+        "actual_pkr": 1317204.750573444,
+        "fitted_pkr": 1293334.378587752,
+        "listing_hash": "5f81c3c32d92e5702d783e794be9acbf1da58b66fb0a5de7c58cbdd30539c1b7",
+        "make": "Toyota",
+        "residual_log": 0.018288204929991347,
+        "residual_pkr": 23870.371985691832
+      },
+      {
+        "actual_pkr": 825881.8323123078,
+        "fitted_pkr": 814514.5272083166,
+        "listing_hash": "5f8b5a91d4f16727bd7a1ac82a0886142fdaf428110901dd2c42a04adb199cf1",
+        "make": "Honda",
+        "residual_log": 0.013859439511611322,
+        "residual_pkr": 11367.30510399118
+      },
+      {
+        "actual_pkr": 868037.7897523053,
+        "fitted_pkr": 871301.8541853592,
+        "listing_hash": "601ce8e051d0b626aa1678d56fefec30660c37925463733d06b6ec82d5fe44e3",
+        "make": "Honda",
+        "residual_log": -0.0037532270089873252,
+        "residual_pkr": -3264.064433053951
+      },
+      {
+        "actual_pkr": 1574910.8877796542,
+        "fitted_pkr": 1581239.6153571412,
+        "listing_hash": "61bd8558cbd83cac72abfe180cef96cc47192fda5b5d0aecfbb3f54c72edaa1e",
+        "make": "Toyota",
+        "residual_log": -0.004010414619642716,
+        "residual_pkr": -6328.727577487007
+      },
+      {
+        "actual_pkr": 1229236.172632467,
+        "fitted_pkr": 1215640.8601580495,
+        "listing_hash": "635d6e21fe532696264795a632292d4376bcee87b2b5cd3d2ff891fb3d8e8c03",
+        "make": "Honda",
+        "residual_log": 0.01112158396929697,
+        "residual_pkr": 13595.3124744175
+      },
+      {
+        "actual_pkr": 959714.2723618321,
+        "fitted_pkr": 950717.8505347939,
+        "listing_hash": "6427b18697d233f420576c9f9b1746ffd17e6cdb81d575e88eba5116321eb1d8",
+        "make": "Toyota",
+        "residual_log": 0.009418275813734635,
+        "residual_pkr": 8996.421827038168
+      },
+      {
+        "actual_pkr": 1766863.564845561,
+        "fitted_pkr": 1765263.7741445943,
+        "listing_hash": "6485b9a5a0bc5aeccd60ead64d33346f7e2572ad11a74ed4a263debcf1ff5c5e",
+        "make": "Toyota",
+        "residual_log": 0.0009058511524778779,
+        "residual_pkr": 1599.7907009667251
+      },
+      {
+        "actual_pkr": 1209588.4484288988,
+        "fitted_pkr": 1214942.7933656154,
+        "listing_hash": "64885027606616b692c1459fec2f29be4bbcaa407eab167a421927cbc0731984",
+        "make": "Toyota",
+        "residual_log": -0.004416815546783116,
+        "residual_pkr": -5354.344936716603
+      },
+      {
+        "actual_pkr": 907396.1690553601,
+        "fitted_pkr": 908177.4541366567,
+        "listing_hash": "672ee32f5589b7792ff46c802d8d4bd7802c97d84c56b1c89108968544ec5332",
+        "make": "Toyota",
+        "residual_log": -0.0008606482486221581,
+        "residual_pkr": -781.2850812965771
+      },
+      {
+        "actual_pkr": 1114632.7766669574,
+        "fitted_pkr": 1125233.9654303573,
+        "listing_hash": "6779057a61fc25fd39c4b6bc82f3fc6e1adce1b5ae0c71e3863b31f5fe340ed6",
+        "make": "Toyota",
+        "residual_log": -0.009465980920930749,
+        "residual_pkr": -10601.188763399841
+      },
+      {
+        "actual_pkr": 1004770.3369612381,
+        "fitted_pkr": 988932.8465614399,
+        "listing_hash": "68403913c5f2554b36ce0ba093b9a7b396d06eb4691b9a5b876040144dbb85c7",
+        "make": "Honda",
+        "residual_log": 0.015887844966769652,
+        "residual_pkr": 15837.490399798146
+      },
+      {
+        "actual_pkr": 2206890.485408239,
+        "fitted_pkr": 2214048.8992454577,
+        "listing_hash": "6acea802d528ac969a1fea307b771eb2e87caf87483a59d93938136e6b0073f3",
+        "make": "Honda",
+        "residual_log": -0.0032384158525786935,
+        "residual_pkr": -7158.413837218657
+      },
+      {
+        "actual_pkr": 652987.1236016726,
+        "fitted_pkr": 653778.7324501332,
+        "listing_hash": "6fc7472f13a14bda70f7f66ded2244944583d9b6d64a1ccbd52169f187f5ad7e",
+        "make": "Toyota",
+        "residual_log": -0.001211554375446447,
+        "residual_pkr": -791.6088484606007
+      },
+      {
+        "actual_pkr": 1579492.1068718308,
+        "fitted_pkr": 1600140.4207622712,
+        "listing_hash": "70344f213c4a968d37d4c28ce9fb07c96d58e66b4b2a70fd6cbd2f4308eca2ee",
+        "make": "Toyota",
+        "residual_log": -0.012988044355836264,
+        "residual_pkr": -20648.31389044039
+      },
+      {
+        "actual_pkr": 2027733.1218656446,
+        "fitted_pkr": 2033244.965274737,
+        "listing_hash": "70e3dca8c08b87c670e9c54921e1dd395565bf46b1ba40579e13fbc11ec8d201",
+        "make": "Honda",
+        "residual_log": -0.0027145415096701416,
+        "residual_pkr": -5511.843409092398
+      },
+      {
+        "actual_pkr": 1124274.5664833093,
+        "fitted_pkr": 1117506.6008274506,
+        "listing_hash": "715efe587f40c53567abf67e0f36a733f0c5b1a927d9ce722f8472d7e99c4e72",
+        "make": "Toyota",
+        "residual_log": 0.006038043602762685,
+        "residual_pkr": 6767.965655858628
+      },
+      {
+        "actual_pkr": 1647794.6126018786,
+        "fitted_pkr": 1655239.3964634696,
+        "listing_hash": "720603b15eb7bc3f27b18af7363680605df38b6eba9415e6b121b64a733fc7dd",
+        "make": "Honda",
+        "residual_log": -0.00450785335428881,
+        "residual_pkr": -7444.783861591015
+      },
+      {
+        "actual_pkr": 1539808.3307774416,
+        "fitted_pkr": 1530550.832139588,
+        "listing_hash": "72a140dd5a7f16b4e215ca4bdd062789c7dd6d37726d6b0f1b4c585a7f69f8c4",
+        "make": "Honda",
+        "residual_log": 0.006030256526955137,
+        "residual_pkr": 9257.498637853656
+      },
+      {
+        "actual_pkr": 2331179.0830751965,
+        "fitted_pkr": 2315164.808494292,
+        "listing_hash": "73c98b7f5d3d39685945fcaa7cb429bf98b1c76b44eddc6cec275bc8ed879efc",
+        "make": "Honda",
+        "residual_log": 0.006893307240279317,
+        "residual_pkr": 16014.274580904283
+      },
+      {
+        "actual_pkr": 2028820.324838145,
+        "fitted_pkr": 2005601.0624197312,
+        "listing_hash": "74fb6d0848ac6ea31756606e2a9abdf81b10a2b00ccd9f77f1a948c56815e046",
+        "make": "Toyota",
+        "residual_log": 0.011510705779753922,
+        "residual_pkr": 23219.262418413768
+      },
+      {
+        "actual_pkr": 1719588.441467924,
+        "fitted_pkr": 1740445.8510077714,
+        "listing_hash": "7508e0cacdce6ca4e1405efdda3f445da1b91391e7b49784db6d1014f74fcc0e",
+        "make": "Honda",
+        "residual_log": -0.012056332637470725,
+        "residual_pkr": -20857.409539847402
+      },
+      {
+        "actual_pkr": 1004158.4966488065,
+        "fitted_pkr": 998135.4489633059,
+        "listing_hash": "7643a348635fcee095c0e2d0a7816fc6f516ddc29f73b80b8be672bc0f7b954b",
+        "make": "Toyota",
+        "residual_log": 0.0060161654739338535,
+        "residual_pkr": 6023.047685500584
+      },
+      {
+        "actual_pkr": 853099.8443529236,
+        "fitted_pkr": 852097.4535385498,
+        "listing_hash": "76724c377faad7d2f1ced3fa4b46092a2372a7dccf721c6e77908f437e519677",
+        "make": "Honda",
+        "residual_log": 0.0011756890901431173,
+        "residual_pkr": 1002.3908143737353
+      },
+      {
+        "actual_pkr": 1989815.6477186459,
+        "fitted_pkr": 1986150.6030879521,
+        "listing_hash": "7680317e0d33b956c017acc440f2457b6230c3040703d126238a96b418611061",
+        "make": "Toyota",
+        "residual_log": 0.0018435999893265513,
+        "residual_pkr": 3665.0446306937374
+      },
+      {
+        "actual_pkr": 1050811.3338413658,
+        "fitted_pkr": 1053826.4226307557,
+        "listing_hash": "76a096e626d269c862b30d4f57ba84941a614270d051ba80be8568ec25c4ac19",
+        "make": "Toyota",
+        "residual_log": -0.002865187458283444,
+        "residual_pkr": -3015.0887893899344
+      },
+      {
+        "actual_pkr": 929376.8402910114,
+        "fitted_pkr": 931725.7970548067,
+        "listing_hash": "78b5ec89afc69cae5c9143f4a47050f682cdcaa7d6f7b89e848f9866d806a606",
+        "make": "Honda",
+        "residual_log": -0.0025242648781845086,
+        "residual_pkr": -2348.956763795344
+      },
+      {
+        "actual_pkr": 818203.9738498273,
+        "fitted_pkr": 804604.702924959,
+        "listing_hash": "79b939b7acdacc6ab3ff073f1ce080825be30404c21ecd5fc08e3aac4d46ed62",
+        "make": "Toyota",
+        "residual_log": 0.016760557757358224,
+        "residual_pkr": 13599.270924868295
+      },
+      {
+        "actual_pkr": 1735547.130596356,
+        "fitted_pkr": 1749155.8991640282,
+        "listing_hash": "7aea8cd1a7f12d71861209e296449ae64f83221fd41e6dcb9dc94518f698ad6b",
+        "make": "Honda",
+        "residual_log": -0.007810615501961544,
+        "residual_pkr": -13608.768567672232
+      },
+      {
+        "actual_pkr": 1242169.515943304,
+        "fitted_pkr": 1246697.8968694198,
+        "listing_hash": "7b0c9b0d3b303fa8849225a5bae6173ebbe29cb3f0d10dc727ba4af633c56698",
+        "make": "Honda",
+        "residual_log": -0.0036389129447017016,
+        "residual_pkr": -4528.380926115904
+      },
+      {
+        "actual_pkr": 1216283.2838753394,
+        "fitted_pkr": 1218700.2515478337,
+        "listing_hash": "7b77dd56393785be80cc03da2ca0b4b231b4ec87ed3d7b8c7a7e76523dfc0310",
+        "make": "Toyota",
+        "residual_log": -0.0019852031285730416,
+        "residual_pkr": -2416.96767249424
+      },
+      {
+        "actual_pkr": 1041630.3022435807,
+        "fitted_pkr": 1042172.8052776859,
+        "listing_hash": "7b803c7094e893d621c69cfa15e01b7a21f4864e812c3b7225615769e6596090",
+        "make": "Toyota",
+        "residual_log": -0.000520685514292271,
+        "residual_pkr": -542.5030341051752
+      },
+      {
+        "actual_pkr": 1477771.307124607,
+        "fitted_pkr": 1458939.9321678407,
+        "listing_hash": "7ba7b512969c10df38b4aa4af1c65028cb422d663bb32ff05c2fbfaf92a4719f",
+        "make": "Honda",
+        "residual_log": 0.012824981101101024,
+        "residual_pkr": 18831.374956766376
+      },
+      {
+        "actual_pkr": 2060743.9964945118,
+        "fitted_pkr": 2018013.251395985,
+        "listing_hash": "7c0f83f50e3d525ac9ea3c97827eed934c4dc35649895805b275f078a68058c9",
+        "make": "Toyota",
+        "residual_log": 0.020953592436095403,
+        "residual_pkr": 42730.74509852682
+      },
+      {
+        "actual_pkr": 759235.6211451875,
+        "fitted_pkr": 765915.7096395507,
+        "listing_hash": "7d4952dfc0d53154a7c73620112ffba7f3cfe12150f6693b4c0c2820496a4bed",
+        "make": "Honda",
+        "residual_log": -0.00875995853906108,
+        "residual_pkr": -6680.0884943631245
+      },
+      {
+        "actual_pkr": 1313920.7065424381,
+        "fitted_pkr": 1297354.2989519953,
+        "listing_hash": "7ee89f8d3d54076912cf8cdfbe13d886bf7f2974a8a0d3852b81b22ca02e33a8",
+        "make": "Toyota",
+        "residual_log": 0.012688537070617891,
+        "residual_pkr": 16566.407590442803
+      },
+      {
+        "actual_pkr": 1512800.2006389154,
+        "fitted_pkr": 1518745.4257560386,
+        "listing_hash": "80ece70d783b64fd174689e08e1a97cb483e33e0982faa0c0628319a106bd472",
+        "make": "Toyota",
+        "residual_log": -0.003922245264686172,
+        "residual_pkr": -5945.22511712322
+      },
+      {
+        "actual_pkr": 1213627.4957270443,
+        "fitted_pkr": 1237630.4494556696,
+        "listing_hash": "817e7fe164ed8bc91debc46cb09e1a8f65dac5290f48eb8c10cec63553141ec9",
+        "make": "Toyota",
+        "residual_log": -0.019584818477007136,
+        "residual_pkr": -24002.953728625318
+      },
+      {
+        "actual_pkr": 1002818.3933894681,
+        "fitted_pkr": 988291.4695428389,
+        "listing_hash": "841e64de2e5de272c0042e077ee04e66503cd5bf1cf973a4c1726d334a33dd58",
+        "make": "Toyota",
+        "residual_log": 0.01459204424788587,
+        "residual_pkr": 14526.923846629215
+      },
+      {
+        "actual_pkr": 1407275.3646100815,
+        "fitted_pkr": 1397625.17885798,
+        "listing_hash": "86096aef03be53be788c9d4ba6ff4eec4a676129cea70992c4b02b9f2d64a036",
+        "make": "Toyota",
+        "residual_log": 0.006880973980201984,
+        "residual_pkr": 9650.185752101475
+      },
+      {
+        "actual_pkr": 1784004.7416193348,
+        "fitted_pkr": 1808291.0097301584,
+        "listing_hash": "8686d1142f2537ed131a0bf65da5b441e26cd56cba737a2c403dfb63dbf85fad",
+        "make": "Honda",
+        "residual_log": -0.01352151371434482,
+        "residual_pkr": -24286.268110823585
+      },
+      {
+        "actual_pkr": 1120162.4434512365,
+        "fitted_pkr": 1103529.4552221366,
+        "listing_hash": "86c0f9ab87e7237f5b8148ef43d070980caa4b895e5de804e20ebcc0e8c51c65",
+        "make": "Toyota",
+        "residual_log": 0.014960074683378132,
+        "residual_pkr": 16632.988229099894
+      },
+      {
+        "actual_pkr": 1706264.0160638047,
+        "fitted_pkr": 1701845.6021829885,
+        "listing_hash": "86c2ebe2214c41134c608310d0190abb6d564a7f5c5d13e871ec78a5d5ed16bf",
+        "make": "Toyota",
+        "residual_log": 0.0025928839451606223,
+        "residual_pkr": 4418.413880816195
+      },
+      {
+        "actual_pkr": 2135413.0948516275,
+        "fitted_pkr": 2155950.195990507,
+        "listing_hash": "87322b6daddd913fe23771d1d4a2fe9f15b74be4d8ae693de3d19984b57816e4",
+        "make": "Toyota",
+        "residual_log": -0.009571437575679995,
+        "residual_pkr": -20537.101138879545
+      },
+      {
+        "actual_pkr": 988884.8634536983,
+        "fitted_pkr": 987703.0991905354,
+        "listing_hash": "87592214442b34635820f70c7ca93d767168e0226c5f813ae7f70632a26cc14d",
+        "make": "Toyota",
+        "residual_log": 0.0011957620164740257,
+        "residual_pkr": 1181.7642631629715
+      },
+      {
+        "actual_pkr": 2022506.045034302,
+        "fitted_pkr": 2021591.8681176065,
+        "listing_hash": "88a4edfd5c5baab7dd6108bed86e93317b081bd1f9b6f3d4ad816d6cfe2e7952",
+        "make": "Honda",
+        "residual_log": 0.00045210425261658655,
+        "residual_pkr": 914.1769166954327
+      },
+      {
+        "actual_pkr": 2021323.196530679,
+        "fitted_pkr": 2003568.2074110534,
+        "listing_hash": "894d45a8db4ae550641075005b0bd30d310d5fc8c4538fa224f3b30d339c338b",
+        "make": "Toyota",
+        "residual_log": 0.008822650107545018,
+        "residual_pkr": 17754.98911962565
+      },
+      {
+        "actual_pkr": 2800471.9314587074,
+        "fitted_pkr": 2790004.3754701638,
+        "listing_hash": "896973bc261c39c37c4002eadef87b14a5942a1c2d4aa8c5ab26c7329fbf49a4",
+        "make": "Honda",
+        "residual_log": 0.0037447858273349866,
+        "residual_pkr": 10467.555988543667
+      },
+      {
+        "actual_pkr": 617768.6616539645,
+        "fitted_pkr": 634184.1433424804,
+        "listing_hash": "8b7dfb05124004c90c35175b3163b8d16a3c07bf17face3d81908d99f8352ca9",
+        "make": "Toyota",
+        "residual_log": -0.02622530569410845,
+        "residual_pkr": -16415.481688515865
+      },
+      {
+        "actual_pkr": 2308713.8933918024,
+        "fitted_pkr": 2282284.868193251,
+        "listing_hash": "8bf680103fff45842c7671c6c6ede66fd7a006ea25c6d546368a97d477c6e2b9",
+        "make": "Toyota",
+        "residual_log": 0.011513537043427263,
+        "residual_pkr": 26429.02519855136
+      },
+      {
+        "actual_pkr": 1575475.9582387633,
+        "fitted_pkr": 1566991.7348526057,
+        "listing_hash": "8dd75f97efec1fe4bc052a23d05c080e61fac587daafb30d03a4b193e4be944c",
+        "make": "Honda",
+        "residual_log": 0.005399733476609907,
+        "residual_pkr": 8484.223386157537
+      },
+      {
+        "actual_pkr": 1649217.041406549,
+        "fitted_pkr": 1657099.0610207259,
+        "listing_hash": "8ec51b81bcf1db9f384a727d4fec1d9c65acf1eb5c91e6ef336d5e02737b6534",
+        "make": "Honda",
+        "residual_log": -0.004767865080964389,
+        "residual_pkr": -7882.019614176825
+      },
+      {
+        "actual_pkr": 770616.1254695678,
+        "fitted_pkr": 764700.0314881697,
+        "listing_hash": "912ee36f5856c8f1bdc549824c22296a7e86d2788eb27eb3f44fb4fcac5cc7ab",
+        "make": "Toyota",
+        "residual_log": 0.007706716608184985,
+        "residual_pkr": 5916.093981398153
+      },
+      {
+        "actual_pkr": 1069323.0227001866,
+        "fitted_pkr": 1060191.1121246447,
+        "listing_hash": "9140b25df9573dfe8aa29d7e063e82b2a2e7bb9f8527f2f5d075f63812e3de2c",
+        "make": "Honda",
+        "residual_log": 0.008576572846285655,
+        "residual_pkr": 9131.9105755419
+      },
+      {
+        "actual_pkr": 1411517.985959364,
+        "fitted_pkr": 1391367.4045172154,
+        "listing_hash": "91af4bd16743a885e52e89d4d597faa3b2abad2e66109c3a4c5e2965ca2fc250",
+        "make": "Honda",
+        "residual_log": 0.014378703233665639,
+        "residual_pkr": 20150.581442148658
+      },
+      {
+        "actual_pkr": 1379833.508134897,
+        "fitted_pkr": 1382226.45600278,
+        "listing_hash": "935148d8928f9625c285757ee9a970b584ef7b042560db6bfd8ee0b7feae91c4",
+        "make": "Toyota",
+        "residual_log": -0.001732727382936749,
+        "residual_pkr": -2392.9478678829037
+      },
+      {
+        "actual_pkr": 1167970.7138993344,
+        "fitted_pkr": 1177168.886802542,
+        "listing_hash": "93e67c315257a3be3205721e4cf4c58f4fb1d3ccef62ac16fd8a4c4e08f93261",
+        "make": "Toyota",
+        "residual_log": -0.007844496821201549,
+        "residual_pkr": -9198.172903207596
+      },
+      {
+        "actual_pkr": 2502375.5056879926,
+        "fitted_pkr": 2528503.764292057,
+        "listing_hash": "951137797c66fffe02e9d38cef29ebe9264d1ac54996a3c74bacd32d52810b02",
+        "make": "Toyota",
+        "residual_log": -0.01038724728898009,
+        "residual_pkr": -26128.258604064584
+      },
+      {
+        "actual_pkr": 1367051.069912559,
+        "fitted_pkr": 1372786.5654676936,
+        "listing_hash": "95b7302ff88d9034ed4e116a2bb645619a568499e0e721598e7285cae93ff929",
+        "make": "Honda",
+        "residual_log": -0.004186747316062145,
+        "residual_pkr": -5735.495555134723
+      },
+      {
+        "actual_pkr": 837342.7423993751,
+        "fitted_pkr": 849627.0229745305,
+        "listing_hash": "9989fd1e45780c9b818b6f093c20a5ab7b7df0be3746c554ce1c8632091b7289",
+        "make": "Toyota",
+        "residual_log": -0.014563980885679293,
+        "residual_pkr": -12284.280575155397
+      },
+      {
+        "actual_pkr": 1945940.9141496217,
+        "fitted_pkr": 1914903.5975270828,
+        "listing_hash": "99f3cd94f8e6cc3a4235b7a80f66e56eb2d254f6e9bbcf4a58dbdfddcd05467f",
+        "make": "Honda",
+        "residual_log": 0.016078339935720814,
+        "residual_pkr": 31037.316622538958
+      },
+      {
+        "actual_pkr": 1342951.8674620232,
+        "fitted_pkr": 1334075.9456777857,
+        "listing_hash": "9a580b97fef7ec157685c3310bb39a6af5d2be0915059b6340721c6cc1b9f89f",
+        "make": "Honda",
+        "residual_log": 0.006631200666344591,
+        "residual_pkr": 8875.921784237493
+      },
+      {
+        "actual_pkr": 943508.8351034122,
+        "fitted_pkr": 939452.0353052865,
+        "listing_hash": "9a95add98d35896ee67015fe9f0efb6bfbe95f5f59821a9fe7528c7733c3d52d",
+        "make": "Honda",
+        "residual_log": 0.004308964821118977,
+        "residual_pkr": 4056.799798125634
+      },
+      {
+        "actual_pkr": 1754889.7011422499,
+        "fitted_pkr": 1774468.6966212443,
+        "listing_hash": "9aaa56b01eaac1d7d1b3368fed6f5b3bf52337913b720457bb338a867ab9cf2a",
+        "make": "Toyota",
+        "residual_log": -0.011095045682475624,
+        "residual_pkr": -19578.995478994446
+      },
+      {
+        "actual_pkr": 1656590.350125549,
+        "fitted_pkr": 1660466.7238201902,
+        "listing_hash": "9ad0dc4a223bd25983553bda96ca7467cc4eab57b934cc30ca330f3638cd6cf4",
+        "make": "Honda",
+        "residual_log": -0.002337237721777163,
+        "residual_pkr": -3876.373694641283
+      },
+      {
+        "actual_pkr": 1020945.7186851294,
+        "fitted_pkr": 1035567.6291536515,
+        "listing_hash": "9b4ac0074c0736cafe3ef260032ce7e1d46b49e850815581c745f572e3d3b72e",
+        "make": "Toyota",
+        "residual_log": -0.014220337431000351,
+        "residual_pkr": -14621.91046852211
+      },
+      {
+        "actual_pkr": 710148.4800248586,
+        "fitted_pkr": 717141.942296764,
+        "listing_hash": "9b5246273890c497c52533c89d1455f24a5c211b485c5b3736d47b3b4dcdb7e2",
+        "make": "Honda",
+        "residual_log": -0.009799712980868285,
+        "residual_pkr": -6993.462271905388
+      },
+      {
+        "actual_pkr": 874135.5148725099,
+        "fitted_pkr": 882134.4334979859,
+        "listing_hash": "9be29a094e5b26d521f15b1a82b1ab6279e3a3ff3543b7a85b8eba5413170207",
+        "make": "Toyota",
+        "residual_log": -0.00910904834629989,
+        "residual_pkr": -7998.918625476072
+      },
+      {
+        "actual_pkr": 1373090.3930396272,
+        "fitted_pkr": 1369106.2131889346,
+        "listing_hash": "9c900293fde8d26a65d2631b82b46632a4ca93097af5c570ccf56b3d552bc335",
+        "make": "Honda",
+        "residual_log": 0.002905832969913546,
+        "residual_pkr": 3984.179850692628
+      },
+      {
+        "actual_pkr": 1819679.920864438,
+        "fitted_pkr": 1798063.032672598,
+        "listing_hash": "a2e83c0b4aac3d1082fcea68e658615da70aed5a4b3495cbace5dfca3a318fcc",
+        "make": "Toyota",
+        "residual_log": 0.011950625426548496,
+        "residual_pkr": 21616.888191839913
+      },
+      {
+        "actual_pkr": 1106138.7946547524,
+        "fitted_pkr": 1084116.064143232,
+        "listing_hash": "a34b7f3ae9109ff8e579f42f4e96a658ea222ba6380099cafba907a8e06108ae",
+        "make": "Toyota",
+        "residual_log": 0.020110420152512697,
+        "residual_pkr": 22022.73051152029
+      },
+      {
+        "actual_pkr": 870808.1654234868,
+        "fitted_pkr": 879460.2329787959,
+        "listing_hash": "a37ebec0dae00b5cbbe3431a24c7135a03b0e336a1f167f0402f671e3a520fa3",
+        "make": "Toyota",
+        "residual_log": -0.00988664142971094,
+        "residual_pkr": -8652.06755530904
+      },
+      {
+        "actual_pkr": 1880384.077744998,
+        "fitted_pkr": 1860785.5650161414,
+        "listing_hash": "a38e7a3befd0911736f92e23c50aeaa34c9c7ee191aa64250459c2cfd81fa7c5",
+        "make": "Toyota",
+        "residual_log": 0.010477307304322229,
+        "residual_pkr": 19598.512728856644
+      },
+      {
+        "actual_pkr": 747753.4050968298,
+        "fitted_pkr": 754844.4823881305,
+        "listing_hash": "a4dafed627be27158f2c4d5454c36e16ba0a966a3360dcfe8a0799f9e9518c42",
+        "make": "Toyota",
+        "residual_log": -0.00943849314944416,
+        "residual_pkr": -7091.077291300753
+      },
+      {
+        "actual_pkr": 2166911.5459888196,
+        "fitted_pkr": 2139534.74197623,
+        "listing_hash": "a5e299ff250096f0400867e82ef456b368a720b817124c579654bf6066bbfe60",
+        "make": "Toyota",
+        "residual_log": 0.012714507967437842,
+        "residual_pkr": 27376.804012589622
+      },
+      {
+        "actual_pkr": 1430462.027360709,
+        "fitted_pkr": 1451063.0917623064,
+        "listing_hash": "aa007f2a12df6369d4c2ae75c83e372ca86db1fd5c7ad09a0f499e10098af18e",
+        "make": "Honda",
+        "residual_log": -0.01429896638570928,
+        "residual_pkr": -20601.064401597483
+      },
+      {
+        "actual_pkr": 2563768.953692199,
+        "fitted_pkr": 2591014.840699074,
+        "listing_hash": "aa03841651112e2d99a862eae5ba5188f6fd1e951aff98aed20c3c52c72698f8",
+        "make": "Honda",
+        "residual_log": -0.010571206018095629,
+        "residual_pkr": -27245.887006874662
+      },
+      {
+        "actual_pkr": 1824351.9555923305,
+        "fitted_pkr": 1862901.7697933346,
+        "listing_hash": "aa6b3ed61dd2e02344de4ad0f552984b5140c80b2ea55238be8769a6e58195b5",
+        "make": "Toyota",
+        "residual_log": -0.020910532185704194,
+        "residual_pkr": -38549.814201004105
+      },
+      {
+        "actual_pkr": 1004272.0588618529,
+        "fitted_pkr": 996283.9069648151,
+        "listing_hash": "ad0e62e75cb872644b3eeeb9ad0735b6824f55e81fcc22e16c8d7b3fc841ea17",
+        "make": "Toyota",
+        "residual_log": 0.007985974386789472,
+        "residual_pkr": 7988.151897037751
+      },
+      {
+        "actual_pkr": 845274.0974342504,
+        "fitted_pkr": 851574.5479600634,
+        "listing_hash": "ad735908210425deb1d0de15ad37d321170b93d5fe3aac7f977f95d12d693b2a",
+        "make": "Toyota",
+        "residual_log": -0.00742609483417673,
+        "residual_pkr": -6300.4505258130375
+      },
+      {
+        "actual_pkr": 1746816.0174437028,
+        "fitted_pkr": 1743300.1087568454,
+        "listing_hash": "af701cea43325847ba650647bf271161dee3ac71f10a6d0d01d432e03e027258",
+        "make": "Toyota",
+        "residual_log": 0.0020147810268085816,
+        "residual_pkr": 3515.9086868574377
+      },
+      {
+        "actual_pkr": 1931365.2088261365,
+        "fitted_pkr": 1925212.1296043592,
+        "listing_hash": "b0768dab39702bc73723de8bbb1e99d73314a7359b9d1bc2883cff5a30af0c9a",
+        "make": "Toyota",
+        "residual_log": 0.0031909560746789804,
+        "residual_pkr": 6153.079221777385
+      },
+      {
+        "actual_pkr": 843715.4208056052,
+        "fitted_pkr": 832068.1282217434,
+        "listing_hash": "b222f0f54581a15e88ebb604e6dcf56ea765c7a8a8ecd1bf2f456052bc6d7186",
+        "make": "Toyota",
+        "residual_log": 0.01390093624728361,
+        "residual_pkr": 11647.292583861854
+      },
+      {
+        "actual_pkr": 1209155.3697271517,
+        "fitted_pkr": 1211088.4192315508,
+        "listing_hash": "b3f5765749f9a70bf6c5e1cb8cf21ebf50c733da852de8cfd399d30e46397436",
+        "make": "Honda",
+        "residual_log": -0.0015974009926297919,
+        "residual_pkr": -1933.0495043990668
+      },
+      {
+        "actual_pkr": 1230643.4370182743,
+        "fitted_pkr": 1236618.1405854444,
+        "listing_hash": "b4d7f4017b0e5a2427109bc11bb9111e33f201c7e18a2c6a37bcf262cda4bccf",
+        "make": "Honda",
+        "residual_log": -0.004843195630512013,
+        "residual_pkr": -5974.703567170072
+      },
+      {
+        "actual_pkr": 974329.8656782324,
+        "fitted_pkr": 965735.0723983564,
+        "listing_hash": "b572d20747ff11b7d4e314f415a5a75c47ae43259918864586ba8b2cbd40d961",
+        "make": "Honda",
+        "residual_log": 0.008860373011064217,
+        "residual_pkr": 8594.793279876001
+      },
+      {
+        "actual_pkr": 1350720.4259023056,
+        "fitted_pkr": 1337718.3075836522,
+        "listing_hash": "b6a730ed2fa522fe921e592d369953f4b66f82c91a17775b0fa82724ae64a32b",
+        "make": "Toyota",
+        "residual_log": 0.009672691834689322,
+        "residual_pkr": 13002.118318653433
+      },
+      {
+        "actual_pkr": 817102.1279111246,
+        "fitted_pkr": 822610.8408378244,
+        "listing_hash": "b71cfca58d9fe13817b8ef051293a072578319932cc1e2611f0952b44c3b490f",
+        "make": "Honda",
+        "residual_log": -0.006719143846247397,
+        "residual_pkr": -5508.71292669978
+      },
+      {
+        "actual_pkr": 991197.5105796369,
+        "fitted_pkr": 988891.2315159524,
+        "listing_hash": "b852c0efa7d2a5d0dadb5c9c16c4b480b7af1e3521a5aa36fb28e52c84eb206c",
+        "make": "Honda",
+        "residual_log": 0.002329471460102604,
+        "residual_pkr": 2306.2790636845166
+      },
+      {
+        "actual_pkr": 1054346.0557124987,
+        "fitted_pkr": 1061843.477208356,
+        "listing_hash": "bc9fe533e51db6b98e5e2188d305a52549bd57627e92887cc436bfd81c81c0e7",
+        "make": "Toyota",
+        "residual_log": -0.007085804696412688,
+        "residual_pkr": -7497.421495857183
+      },
+      {
+        "actual_pkr": 867026.6323607386,
+        "fitted_pkr": 873158.7519537832,
+        "listing_hash": "bca8b0f8ea7fd8a4ea994667f715b2ac9829cb56dbae9ae8ebab7ae3f3b8c446",
+        "make": "Honda",
+        "residual_log": -0.007047691619685973,
+        "residual_pkr": -6132.1195930446265
+      },
+      {
+        "actual_pkr": 1022924.0434935058,
+        "fitted_pkr": 1008204.2260597871,
+        "listing_hash": "bcb2c84e87e9f9f614d3158fb23e9e122b4d10036f94e7b3b93f757d05a504ac",
+        "make": "Toyota",
+        "residual_log": 0.01449448108290592,
+        "residual_pkr": 14719.817433718708
+      },
+      {
+        "actual_pkr": 2316449.593841159,
+        "fitted_pkr": 2358779.0999025316,
+        "listing_hash": "be0cce814336130bf209ba2c044194850ea96772cc08357487b2d5bcebcfecb5",
+        "make": "Honda",
+        "residual_log": -0.0181084886079202,
+        "residual_pkr": -42329.50606137281
+      },
+      {
+        "actual_pkr": 1575903.925138448,
+        "fitted_pkr": 1599890.3292112441,
+        "listing_hash": "c06fcfbc0c5d461aab836a15172bd6fb39240c032744f15ad5970d72235bcfe9",
+        "make": "Honda",
+        "residual_log": -0.015106054282590198,
+        "residual_pkr": -23986.404072796227
+      },
+      {
+        "actual_pkr": 1335280.9740668158,
+        "fitted_pkr": 1314228.5806144539,
+        "listing_hash": "c0df2671a46e1c14999b0ecaf6bba733cfd3693f73501f7cbdf8a58316287a3c",
+        "make": "Honda",
+        "residual_log": 0.015891874389655496,
+        "residual_pkr": 21052.393452361925
+      },
+      {
+        "actual_pkr": 1345244.9968201877,
+        "fitted_pkr": 1351439.2623629954,
+        "listing_hash": "c1a08019c650d2c1bc578796cf6c782cf54a9aeb2b261ca5b0df51eb125f0b76",
+        "make": "Honda",
+        "residual_log": -0.004593994581133731,
+        "residual_pkr": -6194.265542807756
+      },
+      {
+        "actual_pkr": 785317.7753715534,
+        "fitted_pkr": 774519.7498350982,
+        "listing_hash": "c30acafc8aa8d20b1a8bdb727547ce8f50260ea7d6ce13a8f96a8760f6d21e2b",
+        "make": "Honda",
+        "residual_log": 0.01384528561803026,
+        "residual_pkr": 10798.025536455214
+      },
+      {
+        "actual_pkr": 1237526.6038251286,
+        "fitted_pkr": 1229723.391627418,
+        "listing_hash": "c3c3edba85702c2ebf6bf93941d58aae06934c1a0648a246277d7352681374c0",
+        "make": "Honda",
+        "residual_log": 0.0063254540319590494,
+        "residual_pkr": 7803.212197710527
+      },
+      {
+        "actual_pkr": 1453402.3160831132,
+        "fitted_pkr": 1437137.8405629022,
+        "listing_hash": "c496b4196b7454b1f05a0ddd799ad2872cf8b14e1e6f9f9ed007d8b87ff9bd68",
+        "make": "Honda",
+        "residual_log": 0.011253707813008242,
+        "residual_pkr": 16264.47552021104
+      },
+      {
+        "actual_pkr": 2215190.5599914435,
+        "fitted_pkr": 2206585.6298532225,
+        "listing_hash": "c574444aada699ce8894c4e332392229b2385a53aee6bdae02aac60da0a189c1",
+        "make": "Toyota",
+        "residual_log": 0.0038920744204312017,
+        "residual_pkr": 8604.93013822101
+      },
+      {
+        "actual_pkr": 1081135.032285402,
+        "fitted_pkr": 1071995.7588945657,
+        "listing_hash": "c70c30b20193ea528674aa63bc9e54a2a8e42f935461650b168dd6566c354054",
+        "make": "Honda",
+        "residual_log": 0.008489338702787572,
+        "residual_pkr": 9139.273390836315
+      },
+      {
+        "actual_pkr": 2729637.0505634253,
+        "fitted_pkr": 2703138.6044228324,
+        "listing_hash": "c889b3f14a21b7882380a27e6161a0ce92f7cbdc261a45f096bd52779899a90d",
+        "make": "Honda",
+        "residual_log": 0.009755107871358342,
+        "residual_pkr": 26498.446140592918
+      },
+      {
+        "actual_pkr": 743082.9479323874,
+        "fitted_pkr": 748222.2123484635,
+        "listing_hash": "c9bafff3717ad52bc68db205ea52e79b850d931f215064849bcb6b4743d51c44",
+        "make": "Toyota",
+        "residual_log": -0.0068923314928071395,
+        "residual_pkr": -5139.2644160761265
+      },
+      {
+        "actual_pkr": 1623570.1495142928,
+        "fitted_pkr": 1639968.152304506,
+        "listing_hash": "ca2cfe42f95c85960e21a09c114227af97ebca1cba8c97d7371ffc8ee370337e",
+        "make": "Toyota",
+        "residual_log": -0.010049301876804896,
+        "residual_pkr": -16398.002790213097
+      },
+      {
+        "actual_pkr": 1671172.320233967,
+        "fitted_pkr": 1684543.351899607,
+        "listing_hash": "cb2229a4c10afa3f7fe4c9e0d105cc23315fb549b031d2223ab445e267719917",
+        "make": "Honda",
+        "residual_log": -0.00796915098609394,
+        "residual_pkr": -13371.031665640185
+      },
+      {
+        "actual_pkr": 1647591.7867054425,
+        "fitted_pkr": 1632214.9969019238,
+        "listing_hash": "cbe036c85ab0980355324e986b00b3cb1909b7a28d5bf25bb1c8af63a122b916",
+        "make": "Honda",
+        "residual_log": 0.00937671239923424,
+        "residual_pkr": 15376.78980351868
+      },
+      {
+        "actual_pkr": 2054455.7425530395,
+        "fitted_pkr": 2060988.72440454,
+        "listing_hash": "cbe641c905e365e169e04c834e5c15db5560f48b93acd8cc8646d86ca2b355f9",
+        "make": "Honda",
+        "residual_log": -0.0031748635616519797,
+        "residual_pkr": -6532.981851500459
+      },
+      {
+        "actual_pkr": 1352100.4183659558,
+        "fitted_pkr": 1367458.5361372728,
+        "listing_hash": "ccb62c2ad19d19fde4d422ed34e907f96c0a4f946c63f46ffa62693b63f0c771",
+        "make": "Toyota",
+        "residual_log": -0.011294685129010752,
+        "residual_pkr": -15358.117771317018
+      }
+    ],
+    "diagnostics_by_make": {
+      "Honda": {
+        "mae_pkr": 11843.380738828779,
+        "mape_percent": 0.7853614721539963,
+        "r_squared": 0.9990519724219448
+      },
+      "Toyota": {
+        "mae_pkr": 11738.122553539351,
+        "mape_percent": 0.8440685629417854,
+        "r_squared": 0.9990501981425
+      }
+    },
+    "diagnostics_total": 240,
+    "linear_metrics": {
+      "mae_pkr": 11788.558767323868,
+      "mape_percent": 0.815938081939303,
+      "r_squared": 0.9990718098055676
+    },
+    "listings_used": 240,
+    "omitted_predictors": [
+      "fuel_type",
+      "body_type"
+    ],
+    "reason": null,
+    "shap_effects": [
+      {
+        "feature": "model_year",
+        "mean_absolute_log_effect": 0.2466600003623129
+      },
+      {
+        "feature": "engine_litres",
+        "mean_absolute_log_effect": 0.0944739231279528
+      },
+      {
+        "feature": "log_mileage",
+        "mean_absolute_log_effect": 0.05303810016654376
+      },
+      {
+        "feature": "transmission=manual",
+        "mean_absolute_log_effect": 0.038682329862214634
+      },
+      {
+        "feature": "make_model=Toyota / Corolla",
+        "mean_absolute_log_effect": 0.014807358650390927
+      },
+      {
+        "feature": "city=Lahore",
+        "mean_absolute_log_effect": 0.007917852433681266
+      },
+      {
+        "feature": "assembly=local",
+        "mean_absolute_log_effect": 0.0036866153254489346
+      },
+      {
+        "feature": "feature:ABS=1",
+        "mean_absolute_log_effect": 0.0003968144415248704
+      },
+      {
+        "feature": "seller_type=individual",
+        "mean_absolute_log_effect": 0.0
+      }
+    ],
+    "status": "ok"
+  },
+  "generated_at": "2026-10-25T00:00:00Z",
+  "schema_version": "1.0.0"
+}

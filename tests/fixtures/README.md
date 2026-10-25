@@ -66,3 +66,16 @@ The fixtures were captured once with `fixture_frame` from the export test helper
 and `serialize_exports(build_exports(frame, generated_at=NOW))`. Do not regenerate
 them during tests. A deliberate contract change requires reviewing and updating
 all eight snapshots together, including their shared content digest.
+
+## Frontend fixtures
+
+`web/tests/fixtures/` contains a separate seeded six-week, 240-car synthetic bundle
+and twenty Python Fair Price references, generated deliberately by
+`python -m scripts.generate_web_fixtures` from the repository root. The generator
+uses the venv's Python 3.10 and never writes `web/public/data/`. Default tests read
+these committed fixtures without network or regeneration. Both Python and TypeScript
+check their prediction parity. They are not real market findings.
+
+Windows/Chromium screenshot baselines under `web/tests/e2e/` cover the six routes,
+both themes and desktop/360px for the real sparse sample and synthetic supported
+sample. Review them before updates; normal browser tests compare the images.

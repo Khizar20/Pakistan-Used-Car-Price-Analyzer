@@ -79,8 +79,8 @@ the conditional median asking price. The approximate residual range is
 `exp(sum ± interval_multiplier * residual_std_log)`, with multiplier 1.96.
 `typical_error_percent` is held-out MAPE. The range is not a calibrated guarantee.
 Python tests independently evaluate 20 cars from the published contract, including
-a sorted-JSON round trip. Browser implementation and browser parity tests belong
-to the later frontend phase.
+a sorted-JSON round trip. The frontend now evaluates the same contract, with twenty
+stored Python references checked in TypeScript and revalidated in Python.
 
 ## Schemas, declarations and refresh safety
 

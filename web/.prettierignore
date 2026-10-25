@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+lighthouse-results
+test-results
+playwright-report
+src/types
+src/generated
+public/data
+tests/fixtures
+tests/e2e/dashboard.spec.ts-snapshots
+package-lock.json

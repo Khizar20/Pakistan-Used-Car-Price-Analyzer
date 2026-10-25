@@ -1,0 +1,103 @@
+{
+  "bundle_id": "e607458c335404dee0a10cf0805941235fb35a86f75f1ad90c3867210b1b8e52",
+  "data": {
+    "model": {
+      "coefficients": {
+        "assembly=local": -0.0690143826861975,
+        "city=Lahore": -0.07766152498522394,
+        "engine_litres": 0.2995098398893594,
+        "feature:ABS=1": 0.050553093079156564,
+        "intercept": 14.202627743639042,
+        "log_mileage": -0.12024598206520565,
+        "make_model=Toyota / Corolla": -0.0994139566756771,
+        "model_year": 0.05974550581426076,
+        "seller_type=individual": -0.033849204225950835,
+        "transmission=manual": -0.14951299819201225
+      },
+      "defaults": {
+        "assembly": "imported",
+        "city": "Lahore",
+        "engine_cc": 1563.0,
+        "feature:ABS": "1",
+        "make_model": "Toyota / Corolla",
+        "seller_type": "individual",
+        "transmission": "automatic"
+      },
+      "interval_multiplier": 1.96,
+      "point_estimate": "conditional_median",
+      "ranges": {
+        "engine_cc": [
+          800.0,
+          2380.0
+        ],
+        "mileage_km": [
+          5243.0,
+          149984.0
+        ],
+        "model_year": [
+          2008.0,
+          2023.0
+        ]
+      },
+      "reference_year": 2025,
+      "residual_std_log": 0.009872337587823516,
+      "spec": {
+        "categories": {
+          "assembly": [
+            "imported",
+            "local"
+          ],
+          "city": [
+            "Karachi",
+            "Lahore"
+          ],
+          "feature:ABS": [
+            "0",
+            "1"
+          ],
+          "make_model": [
+            "Honda / Civic",
+            "Toyota / Corolla"
+          ],
+          "seller_type": [
+            "dealer",
+            "individual"
+          ],
+          "transmission": [
+            "automatic",
+            "manual"
+          ]
+        },
+        "numeric": [
+          "model_year",
+          "log_mileage",
+          "engine_litres"
+        ],
+        "terms": [
+          "intercept",
+          "model_year",
+          "log_mileage",
+          "engine_litres",
+          "make_model=Toyota / Corolla",
+          "transmission=manual",
+          "city=Lahore",
+          "assembly=local",
+          "seller_type=individual",
+          "feature:ABS=1"
+        ]
+      },
+      "transformations": {
+        "categories": "first sorted level is baseline; other levels are 0/1",
+        "engine_litres": "engine_cc / 1000",
+        "intercept": "1",
+        "log_mileage": "log(1 + mileage_km)",
+        "model_year": "model_year - 2000"
+      },
+      "typical_error_percent": 0.815938081939303
+    },
+    "reason": null,
+    "status": "ok"
+  },
+  "generated_at": "2026-10-25T00:00:00Z",
+  "schema_version": "1.0.0"
+}

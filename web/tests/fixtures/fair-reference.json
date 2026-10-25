@@ -1,0 +1,358 @@
+{
+  "model": {
+    "spec": {
+      "numeric": [
+        "model_year",
+        "log_mileage",
+        "engine_litres"
+      ],
+      "categories": {
+        "make_model": [
+          "Honda / Civic",
+          "Toyota / Corolla"
+        ],
+        "transmission": [
+          "automatic",
+          "manual"
+        ],
+        "city": [
+          "Karachi",
+          "Lahore"
+        ],
+        "assembly": [
+          "imported",
+          "local"
+        ],
+        "seller_type": [
+          "dealer",
+          "individual"
+        ],
+        "feature:ABS": [
+          "0",
+          "1"
+        ]
+      },
+      "terms": [
+        "intercept",
+        "model_year",
+        "log_mileage",
+        "engine_litres",
+        "make_model=Toyota / Corolla",
+        "transmission=manual",
+        "city=Lahore",
+        "assembly=local",
+        "seller_type=individual",
+        "feature:ABS=1"
+      ]
+    },
+    "coefficients": {
+      "intercept": 14.202627743639042,
+      "model_year": 0.05974550581426076,
+      "log_mileage": -0.12024598206520565,
+      "engine_litres": 0.2995098398893594,
+      "make_model=Toyota / Corolla": -0.0994139566756771,
+      "transmission=manual": -0.14951299819201225,
+      "city=Lahore": -0.07766152498522394,
+      "assembly=local": -0.0690143826861975,
+      "seller_type=individual": -0.033849204225950835,
+      "feature:ABS=1": 0.050553093079156564
+    },
+    "ranges": {
+      "model_year": [
+        2008.0,
+        2023.0
+      ],
+      "mileage_km": [
+        5243.0,
+        149984.0
+      ],
+      "engine_cc": [
+        800.0,
+        2380.0
+      ]
+    },
+    "defaults": {
+      "make_model": "Toyota / Corolla",
+      "transmission": "automatic",
+      "city": "Lahore",
+      "assembly": "imported",
+      "seller_type": "individual",
+      "feature:ABS": "1",
+      "engine_cc": 1563.0
+    },
+    "residual_std_log": 0.009872337587823516,
+    "typical_error_percent": 0.815938081939303,
+    "reference_year": 2025,
+    "transformations": {
+      "intercept": "1",
+      "model_year": "model_year - 2000",
+      "log_mileage": "log(1 + mileage_km)",
+      "engine_litres": "engine_cc / 1000",
+      "categories": "first sorted level is baseline; other levels are 0/1"
+    },
+    "interval_multiplier": 1.96,
+    "point_estimate": "conditional_median"
+  },
+  "references": [
+    {
+      "car": {
+        "make": "Honda",
+        "model": "Civic",
+        "model_year": 2017,
+        "mileage_km": 59950,
+        "transmission": "automatic",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 1627600.7028103638,
+      "lower_pkr": 1596409.727036151,
+      "upper_pkr": 1659401.0941708582
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2020,
+        "mileage_km": 138188,
+        "transmission": "manual",
+        "city": "Karachi"
+      },
+      "estimate_pkr": 1483881.4676514934,
+      "lower_pkr": 1455444.6951498576,
+      "upper_pkr": 1512873.8435594314
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2023,
+        "mileage_km": 130939,
+        "transmission": "manual",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 1653204.4377391874,
+      "lower_pkr": 1621522.797716357,
+      "upper_pkr": 1685505.0800455196
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2010,
+        "mileage_km": 113151,
+        "transmission": "manual",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 773817.4284234564,
+      "lower_pkr": 758988.1643281878,
+      "upper_pkr": 788936.4296766184
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2011,
+        "mileage_km": 60076,
+        "transmission": "automatic",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 1029391.1589403866,
+      "lower_pkr": 1009664.1370453615,
+      "upper_pkr": 1049503.6113747053
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2023,
+        "mileage_km": 102031,
+        "transmission": "manual",
+        "city": "Karachi"
+      },
+      "estimate_pkr": 1841117.4544386833,
+      "lower_pkr": 1805834.691399985,
+      "upper_pkr": 1877089.579229913
+    },
+    {
+      "car": {
+        "make": "Honda",
+        "model": "Civic",
+        "model_year": 2017,
+        "mileage_km": 46717,
+        "transmission": "manual",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 1444239.7840283106,
+      "lower_pkr": 1416562.6958837807,
+      "upper_pkr": 1472457.6327126923
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2014,
+        "mileage_km": 137605,
+        "transmission": "manual",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 959862.8034505099,
+      "lower_pkr": 941468.2074065926,
+      "upper_pkr": 978616.7968282481
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2015,
+        "mileage_km": 42455,
+        "transmission": "automatic",
+        "city": "Karachi"
+      },
+      "estimate_pkr": 1473080.1105792797,
+      "lower_pkr": 1444850.332868311,
+      "upper_pkr": 1501861.4473905107
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2014,
+        "mileage_km": 94767,
+        "transmission": "manual",
+        "city": "Karachi"
+      },
+      "estimate_pkr": 1084960.8212373978,
+      "lower_pkr": 1064168.874765052,
+      "upper_pkr": 1106159.0049605789
+    },
+    {
+      "car": {
+        "make": "Honda",
+        "model": "Civic",
+        "model_year": 2009,
+        "mileage_km": 115830,
+        "transmission": "automatic",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 932345.6695915045,
+      "lower_pkr": 914478.4057452753,
+      "upper_pkr": 950562.0276485374
+    },
+    {
+      "car": {
+        "make": "Honda",
+        "model": "Civic",
+        "model_year": 2013,
+        "mileage_km": 49525,
+        "transmission": "manual",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 1129282.5400046427,
+      "lower_pkr": 1107641.2220286143,
+      "upper_pkr": 1151346.6904235461
+    },
+    {
+      "car": {
+        "make": "Honda",
+        "model": "Civic",
+        "model_year": 2022,
+        "mileage_km": 73918,
+        "transmission": "automatic",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 2139666.334676012,
+      "lower_pkr": 2098662.247681861,
+      "upper_pkr": 2181471.567806032
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2018,
+        "mileage_km": 64112,
+        "transmission": "manual",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 1336233.264346353,
+      "lower_pkr": 1310625.9889839387,
+      "upper_pkr": 1362340.859828312
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2023,
+        "mileage_km": 94390,
+        "transmission": "automatic",
+        "city": "Karachi"
+      },
+      "estimate_pkr": 2158137.8346905573,
+      "lower_pkr": 2116779.764002204,
+      "upper_pkr": 2200303.9677197137
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2020,
+        "mileage_km": 43375,
+        "transmission": "manual",
+        "city": "Karachi"
+      },
+      "estimate_pkr": 1705728.3663241377,
+      "lower_pkr": 1673040.1694835133,
+      "upper_pkr": 1739055.2317587272
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2010,
+        "mileage_km": 27001,
+        "transmission": "manual",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 919313.2709548059,
+      "lower_pkr": 901695.7570807015,
+      "upper_pkr": 937274.9993743009
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2020,
+        "mileage_km": 105226,
+        "transmission": "automatic",
+        "city": "Karachi"
+      },
+      "estimate_pkr": 1780584.3268392654,
+      "lower_pkr": 1746461.6071166154,
+      "upper_pkr": 1815373.7431537707
+    },
+    {
+      "car": {
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2022,
+        "mileage_km": 149527,
+        "transmission": "automatic",
+        "city": "Lahore"
+      },
+      "estimate_pkr": 1779835.584919735,
+      "lower_pkr": 1745727.2139197374,
+      "upper_pkr": 1814610.372163346
+    },
+    {
+      "car": {
+        "make": "Honda",
+        "model": "Civic",
+        "model_year": 2020,
+        "mileage_km": 28881,
+        "transmission": "automatic",
+        "city": "Karachi"
+      },
+      "estimate_pkr": 2297500.364918099,
+      "lower_pkr": 2253471.581875877,
+      "upper_pkr": 2342389.391218665
+    }
+  ]
+}

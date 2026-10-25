@@ -1,0 +1,1333 @@
+{
+  "bundle_id": "e607458c335404dee0a10cf0805941235fb35a86f75f1ad90c3867210b1b8e52",
+  "data": {
+    "cohorts": [
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 893722.9026079681,
+        "model": "Civic",
+        "model_year": 2008,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 962381.6957491806,
+        "model": "Civic",
+        "model_year": 2009,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 1142510.2392856334,
+        "model": "Civic",
+        "model_year": 2011,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 1471305.910051939,
+        "model": "Civic",
+        "model_year": 2015,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 1505948.8818185003,
+        "model": "Civic",
+        "model_year": 2016,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 15,
+        "make": "Honda",
+        "median_price_pkr": 1492831.521766445,
+        "model": "Civic",
+        "model_year": 2017,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 1704463.00701058,
+        "model": "Civic",
+        "model_year": 2018,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2409021.0855265856,
+        "model": "Civic",
+        "model_year": 2020,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 2051830.8341127464,
+        "model": "Civic",
+        "model_year": 2021,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2115500.8450817936,
+        "model": "Civic",
+        "model_year": 2022,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2195992.8733990896,
+        "model": "Civic",
+        "model_year": 2023,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 776505.9684371611,
+        "model": "Corolla",
+        "model_year": 2008,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 904616.3630168232,
+        "model": "Corolla",
+        "model_year": 2009,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1049991.1336643063,
+        "model": "Corolla",
+        "model_year": 2010,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 950735.6582383354,
+        "model": "Corolla",
+        "model_year": 2011,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1231531.2542908536,
+        "model": "Corolla",
+        "model_year": 2013,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 1094523.0844553695,
+        "model": "Corolla",
+        "model_year": 2014,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1247901.756082768,
+        "model": "Corolla",
+        "model_year": 2017,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1474241.107361763,
+        "model": "Corolla",
+        "model_year": 2018,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 1828674.869527681,
+        "model": "Corolla",
+        "model_year": 2019,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 2051028.1072361332,
+        "model": "Corolla",
+        "model_year": 2020,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 1992546.893859942,
+        "model": "Corolla",
+        "model_year": 2021,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1853615.9605881853,
+        "model": "Corolla",
+        "model_year": 2022,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1930570.070726866,
+        "model": "Corolla",
+        "model_year": 2023,
+        "week": "2025-01-06"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 897390.543631192,
+        "model": "Civic",
+        "model_year": 2008,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 941045.6080831893,
+        "model": "Civic",
+        "model_year": 2009,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 1111205.409015794,
+        "model": "Civic",
+        "model_year": 2011,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 1435374.590839446,
+        "model": "Civic",
+        "model_year": 2015,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 1497862.6915537333,
+        "model": "Civic",
+        "model_year": 2016,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 15,
+        "make": "Honda",
+        "median_price_pkr": 1474943.57409419,
+        "model": "Civic",
+        "model_year": 2017,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 1681942.4070071,
+        "model": "Civic",
+        "model_year": 2018,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2333551.9543551626,
+        "model": "Civic",
+        "model_year": 2020,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 2021715.942608819,
+        "model": "Civic",
+        "model_year": 2021,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2149938.5606768387,
+        "model": "Civic",
+        "model_year": 2022,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2153272.617179509,
+        "model": "Civic",
+        "model_year": 2023,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 779072.9912821045,
+        "model": "Corolla",
+        "model_year": 2008,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 902161.5672476477,
+        "model": "Corolla",
+        "model_year": 2009,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1030629.1038039941,
+        "model": "Corolla",
+        "model_year": 2010,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 955959.5525667368,
+        "model": "Corolla",
+        "model_year": 2011,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1192331.8163465124,
+        "model": "Corolla",
+        "model_year": 2013,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 1080189.1625371478,
+        "model": "Corolla",
+        "model_year": 2014,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1219789.0820201081,
+        "model": "Corolla",
+        "model_year": 2017,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1461857.2649270368,
+        "model": "Corolla",
+        "model_year": 2018,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 1807528.1537925296,
+        "model": "Corolla",
+        "model_year": 2019,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 2016020.527530022,
+        "model": "Corolla",
+        "model_year": 2020,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 1981767.0977427778,
+        "model": "Corolla",
+        "model_year": 2021,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1824369.7807831978,
+        "model": "Corolla",
+        "model_year": 2022,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1906021.6864405714,
+        "model": "Corolla",
+        "model_year": 2023,
+        "week": "2025-01-13"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 885030.0922002539,
+        "model": "Civic",
+        "model_year": 2008,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 941196.5480309095,
+        "model": "Civic",
+        "model_year": 2009,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 1111886.352899621,
+        "model": "Civic",
+        "model_year": 2011,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 1434540.017960005,
+        "model": "Civic",
+        "model_year": 2015,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 1478035.7180761686,
+        "model": "Civic",
+        "model_year": 2016,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 15,
+        "make": "Honda",
+        "median_price_pkr": 1464540.2060184625,
+        "model": "Civic",
+        "model_year": 2017,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 1664986.5022235685,
+        "model": "Civic",
+        "model_year": 2018,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2298946.6182077043,
+        "model": "Civic",
+        "model_year": 2020,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 2004559.4333150117,
+        "model": "Civic",
+        "model_year": 2021,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2095324.7338065733,
+        "model": "Civic",
+        "model_year": 2022,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2163909.7210950153,
+        "model": "Civic",
+        "model_year": 2023,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 767784.2227931825,
+        "model": "Corolla",
+        "model_year": 2008,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 867232.1761332867,
+        "model": "Corolla",
+        "model_year": 2009,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1031261.8295203667,
+        "model": "Corolla",
+        "model_year": 2010,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 943058.2649505078,
+        "model": "Corolla",
+        "model_year": 2011,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1216551.9403104873,
+        "model": "Corolla",
+        "model_year": 2013,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 1058492.8875080247,
+        "model": "Corolla",
+        "model_year": 2014,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1204916.260939102,
+        "model": "Corolla",
+        "model_year": 2017,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1474327.4388639664,
+        "model": "Corolla",
+        "model_year": 2018,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 1842024.6545318142,
+        "model": "Corolla",
+        "model_year": 2019,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 2024540.148358244,
+        "model": "Corolla",
+        "model_year": 2020,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 1973073.4157596203,
+        "model": "Corolla",
+        "model_year": 2021,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1793137.9548381162,
+        "model": "Corolla",
+        "model_year": 2022,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1865868.6405709877,
+        "model": "Corolla",
+        "model_year": 2023,
+        "week": "2025-01-20"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 874004.6076709912,
+        "model": "Civic",
+        "model_year": 2008,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 934807.1416060217,
+        "model": "Civic",
+        "model_year": 2009,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 1093876.9492320376,
+        "model": "Civic",
+        "model_year": 2011,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 1400749.4758743646,
+        "model": "Civic",
+        "model_year": 2015,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 1457524.3853584148,
+        "model": "Civic",
+        "model_year": 2016,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 15,
+        "make": "Honda",
+        "median_price_pkr": 1459093.0390918243,
+        "model": "Civic",
+        "model_year": 2017,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 1650053.2855402785,
+        "model": "Civic",
+        "model_year": 2018,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2312977.9926570947,
+        "model": "Civic",
+        "model_year": 2020,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 2002840.5178589711,
+        "model": "Civic",
+        "model_year": 2021,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2079980.3710278047,
+        "model": "Civic",
+        "model_year": 2022,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2130459.9527427685,
+        "model": "Civic",
+        "model_year": 2023,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 748156.0857304299,
+        "model": "Corolla",
+        "model_year": 2008,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 892144.090442185,
+        "model": "Corolla",
+        "model_year": 2009,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 995740.7193105613,
+        "model": "Corolla",
+        "model_year": 2010,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 933463.9580922946,
+        "model": "Corolla",
+        "model_year": 2011,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1195970.036891362,
+        "model": "Corolla",
+        "model_year": 2013,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 1054309.618245825,
+        "model": "Corolla",
+        "model_year": 2014,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1194955.6253390277,
+        "model": "Corolla",
+        "model_year": 2017,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1439364.9035158053,
+        "model": "Corolla",
+        "model_year": 2018,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 1739938.7262981553,
+        "model": "Corolla",
+        "model_year": 2019,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1991090.2321748221,
+        "model": "Corolla",
+        "model_year": 2020,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 1899597.9041763523,
+        "model": "Corolla",
+        "model_year": 2021,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1810092.7588327273,
+        "model": "Corolla",
+        "model_year": 2022,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1847144.4461092637,
+        "model": "Corolla",
+        "model_year": 2023,
+        "week": "2025-01-27"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 855732.0085200806,
+        "model": "Civic",
+        "model_year": 2008,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 905184.7493882044,
+        "model": "Civic",
+        "model_year": 2009,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 1075259.237417322,
+        "model": "Civic",
+        "model_year": 2011,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 1407087.9362690137,
+        "model": "Civic",
+        "model_year": 2015,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 1449596.1580832507,
+        "model": "Civic",
+        "model_year": 2016,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 15,
+        "make": "Honda",
+        "median_price_pkr": 1449098.2310775486,
+        "model": "Civic",
+        "model_year": 2017,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 1621564.356433867,
+        "model": "Civic",
+        "model_year": 2018,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2269866.7763610505,
+        "model": "Civic",
+        "model_year": 2020,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 1955143.092730297,
+        "model": "Civic",
+        "model_year": 2021,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2064324.3096198167,
+        "model": "Civic",
+        "model_year": 2022,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2119019.1933391043,
+        "model": "Civic",
+        "model_year": 2023,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 752875.7280657777,
+        "model": "Corolla",
+        "model_year": 2008,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 877440.2074651814,
+        "model": "Corolla",
+        "model_year": 2009,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 993232.4057164823,
+        "model": "Corolla",
+        "model_year": 2010,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 916036.160762427,
+        "model": "Corolla",
+        "model_year": 2011,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1192756.0125223568,
+        "model": "Corolla",
+        "model_year": 2013,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 1034248.9642168328,
+        "model": "Corolla",
+        "model_year": 2014,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1194100.2164668613,
+        "model": "Corolla",
+        "model_year": 2017,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1422130.8186534853,
+        "model": "Corolla",
+        "model_year": 2018,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 1741156.7415716988,
+        "model": "Corolla",
+        "model_year": 2019,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1980528.246380561,
+        "model": "Corolla",
+        "model_year": 2020,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 1894066.4574832257,
+        "model": "Corolla",
+        "model_year": 2021,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1770905.7780341634,
+        "model": "Corolla",
+        "model_year": 2022,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1866113.5932538281,
+        "model": "Corolla",
+        "model_year": 2023,
+        "week": "2025-02-03"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 852394.1974555535,
+        "model": "Civic",
+        "model_year": 2008,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 911810.8631008111,
+        "model": "Civic",
+        "model_year": 2009,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 1081135.032285402,
+        "model": "Civic",
+        "model_year": 2011,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 1396514.7839608323,
+        "model": "Civic",
+        "model_year": 2015,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 1443948.9004695443,
+        "model": "Civic",
+        "model_year": 2016,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 15,
+        "make": "Honda",
+        "median_price_pkr": 1424720.9120685086,
+        "model": "Civic",
+        "model_year": 2017,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 1615382.5750900847,
+        "model": "Civic",
+        "model_year": 2018,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2232496.834483196,
+        "model": "Civic",
+        "model_year": 2020,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 1945940.9141496217,
+        "model": "Civic",
+        "model_year": 2021,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2027733.1218656446,
+        "model": "Civic",
+        "model_year": 2022,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2077111.916299329,
+        "model": "Civic",
+        "model_year": 2023,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 746892.7621389518,
+        "model": "Corolla",
+        "model_year": 2008,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 864849.016348975,
+        "model": "Corolla",
+        "model_year": 2009,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 988884.8634536983,
+        "model": "Corolla",
+        "model_year": 2010,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 907396.1690553601,
+        "model": "Corolla",
+        "model_year": 2011,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1183067.3503283751,
+        "model": "Corolla",
+        "model_year": 2013,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 1031288.0104643551,
+        "model": "Corolla",
+        "model_year": 2014,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1170867.4603947755,
+        "model": "Corolla",
+        "model_year": 2017,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 1433555.2404100238,
+        "model": "Corolla",
+        "model_year": 2018,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 1733261.2146043081,
+        "model": "Corolla",
+        "model_year": 2019,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1960590.4282723912,
+        "model": "Corolla",
+        "model_year": 2020,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 1885498.722726553,
+        "model": "Corolla",
+        "model_year": 2021,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 1749060.051594506,
+        "model": "Corolla",
+        "model_year": 2022,
+        "week": "2025-02-10"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 1815932.8433296857,
+        "model": "Corolla",
+        "model_year": 2023,
+        "week": "2025-02-10"
+      }
+    ],
+    "per_make": {
+      "Honda": {
+        "points": [
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.0,
+            "week": "2025-01-06"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 98.58799319304782,
+            "week": "2025-01-13"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 97.83400474023861,
+            "week": "2025-01-20"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 96.97036135019697,
+            "week": "2025-01-27"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 95.62938963869384,
+            "week": "2025-02-03"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 94.93290290637542,
+            "week": "2025-02-10"
+          }
+        ],
+        "reason": null,
+        "status": "ok"
+      },
+      "Toyota": {
+        "points": [
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.0,
+            "week": "2025-01-06"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 98.89245112018764,
+            "week": "2025-01-13"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 98.01226145970801,
+            "week": "2025-01-20"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 96.5674459769229,
+            "week": "2025-01-27"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 95.96523341835398,
+            "week": "2025-02-03"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 95.00955531303197,
+            "week": "2025-02-10"
+          }
+        ],
+        "reason": null,
+        "status": "ok"
+      }
+    },
+    "quality_adjusted": {
+      "points": [
+        {
+          "lower": 100.0,
+          "upper": 100.0,
+          "value": 100.0,
+          "week": "2025-01-06"
+        },
+        {
+          "lower": 98.76380379208697,
+          "upper": 99.15393924360205,
+          "value": 98.95867925890899,
+          "week": "2025-01-13"
+        },
+        {
+          "lower": 97.79090615346261,
+          "upper": 98.17355757862254,
+          "value": 97.98204506909741,
+          "week": "2025-01-20"
+        },
+        {
+          "lower": 96.78502248709277,
+          "upper": 97.1658839562924,
+          "value": 96.97526624705914,
+          "week": "2025-01-27"
+        },
+        {
+          "lower": 95.93502366101508,
+          "upper": 96.29527846646761,
+          "value": 96.11498227708626,
+          "week": "2025-02-03"
+        },
+        {
+          "lower": 94.9421753616707,
+          "upper": 95.313970393461,
+          "value": 95.12789123865338,
+          "week": "2025-02-10"
+        }
+      ],
+      "reason": null,
+      "status": "ok"
+    },
+    "raw": {
+      "points": [
+        {
+          "lower": null,
+          "upper": null,
+          "value": 100.0,
+          "week": "2025-01-06"
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "value": 98.75392997798184,
+          "week": "2025-01-13"
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "value": 97.93125344441832,
+          "week": "2025-01-20"
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "value": 96.75111774716089,
+          "week": "2025-01-27"
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "value": 95.8135424231709,
+          "week": "2025-02-03"
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "value": 94.97600335567172,
+          "week": "2025-02-10"
+        }
+      ],
+      "reason": null,
+      "status": "ok"
+    },
+    "reason": null,
+    "status": "ok"
+  },
+  "generated_at": "2026-10-25T00:00:00Z",
+  "schema_version": "1.0.0"
+}

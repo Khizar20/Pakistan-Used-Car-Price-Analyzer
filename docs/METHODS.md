@@ -122,7 +122,8 @@ conditional median `exp(Xβ)`, without retransformation correction. Its range is
 `exp(Xβ ± 1.96 * residual_sd)`, assuming approximately Gaussian log residuals;
 this is an approximate residual range, not a calibrated coverage guarantee or
 a confidence interval for the mean. Twenty reference cars test exact evaluation
-parity with the exported formula. Browser parity will be tested in the frontend phase.
+parity with the exported formula. Twenty stored reference cases now verify browser
+evaluation in TypeScript and are rechecked against Python in the default tests.
 
 Implementation references: [statsmodels robust fitting](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.fit.html),
 [grouped folds](https://scikit-learn.org/1.6/modules/generated/sklearn.model_selection.GroupKFold.html),

@@ -1,0 +1,26 @@
+{
+  "bundle_id": "e607458c335404dee0a10cf0805941235fb35a86f75f1ad90c3867210b1b8e52",
+  "data": {
+    "models": [
+      {
+        "listing_count": 115,
+        "make": "Honda",
+        "median_price_pkr": 1453402.3160831132,
+        "model": "Civic",
+        "priced_listing_count": 115
+      },
+      {
+        "listing_count": 125,
+        "make": "Toyota",
+        "median_price_pkr": 1213627.4957270443,
+        "model": "Corolla",
+        "priced_listing_count": 125
+      }
+    ],
+    "population": "latest_active_nonduplicate",
+    "reason": null,
+    "status": "ok"
+  },
+  "generated_at": "2026-10-25T00:00:00Z",
+  "schema_version": "1.0.0"
+}

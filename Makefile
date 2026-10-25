@@ -6,7 +6,7 @@ PYTHON ?= .venv/bin/python
 PYTHON310 ?= python3.10
 endif
 
-.PHONY: setup scrape analyze export status backup migrate test lint typecheck check
+.PHONY: setup scrape analyze export status backup migrate test lint typecheck frontend check
 
 setup:
 	$(PYTHON310) -m venv .venv
@@ -14,6 +14,7 @@ setup:
 	$(PYTHON) -m pip install -r requirements.lock
 	$(PYTHON) -m pip install --no-deps --no-build-isolation -e .
 	$(PYTHON) --version
+	$(PYTHON) -m scripts.frontend ci
 
 scrape:
 	$(PYTHON) -m tracker.cli scrape
@@ -47,4 +48,7 @@ lint:
 typecheck:
 	$(PYTHON) -m mypy src
 
-check: lint typecheck test
+frontend:
+	$(PYTHON) -m scripts.frontend check
+
+check: lint typecheck test frontend

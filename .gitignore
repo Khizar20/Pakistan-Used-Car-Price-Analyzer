@@ -33,3 +33,6 @@ build/
 web/dist/
 playwright-report/
 test-results/
+web/coverage/
+web/src/generated/
+web/lighthouse-results/

@@ -3,9 +3,8 @@
 What drives used-car asking prices in Pakistan, and how do those prices change
 over time? This project collects original observations for educational analysis.
 The scraper, cleaning layer, normalized storage, and analysis are implemented.
-Versioned public exports are implemented; the dashboard is a planned phase.
-No market findings or deployed dashboard are
-available yet.
+Versioned public exports and the six-page dashboard are implemented. The dashboard
+runs locally; a public deployment and longitudinal market findings are not yet available.
 
 ## Current status
 
@@ -20,7 +19,31 @@ available yet.
   survival, gated seasonality, validated price drivers, and private analysis CLI complete.
 - Phase 6: eight public JSON contracts, privacy/size validation, schema-derived
   TypeScript declarations, fixture snapshots, and export CLI complete.
-- Next: Phases 7–8 dashboard.
+- Phase 7: accessible dashboard design handoff and verified light/dark palettes complete.
+- Phase 8: responsive React dashboard, supported-model price calculator, chart tables,
+  runtime data validation, Python/browser parity and browser quality checks implemented.
+- Remaining: longer daily collection, supported real-data models/findings and public hosting.
+
+![The dashboard showing the actual one-day observation sample](web/tests/e2e/dashboard.spec.ts-snapshots/market-light-1280-win32.png)
+
+## Run the dashboard
+
+Use Node 20.19 or newer alongside Python 3.10:
+
+```powershell
+cd web
+npm ci
+npm run dev
+```
+
+Open the Local URL printed by Vite, normally `http://127.0.0.1:5173/`. Market,
+Price drops, Seasons, Drivers, Fair price and About the data all read the committed
+exports. Theme and full-price controls, mobile layouts, keyboard navigation and
+chart data tables are available. The current sparse sample explains unavailable
+analyses; the calculator activates only when the exported model is supported.
+
+`make check` now includes the frontend quality gate. Production browser checks,
+visual baselines and performance audits are documented in [web/README.md](web/README.md).
 
 ## Setup
 
@@ -131,7 +154,7 @@ refreshes. Existing generated files are refreshed; unrelated files are retained.
 See [the public data contract](docs/EXPORTS.md) for filenames, schema regeneration,
 digest checks, population definitions and publication review. The current committed
 data describes the small available sample and its insufficient-data states; it
-does not claim market findings. Dashboard implementation remains in Phases 7–8.
+does not claim market findings. The dashboard reads this public contract directly.
 
 Missing or malformed details retain the list summary and produce a nonzero exit
 status with an error count. Access challenges or server failures stop collection.

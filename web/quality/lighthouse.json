@@ -1,0 +1,32 @@
+{
+  "market": {
+    "performance": 96,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "drops": {
+    "performance": 95,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "seasons": {
+    "performance": 98,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "drivers": {
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "fair": {
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "about": {
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100
+  }
+}
