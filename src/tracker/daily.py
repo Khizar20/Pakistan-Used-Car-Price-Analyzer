@@ -57,6 +57,7 @@ def refresh(
     settings: DailySettings,
     *,
     force: bool = False,
+    scheduled: bool = False,
     now: Callable[[], datetime] = lambda: datetime.now(timezone.utc),
     command: Callable[[list[str], Path], int] = _command,
 ) -> str:
@@ -74,6 +75,12 @@ def refresh(
         stamp = now()
         if stamp.utcoffset() is None:
             raise ValueError("Clock must be timezone aware")
+        if (
+            scheduled
+            and not force
+            and stamp.astimezone(ZoneInfo("Asia/Karachi")).hour < 9
+        ):
+            return "not_due"
         day = stamp.astimezone(ZoneInfo("Asia/Karachi")).date().isoformat()
         digest = hashlib.sha256(settings.model_dump_json().encode()).hexdigest()
         path = state / "status.json"

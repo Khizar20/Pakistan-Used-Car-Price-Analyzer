@@ -1,5 +1,6 @@
 """Image ingestion uses invented, anonymous artwork and mocked downloads."""
 
+import gzip
 import hashlib
 import io
 import json
@@ -78,6 +79,24 @@ def test_thumbnail_requests_respect_robots_and_validate_response(tmp_path):
     with client(tmp_path, lambda _: httpx.Response(403)) as http:
         with pytest.raises(AccessBlockedError):
             http.get_photo(PHOTO)
+
+
+def test_compressed_thumbnail_is_decoded_once(tmp_path):
+    content = artwork()
+
+    def handler(request):
+        return (
+            httpx.Response(404)
+            if request.url.path == "/robots.txt"
+            else httpx.Response(
+                200,
+                content=gzip.compress(content, mtime=0),
+                headers={"content-type": "image/webp", "content-encoding": "gzip"},
+            )
+        )
+
+    with client(tmp_path, handler) as http:
+        assert http.get_photo(PHOTO) == content
 
 
 @pytest.mark.parametrize(

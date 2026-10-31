@@ -154,13 +154,17 @@ class PoliteClient:
             else:
                 with self._client.stream("GET", url) as streamed:
                     body = bytearray()
-                    for chunk in streamed.iter_bytes():
+                    for chunk in streamed.iter_bytes(chunk_size=65536):
                         body.extend(chunk)
                         if len(body) > max_bytes:
                             raise ValueError("Thumbnail exceeds download limit")
                     response = httpx.Response(
                         streamed.status_code,
-                        headers=streamed.headers,
+                        headers={
+                            key: value
+                            for key, value in streamed.headers.items()
+                            if key not in {"content-encoding", "content-length"}
+                        },
                         content=bytes(body),
                         request=streamed.request,
                     )

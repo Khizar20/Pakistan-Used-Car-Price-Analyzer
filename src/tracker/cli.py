@@ -305,7 +305,8 @@ def export_data(
     typer.echo(
         f"Exported 8 public JSON files to {output}; schema version {EXPORT_VERSION}."
     )
-    typer.echo(f"Generated {len(saved) - 8} contract artifacts in {types_directory}.")
+    count = sum(path.parent == types_directory for path in saved)
+    typer.echo(f"Generated {count} contract artifacts in {types_directory}.")
 
 
 @app.command(name="refresh")
@@ -314,13 +315,16 @@ def daily_refresh(
     force: Annotated[
         bool, typer.Option(help="Repeat even after today's success.")
     ] = False,
+    scheduled: Annotated[
+        bool, typer.Option(help="Wait until 09:00 Pakistan time.")
+    ] = False,
 ) -> None:
     """Back up, collect four cities, then refresh the local dashboard exports."""
     try:
         settings = DailySettings.model_validate_json(
             config.read_text(encoding="utf-8-sig")
         )
-        result = refresh(Path.cwd(), settings, force=force)
+        result = refresh(Path.cwd(), settings, force=force, scheduled=scheduled)
     except Exception as exc:
         typer.echo(
             f"Daily refresh failed ({type(exc).__name__}); "

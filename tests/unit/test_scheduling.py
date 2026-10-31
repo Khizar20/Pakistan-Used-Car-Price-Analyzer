@@ -10,7 +10,7 @@ import pytest
 
 @pytest.mark.skipif(sys.platform != "win32", reason="Windows Task Scheduler installer")
 def test_schedule_preview_has_safe_paths_and_catchup(tmp_path):
-    python = tmp_path / ".venv/Scripts/python.exe"
+    python = tmp_path / ".venv/Scripts/pythonw.exe"
     python.parent.mkdir(parents=True)
     python.touch()
     config = tmp_path / "data/daily/config.json"
@@ -37,4 +37,6 @@ def test_schedule_preview_has_safe_paths_and_catchup(tmp_path):
     assert task["DailyAt"] == "09:00" and task["TimeZone"] == "Asia/Karachi"
     assert task["CatchUpAtLogon"] and task["StartWhenAvailable"]
     assert task["RunOnlyWhenLoggedOn"]
-    assert task["Arguments"] == f'-m tracker.cli refresh --config "{config}"'
+    assert (
+        task["Arguments"] == f'-m tracker.cli refresh --config "{config}" --scheduled'
+    )

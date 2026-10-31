@@ -4,12 +4,12 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $ProjectRoot = (Resolve-Path -LiteralPath $ProjectRoot).Path
-$python = Join-Path $ProjectRoot '.venv\Scripts\python.exe'
+$python = Join-Path $ProjectRoot '.venv\Scripts\pythonw.exe'
 $config = Join-Path $ProjectRoot 'data\daily\config.json'
 if (!(Test-Path -LiteralPath $python) -or !(Test-Path -LiteralPath $config)) {
     throw 'Python 3.10 venv and data/daily/config.json are required.'
 }
-$arguments = '-m tracker.cli refresh --config "{0}"' -f $config
+$arguments = '-m tracker.cli refresh --config "{0}" --scheduled' -f $config
 $taskName = 'Pakistan Used Car Tracker - Daily'
 if ($Preview) {
     [ordered]@{ TaskName=$taskName; Execute=$python; Arguments=$arguments;

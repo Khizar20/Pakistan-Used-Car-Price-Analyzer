@@ -144,3 +144,30 @@ def test_command_logs_and_uses_current_venv(tmp_path, monkeypatch):
     monkeypatch.setattr("tracker.daily.subprocess.run", run)
     assert _command(["scrape"], tmp_path) == 0
     assert "bounded collection" in (tmp_path / "data/daily/scrape.log").read_text()
+
+
+def test_logon_before_nine_does_not_preempt_the_daily_run(tmp_path):
+    calls = []
+
+    def command(args, _):
+        calls.append(args[0])
+        return 0
+
+    early = NOW.replace(hour=3, minute=59)
+    assert (
+        refresh(
+            tmp_path, settings(), scheduled=True, now=lambda: early, command=command
+        )
+        == "not_due"
+    )
+    assert calls == []
+    due = NOW.replace(hour=4, minute=0)
+    assert (
+        refresh(tmp_path, settings(), scheduled=True, now=lambda: due, command=command)
+        == "ok"
+    )
+    assert calls == ["scrape", "export", "photos"]
+    assert (
+        refresh(tmp_path, settings(), scheduled=True, now=lambda: due, command=command)
+        == "already_completed"
+    )
