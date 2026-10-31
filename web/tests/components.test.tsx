@@ -1,9 +1,12 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+// Compile the real chart before test timing; browser tests cover lazy chunk loading.
+import "../src/components/ChartImplementation";
 import { expect, it } from "vitest";
 import { Chart, Empty } from "../src/components/Chart";
+import { CityExplorer } from "../src/components/CityExplorer";
 import { FairPrice } from "../src/components/FairPrice";
 import { Drops, Fair, Market, Seasons, Drivers, About } from "../src/pages";
-import { validate } from "../src/lib/data";
+import { validate } from "../src/lib/validation";
 import type { FairModel } from "../src/lib/fairPrice";
 import meta from "./fixtures/meta.json";
 import index from "./fixtures/index.json";
@@ -137,4 +140,71 @@ it("renders all supported page bodies and model filtering", () => {
     <Empty title="Unavailable" detail="Collect more observations" />,
   );
   expect(screen.getByText("Collect more observations")).toBeVisible();
+});
+
+it("refines city comparisons without inventing small-sample medians", () => {
+  render(<CityExplorer data={populated.models.data} full={false} />);
+  fireEvent.change(screen.getByLabelText("Car model"), {
+    target: { value: "Honda / Civic" },
+  });
+  expect(screen.getByRole("table")).toHaveAccessibleName(/Compare/);
+  fireEvent.change(screen.getByLabelText("Buying city"), {
+    target: { value: "Lahore" },
+  });
+  fireEvent.change(screen.getByLabelText("Year"), {
+    target: { value: "2023" },
+  });
+  expect(screen.getByLabelText("Year")).toHaveValue("2023");
+  fireEvent.click(
+    screen.getByRole("button", { name: "Clear car refinements" }),
+  );
+  expect(screen.getByLabelText("Year")).toHaveValue("All years");
+  expect(screen.getByText(/Trim, condition and mileage/)).toBeVisible();
+});
+
+it("handles empty city data and an unavailable reviewed photo", () => {
+  const view = render(
+    <CityExplorer
+      data={{ ...populated.models.data, city_prices: [] }}
+      full={false}
+    />,
+  );
+  expect(screen.getByText("Not enough comparable listings yet")).toBeVisible();
+  expect(screen.getByLabelText("Buying city")).toHaveValue("Karachi");
+  view.unmount();
+  render(<CityExplorer data={populated.models.data} full={true} />);
+  fireEvent.change(screen.getByLabelText("Car model"), {
+    target: { value: "Honda / Civic" },
+  });
+  const image = screen.getByRole("img", {
+    name: "Honda Civic example listing",
+  });
+  expect(image).toHaveAttribute("loading", "lazy");
+  fireEvent.error(image);
+  expect(screen.queryByRole("img")).not.toBeInTheDocument();
+});
+
+it("keeps long model summaries manageable and expands on request", () => {
+  const data = {
+    ...populated,
+    models: {
+      ...populated.models,
+      data: {
+        ...populated.models.data,
+        models: Array.from({ length: 15 }, (_, index) => ({
+          ...populated.models.data.models[0]!,
+          model: `Example ${index}`,
+          listing_count: index + 1,
+        })),
+      },
+    },
+  };
+  const { container } = render(<Market bundle={data} full={false} />);
+  expect(container.querySelectorAll(".model-row")).toHaveLength(12);
+  fireEvent.click(screen.getByRole("button", { name: "Show all 15 models" }));
+  expect(container.querySelectorAll(".model-row")).toHaveLength(15);
+  fireEvent.click(
+    screen.getByRole("button", { name: "Show twelve most observed models" }),
+  );
+  expect(container.querySelectorAll(".model-row")).toHaveLength(12);
 });

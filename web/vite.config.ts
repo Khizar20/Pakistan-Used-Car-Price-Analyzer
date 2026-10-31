@@ -6,6 +6,7 @@ export default defineConfig({
   base: "./",
   build: { target: "es2022" },
   test: {
+    maxWorkers: 1,
     environment: "jsdom",
     setupFiles: ["./tests/setup.ts"],
     include: ["tests/**/*.test.ts", "tests/**/*.test.tsx"],

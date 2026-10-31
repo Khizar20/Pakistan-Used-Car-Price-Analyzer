@@ -30,9 +30,11 @@ Get-ScheduledTask -TaskName 'Pakistan Used Car Tracker - Daily'
 ```
 
 The installer requires Windows **Pakistan Standard Time**, runs with limited
-privileges, prevents overlapping instances and catches missed runs at logon.
+privileges, prevents overlapping instances and catches missed runs at logon
+after 09:00. Earlier logons wait for the daily trigger instead of preempting it.
 The computer must be on, network available, and this user logged on. It cannot
-collect while powered off. It stores no account passwords.
+collect while powered off. It uses the venv's Python windowless launcher to
+avoid opening a console and stores no account passwords.
 
 Run the same workflow manually:
 
@@ -43,8 +45,10 @@ Get-Content data/daily/status.json
 ```
 
 The worker uses an OS-released lock, backs up the database, collects, then exports
-eight validated dashboard files. Failed collection does not export. It retains
-seven automatic backups and preserves manual backups. One successful refresh per
+eight validated dashboard files. Large city comparisons are split losslessly into
+hash-addressed JSON parts, each below 500 KB. The browser verifies their hashes,
+schemas and bundle identity before displaying them. Failed collection does not
+export. It retains seven automatic backups and preserves manual backups. One successful refresh per
 Pakistan date/configuration is enough; `--force` permits a deliberate rerun.
 Snapshot uniqueness uses UTC dates.
 

@@ -2,10 +2,176 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { createHash } from "node:crypto";
 const pages = ["market", "drops", "seasons", "drivers", "fair", "about"];
+const realFairprice = JSON.parse(
+  readFileSync(resolve("public/data/fairprice.json"), "utf8"),
+) as { data: { status: string } };
+const realIndex = JSON.parse(
+  readFileSync(resolve("public/data/index.json"), "utf8"),
+) as { data: { quality_adjusted: { status: string } } };
+
+test("survival charts use readable numeric day ticks and retain exact table values", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.goto("/#drops");
+  const plot = page.getByRole("group", {
+    name: "Still without a price drop: all",
+    exact: true,
+  });
+  await plot.scrollIntoViewIfNeeded();
+  await expect(
+    plot.getByRole("img", { name: /Exact values are available/ }),
+  ).toBeVisible();
+  await expect(
+    plot.locator(".recharts-xAxis-tick-labels text").first(),
+  ).toContainText("0d");
+  const labels = await plot
+    .locator(".recharts-xAxis-tick-labels text")
+    .allTextContents();
+  expect(labels.every((label) => /^\d+(\.\d)?d$/.test(label))).toBe(true);
+  await plot.getByRole("button", { name: "Show data table" }).click();
+  await expect(plot.getByRole("table")).toBeVisible();
+  await expect(
+    plot.getByRole("rowheader", { name: "0 days", exact: true }),
+  ).toBeVisible();
+});
+
+async function marketReady(page: import("@playwright/test").Page) {
+  await expect(
+    page.getByRole("heading", {
+      name: "What does this car cost in your city?",
+    }),
+  ).toBeVisible();
+}
+
+test("keyboard exploration reveals deferred prices without losing focus", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.addInitScript(() =>
+    Object.defineProperty(window, "IntersectionObserver", {
+      value: class {
+        observe() {}
+        disconnect() {}
+      },
+    }),
+  );
+  await page.goto("/");
+  await page
+    .getByRole("button", { name: "Explore city prices", exact: true })
+    .focus();
+  await expect(
+    page.getByRole("group", {
+      name: "City prices and market details",
+      exact: true,
+    }),
+  ).toBeFocused();
+  await page.keyboard.press("Tab");
+  await expect(
+    page.getByRole("combobox", { name: "Car model", exact: true }),
+  ).toBeFocused();
+});
+
+test("a missing city part cannot display a partial comparison and retry recovers", async ({
+  page,
+}) => {
+  await fixture(page);
+  const model = JSON.parse(
+    readFileSync(resolve("tests/fixtures/models.json"), "utf8"),
+  );
+  const content = JSON.stringify({
+    schema_version: model.schema_version,
+    generated_at: model.generated_at,
+    bundle_id: model.bundle_id,
+    data: model.data.city_prices,
+  });
+  const digest = createHash("sha256").update(content).digest("hex");
+  await page.context().route("**/data/models.json", (route) =>
+    route.fulfill({
+      json: {
+        ...model,
+        data: { ...model.data, city_prices: [], city_price_parts: [digest] },
+      },
+    }),
+  );
+  let missing = true;
+  await page
+    .context()
+    .route(`**/data/models-cities-${digest}.json`, (route) =>
+      missing
+        ? route.fulfill({ status: 503 })
+        : route.fulfill({ contentType: "application/json", body: content }),
+    );
+  await page.goto("/");
+  await expect(page.getByRole("alert")).toContainText(
+    "city data could not be loaded",
+  );
+  missing = false;
+  await page.getByRole("button", { name: "Retry" }).click();
+  await marketReady(page);
+});
+
+test("a failed data worker is actionable and retry starts a fresh worker", async ({
+  page,
+}) => {
+  await page
+    .context()
+    .route("**/assets/dataWorker-*.js", (route) => route.abort());
+  await page.goto("/");
+  await expect(page.getByRole("alert")).toContainText("could not be loaded");
+  await page.context().unroute("**/assets/dataWorker-*.js");
+  await page.getByRole("button", { name: "Retry" }).click();
+  await expect(
+    page.getByRole("heading", {
+      name: "What does this car cost in your city?",
+    }),
+  ).toBeVisible();
+});
+
+test("a browser without workers still validates and renders data", async ({
+  page,
+}) => {
+  await page.addInitScript(() =>
+    Object.defineProperty(window, "Worker", { value: undefined }),
+  );
+  await page.goto("/");
+  await expect(
+    page.getByRole("heading", {
+      name: "What does this car cost in your city?",
+    }),
+  ).toBeVisible();
+  await expect(page.getByRole("alert")).toHaveCount(0);
+});
+
+test("city choices refine supported prices and display a reviewed matching photo", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.goto("/");
+  await page
+    .getByRole("combobox", { name: "Car model", exact: true })
+    .selectOption("Honda / Civic");
+  await page.getByLabel("Buying city").selectOption("Lahore");
+  await expect(page.locator(".local-price")).toContainText("Lahore");
+  const photo = page.getByRole("img", { name: "Honda Civic example listing" });
+  await photo.scrollIntoViewIfNeeded();
+  await expect
+    .poll(() =>
+      photo.evaluate((node) => (node as HTMLImageElement).naturalWidth),
+    )
+    .toBeGreaterThan(0);
+  await page.getByLabel("Buying city").selectOption("Rawalpindi");
+  await expect(page.locator(".local-price")).toContainText(
+    "Not enough comparable listings yet",
+  );
+  await page.getByRole("button", { name: "Refresh data", exact: true }).click();
+  await expect(page.getByLabel("Buying city")).toBeVisible();
+});
 
 async function fixture(page: import("@playwright/test").Page) {
-  await page.route("**/data/*.json", (route) =>
+  await page.context().route("**/data/*.json", (route) =>
     route.fulfill({
       contentType: "application/json",
       body: readFileSync(
@@ -36,6 +202,14 @@ for (const theme of ["light", "dark"] as const)
           );
           await expect(page.locator("main h1")).toBeVisible();
           await expect(page.getByRole("status")).toHaveCount(0);
+          for (const section of await page.locator(".deferred-content").all()) {
+            await section.scrollIntoViewIfNeeded();
+            await expect(
+              section.getByRole("button", {
+                name: /^Explore (city prices|price drops)$/,
+              }),
+            ).toHaveCount(0);
+          }
           for (const chart of await page.locator(".chart-host").all()) {
             await chart.scrollIntoViewIfNeeded();
             await expect(
@@ -67,7 +241,11 @@ test("real data has truthful unavailable states, keyboard navigation and persist
   page,
 }) => {
   await page.goto("/");
-  await expect(page.getByText("A trend needs more observations")).toBeVisible();
+  await marketReady(page);
+  if (realIndex.data.quality_adjusted.status !== "ok")
+    await expect(
+      page.getByText("A trend needs more observations"),
+    ).toBeVisible();
   await page.keyboard.press("Tab");
   await expect(
     page.getByRole("link", { name: "Skip to content" }),
@@ -75,9 +253,15 @@ test("real data has truthful unavailable states, keyboard navigation and persist
   await page.keyboard.press("Enter");
   await expect(page.locator("main")).toBeFocused();
   await page.getByRole("link", { name: "Fair price", exact: true }).click();
-  await expect(
-    page.getByText("Fair Price Check is not available yet"),
-  ).toBeVisible();
+  if (realFairprice.data.status !== "ok") {
+    await expect(
+      page.getByText("Fair Price Check is not available yet"),
+    ).toBeVisible();
+  } else {
+    await expect(
+      page.getByRole("button", { name: "Check price", exact: true }),
+    ).toBeVisible();
+  }
   await expect(page.locator("main")).toBeFocused();
   await page.getByRole("button", { name: "Switch to dark theme" }).click();
   await page.reload();
@@ -95,7 +279,7 @@ test("populated data supports chart tables, filters, models and fair-price input
     page.getByRole("button", { name: "Show data table" }).first(),
   ).toBeVisible();
   await page.getByRole("button", { name: "Show data table" }).first().click();
-  await expect(page.getByRole("table")).toBeVisible();
+  await expect(page.getByRole("table").last()).toBeVisible();
   await page
     .getByRole("combobox", { name: "Model", exact: true })
     .selectOption("Toyota / Corolla");
@@ -134,7 +318,7 @@ test("network and mixed-update errors are actionable and retry recovers", async 
   page,
 }) => {
   let broken = true;
-  await page.route("**/data/meta.json", async (route) => {
+  await page.context().route("**/data/meta.json", async (route) => {
     if (broken) await route.fulfill({ status: 503, body: "Unavailable" });
     else await route.continue();
   });
@@ -142,20 +326,26 @@ test("network and mixed-update errors are actionable and retry recovers", async 
   await expect(page.getByRole("alert")).toContainText("could not be loaded");
   broken = false;
   await page.getByRole("button", { name: "Retry" }).click();
-  await expect(page.getByText("A trend needs more observations")).toBeVisible();
+  await marketReady(page);
 });
 
 test("keyboard-only navigation opens the fair-price page", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByText("A trend needs more observations")).toBeVisible();
+  await marketReady(page);
   for (let index = 0; index < 7; index++) await page.keyboard.press("Tab");
   await expect(
     page.getByRole("link", { name: "Fair price", exact: true }),
   ).toBeFocused();
   await page.keyboard.press("Enter");
-  await expect(
-    page.getByText("Fair Price Check is not available yet"),
-  ).toBeVisible();
+  if (realFairprice.data.status !== "ok") {
+    await expect(
+      page.getByText("Fair Price Check is not available yet"),
+    ).toBeVisible();
+  } else {
+    await expect(
+      page.getByRole("button", { name: "Check price", exact: true }),
+    ).toBeVisible();
+  }
   await expect(page.locator("main")).toBeFocused();
 });
 test("theme follows the system until chosen and survives blocked storage", async ({
@@ -170,7 +360,7 @@ test("theme follows the system until chosen and survives blocked storage", async
   );
   await page.emulateMedia({ colorScheme: "light" });
   await page.goto("/");
-  await expect(page.getByText("A trend needs more observations")).toBeVisible();
+  await marketReady(page);
   await page.emulateMedia({ colorScheme: "dark" });
   await expect(page.locator(".app")).toHaveAttribute("data-theme", "dark");
   await page.getByRole("button", { name: "Switch to light theme" }).click();
@@ -181,7 +371,7 @@ test("theme follows the system until chosen and survives blocked storage", async
 test("mixed bundles fail visibly and unknown hash routes remain safe", async ({
   page,
 }) => {
-  await page.route("**/data/meta.json", async (route) => {
+  await page.context().route("**/data/meta.json", async (route) => {
     const response = await route.fetch();
     await route.fulfill({
       json: { ...(await response.json()), bundle_id: "a".repeat(64) },
@@ -190,9 +380,9 @@ test("mixed bundles fail visibly and unknown hash routes remain safe", async ({
   await page.goto("/#__proto__");
   await expect(page.getByRole("alert")).toContainText("being refreshed");
   await expect(page.getByRole("button", { name: "Retry" })).toBeVisible();
-  await page.unroute("**/data/meta.json");
+  await page.context().unroute("**/data/meta.json");
   await page.getByRole("button", { name: "Retry" }).click();
-  await expect(page.getByText("A trend needs more observations")).toBeVisible();
+  await marketReady(page);
   await expect(page).toHaveTitle(/Market/);
 });
 

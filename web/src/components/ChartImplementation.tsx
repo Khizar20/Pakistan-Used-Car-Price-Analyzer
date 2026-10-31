@@ -1,5 +1,5 @@
 import { useId, useState } from "react";
-import { money } from "../lib/format";
+import { chartDay, chartLabel, money } from "../lib/format";
 import {
   ResponsiveContainer,
   LineChart as ReLine,
@@ -53,7 +53,7 @@ export function Chart({
       : value.toLocaleString("en-PK", { maximumFractionDigits: 2 });
   const data = rows.map((row) => ({
     ...row,
-    x: Number(row.label),
+    x: step ? Number.parseFloat(row.label) : Number(row.label),
     error:
       row.lower != null && row.upper != null
         ? [
@@ -95,7 +95,7 @@ export function Chart({
                   <CartesianGrid vertical={false} stroke="var(--chalk)" />
                   <XAxis
                     dataKey={horizontal ? undefined : "label"}
-                    tickFormatter={horizontal ? formatTick : undefined}
+                    tickFormatter={horizontal ? formatTick : chartLabel}
                     type={horizontal ? "number" : "category"}
                     tick={{ fill: "var(--muted)", fontSize: 12 }}
                     interval="preserveStartEnd"
@@ -171,7 +171,10 @@ export function Chart({
                 >
                   <CartesianGrid vertical={false} stroke="var(--chalk)" />
                   <XAxis
-                    dataKey="label"
+                    dataKey={step ? "x" : "label"}
+                    type={step ? "number" : "category"}
+                    domain={step ? [0, "dataMax"] : undefined}
+                    tickFormatter={step ? chartDay : chartLabel}
                     tick={{ fill: "var(--muted)", fontSize: 12 }}
                     interval="preserveStartEnd"
                   />
@@ -179,7 +182,7 @@ export function Chart({
                     tick={{ fill: "var(--muted)", fontSize: 12 }}
                     tickFormatter={formatTick}
                     width={65}
-                    domain={["auto", "auto"]}
+                    domain={step ? [0, 100] : ["auto", "auto"]}
                   />
                   <Tooltip
                     contentStyle={{

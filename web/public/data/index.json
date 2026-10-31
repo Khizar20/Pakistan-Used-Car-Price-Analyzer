@@ -1,36 +1,3155 @@
 {
-  "bundle_id": "68369024cfc6a9a96596cdc3e42c4e50181bfbaf57ca09f8aac3c1c6a8d68d0b",
+  "bundle_id": "427147898827bb2814afcf5157f7b797e4cf69ebe190e0192ec8e5a5d981eca0",
   "data": {
     "cohorts": [
       {
         "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 1390000.0,
+        "model": "City",
+        "model_year": 2003,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 1980000.0,
+        "model": "City",
+        "model_year": 2006,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 3300000.0,
+        "model": "City",
+        "model_year": 2015,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 3250000.0,
+        "model": "City",
+        "model_year": 2016,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 3450000.0,
+        "model": "City",
+        "model_year": 2017,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 10,
+        "make": "Honda",
+        "median_price_pkr": 3650000.0,
+        "model": "City",
+        "model_year": 2018,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 4100000.0,
+        "model": "City",
+        "model_year": 2019,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 10,
+        "make": "Honda",
+        "median_price_pkr": 4987500.0,
+        "model": "City",
+        "model_year": 2022,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 4750000.0,
+        "model": "City",
+        "model_year": 2024,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 4838000.0,
+        "model": "City",
+        "model_year": 2026,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 1920000.0,
+        "model": "Civic",
+        "model_year": 2004,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 1600000.0,
+        "model": "Civic",
+        "model_year": 2005,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 2450000.0,
+        "model": "Civic",
+        "model_year": 2009,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 2549000.0,
+        "model": "Civic",
+        "model_year": 2011,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 2905000.0,
+        "model": "Civic",
+        "model_year": 2012,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 3625000.0,
+        "model": "Civic",
+        "model_year": 2013,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 3700000.0,
+        "model": "Civic",
+        "model_year": 2014,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 3990000.0,
+        "model": "Civic",
+        "model_year": 2015,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 4250000.0,
+        "model": "Civic",
+        "model_year": 2016,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 4800000.0,
+        "model": "Civic",
+        "model_year": 2017,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 17,
+        "make": "Honda",
+        "median_price_pkr": 5275000.0,
+        "model": "Civic",
+        "model_year": 2018,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Honda",
+        "median_price_pkr": 5450000.0,
+        "model": "Civic",
+        "model_year": 2019,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 6400000.0,
+        "model": "Civic",
+        "model_year": 2021,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Jaecoo",
+        "median_price_pkr": 7900000.0,
+        "model": "J5",
+        "model_year": 2026,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "KIA",
+        "median_price_pkr": 2900000.0,
+        "model": "Picanto",
+        "model_year": 2021,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 9,
+        "make": "KIA",
+        "median_price_pkr": 6050000.0,
+        "model": "Sportage",
+        "model_year": 2020,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "KIA",
+        "median_price_pkr": 6500000.0,
+        "model": "Sportage",
+        "model_year": 2021,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "KIA",
+        "median_price_pkr": 6775000.0,
+        "model": "Sportage",
+        "model_year": 2022,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 8,
+        "make": "MG",
+        "median_price_pkr": 5525000.0,
+        "model": "HS",
+        "model_year": 2021,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1087500.0,
+        "model": "Alto",
+        "model_year": 2008,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 2600000.0,
+        "model": "Alto",
+        "model_year": 2021,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 9,
+        "make": "Suzuki",
+        "median_price_pkr": 2700000.0,
+        "model": "Alto",
+        "model_year": 2022,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 1100000.0,
+        "model": "Cultus",
+        "model_year": 2007,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1130000.0,
+        "model": "Cultus",
+        "model_year": 2011,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 1820000.0,
+        "model": "Cultus",
+        "model_year": 2016,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 2592500.0,
+        "model": "Cultus",
+        "model_year": 2017,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 1150000.0,
+        "model": "Liana",
+        "model_year": 2006,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 8,
+        "make": "Suzuki",
+        "median_price_pkr": 780000.0,
+        "model": "Mehran",
+        "model_year": 2007,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1082500.0,
+        "model": "Mehran",
+        "model_year": 2013,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 1200000.0,
+        "model": "Mehran",
+        "model_year": 2015,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1270000.0,
+        "model": "Mehran",
+        "model_year": 2016,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1350000.0,
+        "model": "Mehran",
+        "model_year": 2017,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 2250000.0,
+        "model": "Wagon R",
+        "model_year": 2017,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 8,
+        "make": "Suzuki",
+        "median_price_pkr": 2395000.0,
+        "model": "Wagon R",
+        "model_year": 2018,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 8,
         "make": "Toyota",
-        "median_price_pkr": 4000000.0,
+        "median_price_pkr": 2317500.0,
+        "model": "Corolla",
+        "model_year": 2009,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 2735000.0,
+        "model": "Corolla",
+        "model_year": 2010,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 2880000.0,
+        "model": "Corolla",
+        "model_year": 2011,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 2922500.0,
+        "model": "Corolla",
+        "model_year": 2012,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 2990000.0,
+        "model": "Corolla",
+        "model_year": 2013,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 3187500.0,
+        "model": "Corolla",
+        "model_year": 2014,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 17,
+        "make": "Toyota",
+        "median_price_pkr": 3780000.0,
+        "model": "Corolla",
+        "model_year": 2015,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 4350000.0,
+        "model": "Corolla",
+        "model_year": 2016,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 4250000.0,
+        "model": "Corolla",
+        "model_year": 2017,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 13,
+        "make": "Toyota",
+        "median_price_pkr": 4400000.0,
         "model": "Corolla",
         "model_year": 2018,
         "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 4425000.0,
+        "model": "Corolla",
+        "model_year": 2019,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 5350000.0,
+        "model": "Corolla",
+        "model_year": 2020,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 5590000.0,
+        "model": "Corolla",
+        "model_year": 2021,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 6600000.0,
+        "model": "Corolla",
+        "model_year": 2022,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 5600000.0,
+        "model": "Raize",
+        "model_year": 2020,
+        "week": "2026-10-19"
+      },
+      {
+        "listings": 5,
+        "make": "BYD",
+        "median_price_pkr": 19700000.0,
+        "model": "Shark 6",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Changan",
+        "median_price_pkr": 3412500.0,
+        "model": "Alsvin",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Changan",
+        "median_price_pkr": 3400000.0,
+        "model": "Alsvin",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Changan",
+        "median_price_pkr": 4850000.0,
+        "model": "Alsvin",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Changan",
+        "median_price_pkr": 2250000.0,
+        "model": "Karvaan",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Changan",
+        "median_price_pkr": 3200000.0,
+        "model": "Karvaan",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Changan",
+        "median_price_pkr": 6750000.0,
+        "model": "Oshan X7",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Changan",
+        "median_price_pkr": 6937500.0,
+        "model": "Oshan X7",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Changan",
+        "median_price_pkr": 7500000.0,
+        "model": "Oshan X7",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Changan",
+        "median_price_pkr": 7800000.0,
+        "model": "Oshan X7",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Changan",
+        "median_price_pkr": 8475000.0,
+        "model": "Oshan X7",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Chery",
+        "median_price_pkr": 9550000.0,
+        "model": "Tiggo 7",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "DFSK",
+        "median_price_pkr": 3995000.0,
+        "model": "Glory 580",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "DFSK",
+        "median_price_pkr": 4200000.0,
+        "model": "Glory 580",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 925000.0,
+        "model": "Cuore",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Daihatsu",
+        "median_price_pkr": 984500.0,
+        "model": "Cuore",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 1175000.0,
+        "model": "Cuore",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 2045000.0,
+        "model": "Mira",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 2350000.0,
+        "model": "Mira",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 2430000.0,
+        "model": "Mira",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Daihatsu",
+        "median_price_pkr": 2545000.0,
+        "model": "Mira",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Daihatsu",
+        "median_price_pkr": 2395000.0,
+        "model": "Mira",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 3200000.0,
+        "model": "Mira",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 3310000.0,
+        "model": "Mira",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 3650000.0,
+        "model": "Mira",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Daihatsu",
+        "median_price_pkr": 3692000.0,
+        "model": "Mira",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Daihatsu",
+        "median_price_pkr": 3875000.0,
+        "model": "Mira",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Daihatsu",
+        "median_price_pkr": 5500000.0,
+        "model": "Rocky",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Haval",
+        "median_price_pkr": 7800000.0,
+        "model": "H6",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Haval",
+        "median_price_pkr": 9500000.0,
+        "model": "H6",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 33,
+        "make": "Haval",
+        "median_price_pkr": 9750000.0,
+        "model": "H6",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 25,
+        "make": "Haval",
+        "median_price_pkr": 9500000.0,
+        "model": "H6",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Haval",
+        "median_price_pkr": 7800000.0,
+        "model": "Jolion",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Haval",
+        "median_price_pkr": 7575000.0,
+        "model": "Jolion",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Honda",
+        "median_price_pkr": 4125000.0,
+        "model": "BR-V",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 4200000.0,
+        "model": "BR-V",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 4370000.0,
+        "model": "BR-V",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 5250000.0,
+        "model": "BR-V",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 1745000.0,
+        "model": "City",
+        "model_year": 2004,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Honda",
+        "median_price_pkr": 1827500.0,
+        "model": "City",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Honda",
+        "median_price_pkr": 1890000.0,
+        "model": "City",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Honda",
+        "median_price_pkr": 1940000.0,
+        "model": "City",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 2197500.0,
+        "model": "City",
+        "model_year": 2008,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 2500000.0,
+        "model": "City",
+        "model_year": 2009,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Honda",
+        "median_price_pkr": 2625000.0,
+        "model": "City",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Honda",
+        "median_price_pkr": 2850000.0,
+        "model": "City",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 2837500.0,
+        "model": "City",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 19,
+        "make": "Honda",
+        "median_price_pkr": 3085000.0,
+        "model": "City",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 32,
+        "make": "Honda",
+        "median_price_pkr": 3105500.0,
+        "model": "City",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 28,
+        "make": "Honda",
+        "median_price_pkr": 3162500.0,
+        "model": "City",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 26,
+        "make": "Honda",
+        "median_price_pkr": 3405000.0,
+        "model": "City",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 32,
+        "make": "Honda",
+        "median_price_pkr": 3525000.0,
+        "model": "City",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 32,
+        "make": "Honda",
+        "median_price_pkr": 3672500.0,
+        "model": "City",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 34,
+        "make": "Honda",
+        "median_price_pkr": 3855000.0,
+        "model": "City",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 20,
+        "make": "Honda",
+        "median_price_pkr": 4075000.0,
+        "model": "City",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Honda",
+        "median_price_pkr": 4025000.0,
+        "model": "City",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 31,
+        "make": "Honda",
+        "median_price_pkr": 4900000.0,
+        "model": "City",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 4600000.0,
+        "model": "City",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 19,
+        "make": "Honda",
+        "median_price_pkr": 4600000.0,
+        "model": "City",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Honda",
+        "median_price_pkr": 4775000.0,
+        "model": "City",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Honda",
+        "median_price_pkr": 4840000.0,
+        "model": "City",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 1000000.0,
+        "model": "Civic",
+        "model_year": 1995,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 1050000.0,
+        "model": "Civic",
+        "model_year": 1996,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 1200000.0,
+        "model": "Civic",
+        "model_year": 1999,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 1320000.0,
+        "model": "Civic",
+        "model_year": 2000,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Honda",
+        "median_price_pkr": 1430000.0,
+        "model": "Civic",
+        "model_year": 2001,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 1525000.0,
+        "model": "Civic",
+        "model_year": 2002,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Honda",
+        "median_price_pkr": 1550000.0,
+        "model": "Civic",
+        "model_year": 2003,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 28,
+        "make": "Honda",
+        "median_price_pkr": 1792500.0,
+        "model": "Civic",
+        "model_year": 2004,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 27,
+        "make": "Honda",
+        "median_price_pkr": 1780000.0,
+        "model": "Civic",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Honda",
+        "median_price_pkr": 1810000.0,
+        "model": "Civic",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 20,
+        "make": "Honda",
+        "median_price_pkr": 2212500.0,
+        "model": "Civic",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Honda",
+        "median_price_pkr": 2275000.0,
+        "model": "Civic",
+        "model_year": 2008,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Honda",
+        "median_price_pkr": 2587500.0,
+        "model": "Civic",
+        "model_year": 2009,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 22,
+        "make": "Honda",
+        "median_price_pkr": 2545000.0,
+        "model": "Civic",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 19,
+        "make": "Honda",
+        "median_price_pkr": 2790000.0,
+        "model": "Civic",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 21,
+        "make": "Honda",
+        "median_price_pkr": 2900000.0,
+        "model": "Civic",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 31,
+        "make": "Honda",
+        "median_price_pkr": 3350000.0,
+        "model": "Civic",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 31,
+        "make": "Honda",
+        "median_price_pkr": 3460000.0,
+        "model": "Civic",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 29,
+        "make": "Honda",
+        "median_price_pkr": 3700000.0,
+        "model": "Civic",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 34,
+        "make": "Honda",
+        "median_price_pkr": 4595000.0,
+        "model": "Civic",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 50,
+        "make": "Honda",
+        "median_price_pkr": 4815000.0,
+        "model": "Civic",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 42,
+        "make": "Honda",
+        "median_price_pkr": 5177500.0,
+        "model": "Civic",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 28,
+        "make": "Honda",
+        "median_price_pkr": 5450000.0,
+        "model": "Civic",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 39,
+        "make": "Honda",
+        "median_price_pkr": 5725000.0,
+        "model": "Civic",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 51,
+        "make": "Honda",
+        "median_price_pkr": 6300000.0,
+        "model": "Civic",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 19,
+        "make": "Honda",
+        "median_price_pkr": 7200000.0,
+        "model": "Civic",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Honda",
+        "median_price_pkr": 8350000.0,
+        "model": "Civic",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Honda",
+        "median_price_pkr": 7900000.0,
+        "model": "Civic",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Honda",
+        "median_price_pkr": 8775000.0,
+        "model": "Civic",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Honda",
+        "median_price_pkr": 4200000.0,
+        "model": "Grace Hybrid",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Honda",
+        "median_price_pkr": 4525000.0,
+        "model": "Vezel",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 15,
+        "make": "Honda",
+        "median_price_pkr": 4850000.0,
+        "model": "Vezel",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Honda",
+        "median_price_pkr": 5027500.0,
+        "model": "Vezel",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Hyundai",
+        "median_price_pkr": 5400000.0,
+        "model": "Elantra",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Hyundai",
+        "median_price_pkr": 5550000.0,
+        "model": "Elantra",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Hyundai",
+        "median_price_pkr": 8950000.0,
+        "model": "Elantra",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Hyundai",
+        "median_price_pkr": 890000.0,
+        "model": "Santro",
+        "model_year": 2001,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Hyundai",
+        "median_price_pkr": 980000.0,
+        "model": "Santro",
+        "model_year": 2004,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Hyundai",
+        "median_price_pkr": 1215000.0,
+        "model": "Santro",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Hyundai",
+        "median_price_pkr": 1290000.0,
+        "model": "Santro",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Hyundai",
+        "median_price_pkr": 7800000.0,
+        "model": "Sonata",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Hyundai",
+        "median_price_pkr": 8075000.0,
+        "model": "Sonata",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Hyundai",
+        "median_price_pkr": 6650000.0,
+        "model": "Tucson",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Hyundai",
+        "median_price_pkr": 6850000.0,
+        "model": "Tucson",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Hyundai",
+        "median_price_pkr": 7475000.0,
+        "model": "Tucson",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Hyundai",
+        "median_price_pkr": 7550000.0,
+        "model": "Tucson",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Hyundai",
+        "median_price_pkr": 11600000.0,
+        "model": "Tucson",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 26,
+        "make": "Jaecoo",
+        "median_price_pkr": 7749500.0,
+        "model": "J5",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Jaecoo",
+        "median_price_pkr": 9800000.0,
+        "model": "J7",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Jetour",
+        "median_price_pkr": 13700000.0,
+        "model": "T2",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "KIA",
+        "median_price_pkr": 2775000.0,
+        "model": "Picanto",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "KIA",
+        "median_price_pkr": 2685000.0,
+        "model": "Picanto",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "KIA",
+        "median_price_pkr": 2900000.0,
+        "model": "Picanto",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "KIA",
+        "median_price_pkr": 3125000.0,
+        "model": "Picanto",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "KIA",
+        "median_price_pkr": 7500000.0,
+        "model": "Sorento",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "KIA",
+        "median_price_pkr": 8000000.0,
+        "model": "Sorento",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "KIA",
+        "median_price_pkr": 5575000.0,
+        "model": "Sportage",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 22,
+        "make": "KIA",
+        "median_price_pkr": 6025000.0,
+        "model": "Sportage",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 34,
+        "make": "KIA",
+        "median_price_pkr": 6275000.0,
+        "model": "Sportage",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 19,
+        "make": "KIA",
+        "median_price_pkr": 6500000.0,
+        "model": "Sportage",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "KIA",
+        "median_price_pkr": 7275000.0,
+        "model": "Sportage",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "KIA",
+        "median_price_pkr": 5470000.0,
+        "model": "Stonic",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 43,
+        "make": "MG",
+        "median_price_pkr": 5600000.0,
+        "model": "HS",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "MG",
+        "median_price_pkr": 7995000.0,
+        "model": "HS",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "MG",
+        "median_price_pkr": 7950000.0,
+        "model": "ZS",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Mercedes-Benz",
+        "median_price_pkr": 4550000.0,
+        "model": "C Class",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Mitsubishi",
+        "median_price_pkr": 1830000.0,
+        "model": "Lancer",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Mitsubishi",
+        "median_price_pkr": 1900000.0,
+        "model": "Lancer",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Nissan",
+        "median_price_pkr": 2350000.0,
+        "model": "Dayz",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Nissan",
+        "median_price_pkr": 4120000.0,
+        "model": "Dayz",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Nissan",
+        "median_price_pkr": 4175000.0,
+        "model": "Dayz",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Nissan",
+        "median_price_pkr": 6500000.0,
+        "model": "Kicks",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Nissan",
+        "median_price_pkr": 3900000.0,
+        "model": "Note",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Peugeot",
+        "median_price_pkr": 5215000.0,
+        "model": "2008",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Proton",
+        "median_price_pkr": 2682500.0,
+        "model": "Saga",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 875000.0,
+        "model": "Alto",
+        "model_year": 2004,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 1300000.0,
+        "model": "Alto",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Suzuki",
+        "median_price_pkr": 870000.0,
+        "model": "Alto",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Suzuki",
+        "median_price_pkr": 1180000.0,
+        "model": "Alto",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 1190000.0,
+        "model": "Alto",
+        "model_year": 2008,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1200000.0,
+        "model": "Alto",
+        "model_year": 2009,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 1350000.0,
+        "model": "Alto",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 1325000.0,
+        "model": "Alto",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 1215000.0,
+        "model": "Alto",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 2100000.0,
+        "model": "Alto",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 15,
+        "make": "Suzuki",
+        "median_price_pkr": 2450000.0,
+        "model": "Alto",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 2375000.0,
+        "model": "Alto",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 33,
+        "make": "Suzuki",
+        "median_price_pkr": 2500000.0,
+        "model": "Alto",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 44,
+        "make": "Suzuki",
+        "median_price_pkr": 2685000.0,
+        "model": "Alto",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Suzuki",
+        "median_price_pkr": 2950000.0,
+        "model": "Alto",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 29,
+        "make": "Suzuki",
+        "median_price_pkr": 2825000.0,
+        "model": "Alto",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Suzuki",
+        "median_price_pkr": 3165000.0,
+        "model": "Alto",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 30,
+        "make": "Suzuki",
+        "median_price_pkr": 3100000.0,
+        "model": "Alto",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 1030000.0,
+        "model": "Baleno",
+        "model_year": 2002,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 1150000.0,
+        "model": "Baleno",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 900000.0,
+        "model": "Bolan",
+        "model_year": 2008,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 1480000.0,
+        "model": "Bolan",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 750000.0,
+        "model": "Cultus",
+        "model_year": 2002,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Suzuki",
+        "median_price_pkr": 782500.0,
+        "model": "Cultus",
+        "model_year": 2003,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 885000.0,
+        "model": "Cultus",
+        "model_year": 2004,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 1000000.0,
+        "model": "Cultus",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Suzuki",
+        "median_price_pkr": 925000.0,
+        "model": "Cultus",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 23,
+        "make": "Suzuki",
+        "median_price_pkr": 1025000.0,
+        "model": "Cultus",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 15,
+        "make": "Suzuki",
+        "median_price_pkr": 1100000.0,
+        "model": "Cultus",
+        "model_year": 2008,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Suzuki",
+        "median_price_pkr": 1140000.0,
+        "model": "Cultus",
+        "model_year": 2009,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 1260000.0,
+        "model": "Cultus",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1272500.0,
+        "model": "Cultus",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 1400000.0,
+        "model": "Cultus",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Suzuki",
+        "median_price_pkr": 1480000.0,
+        "model": "Cultus",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 1580000.0,
+        "model": "Cultus",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 1687500.0,
+        "model": "Cultus",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 20,
+        "make": "Suzuki",
+        "median_price_pkr": 1855000.0,
+        "model": "Cultus",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 2250000.0,
+        "model": "Cultus",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Suzuki",
+        "median_price_pkr": 2500000.0,
+        "model": "Cultus",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 2945000.0,
+        "model": "Cultus",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Suzuki",
+        "median_price_pkr": 2790000.0,
+        "model": "Cultus",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 19,
+        "make": "Suzuki",
+        "median_price_pkr": 3125000.0,
+        "model": "Cultus",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Suzuki",
+        "median_price_pkr": 3290000.0,
+        "model": "Cultus",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Suzuki",
+        "median_price_pkr": 6400000.0,
+        "model": "Fronx",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 395000.0,
+        "model": "Khyber",
+        "model_year": 1994,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1227500.0,
+        "model": "Liana",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Suzuki",
+        "median_price_pkr": 1375000.0,
+        "model": "Liana",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 475000.0,
+        "model": "Mehran",
+        "model_year": 1991,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Suzuki",
+        "median_price_pkr": 670000.0,
+        "model": "Mehran",
+        "model_year": 2003,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Suzuki",
+        "median_price_pkr": 615000.0,
+        "model": "Mehran",
+        "model_year": 2004,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 900000.0,
+        "model": "Mehran",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Suzuki",
+        "median_price_pkr": 720000.0,
+        "model": "Mehran",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 825000.0,
+        "model": "Mehran",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 18,
+        "make": "Suzuki",
+        "median_price_pkr": 792500.0,
+        "model": "Mehran",
+        "model_year": 2008,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 765000.0,
+        "model": "Mehran",
+        "model_year": 2009,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Suzuki",
+        "median_price_pkr": 955000.0,
+        "model": "Mehran",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Suzuki",
+        "median_price_pkr": 985000.0,
+        "model": "Mehran",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Suzuki",
+        "median_price_pkr": 969000.0,
+        "model": "Mehran",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Suzuki",
+        "median_price_pkr": 1125000.0,
+        "model": "Mehran",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Suzuki",
+        "median_price_pkr": 1085000.0,
+        "model": "Mehran",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 22,
+        "make": "Suzuki",
+        "median_price_pkr": 1235000.0,
+        "model": "Mehran",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Suzuki",
+        "median_price_pkr": 1270000.0,
+        "model": "Mehran",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 30,
+        "make": "Suzuki",
+        "median_price_pkr": 1375000.0,
+        "model": "Mehran",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Suzuki",
+        "median_price_pkr": 1520000.0,
+        "model": "Mehran",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Suzuki",
+        "median_price_pkr": 1650000.0,
+        "model": "Mehran",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Suzuki",
+        "median_price_pkr": 1980000.0,
+        "model": "Swift",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Suzuki",
+        "median_price_pkr": 1850000.0,
+        "model": "Swift",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Suzuki",
+        "median_price_pkr": 2150000.0,
+        "model": "Swift",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Suzuki",
+        "median_price_pkr": 2350000.0,
+        "model": "Swift",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 2300000.0,
+        "model": "Swift",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Suzuki",
+        "median_price_pkr": 2450000.0,
+        "model": "Swift",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Suzuki",
+        "median_price_pkr": 2445000.0,
+        "model": "Swift",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Suzuki",
+        "median_price_pkr": 2740000.0,
+        "model": "Swift",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Suzuki",
+        "median_price_pkr": 2900000.0,
+        "model": "Swift",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 2990000.0,
+        "model": "Swift",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 3170000.0,
+        "model": "Swift",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Suzuki",
+        "median_price_pkr": 4275000.0,
+        "model": "Swift",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 4420000.0,
+        "model": "Swift",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 4860000.0,
+        "model": "Swift",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 2350000.0,
+        "model": "Wagon R",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Suzuki",
+        "median_price_pkr": 2465000.0,
+        "model": "Wagon R",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Suzuki",
+        "median_price_pkr": 1960000.0,
+        "model": "Wagon R",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Suzuki",
+        "median_price_pkr": 2100000.0,
+        "model": "Wagon R",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 21,
+        "make": "Suzuki",
+        "median_price_pkr": 2280000.0,
+        "model": "Wagon R",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 29,
+        "make": "Suzuki",
+        "median_price_pkr": 2350000.0,
+        "model": "Wagon R",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Suzuki",
+        "median_price_pkr": 2550000.0,
+        "model": "Wagon R",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Suzuki",
+        "median_price_pkr": 2550000.0,
+        "model": "Wagon R",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 24,
+        "make": "Suzuki",
+        "median_price_pkr": 2927500.0,
+        "model": "Wagon R",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Suzuki",
+        "median_price_pkr": 3300000.0,
+        "model": "Wagon R",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Tank",
+        "median_price_pkr": 21600000.0,
+        "model": "500",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 3500000.0,
+        "model": "Aqua",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 3487500.0,
+        "model": "Aqua",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 3550000.0,
+        "model": "Aqua",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 4350000.0,
+        "model": "Aqua",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 2300000.0,
+        "model": "Belta",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 6400000.0,
+        "model": "C-Hr",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 1365000.0,
+        "model": "Corolla",
+        "model_year": 1999,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 1875000.0,
+        "model": "Corolla",
+        "model_year": 2003,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 11,
+        "make": "Toyota",
+        "median_price_pkr": 2700000.0,
+        "model": "Corolla",
+        "model_year": 2004,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 2537000.0,
+        "model": "Corolla",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 2237500.0,
+        "model": "Corolla",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Toyota",
+        "median_price_pkr": 2075000.0,
+        "model": "Corolla",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 2050000.0,
+        "model": "Corolla",
+        "model_year": 2008,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 28,
+        "make": "Toyota",
+        "median_price_pkr": 2587500.0,
+        "model": "Corolla",
+        "model_year": 2009,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 33,
+        "make": "Toyota",
+        "median_price_pkr": 2600000.0,
+        "model": "Corolla",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 27,
+        "make": "Toyota",
+        "median_price_pkr": 2675000.0,
+        "model": "Corolla",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 26,
+        "make": "Toyota",
+        "median_price_pkr": 3060000.0,
+        "model": "Corolla",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 24,
+        "make": "Toyota",
+        "median_price_pkr": 2975000.0,
+        "model": "Corolla",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 29,
+        "make": "Toyota",
+        "median_price_pkr": 3500000.0,
+        "model": "Corolla",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 44,
+        "make": "Toyota",
+        "median_price_pkr": 3825000.0,
+        "model": "Corolla",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 32,
+        "make": "Toyota",
+        "median_price_pkr": 3862500.0,
+        "model": "Corolla",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 28,
+        "make": "Toyota",
+        "median_price_pkr": 4067500.0,
+        "model": "Corolla",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 37,
+        "make": "Toyota",
+        "median_price_pkr": 4800000.0,
+        "model": "Corolla",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 29,
+        "make": "Toyota",
+        "median_price_pkr": 4750000.0,
+        "model": "Corolla",
+        "model_year": 2019,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 28,
+        "make": "Toyota",
+        "median_price_pkr": 5200000.0,
+        "model": "Corolla",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 30,
+        "make": "Toyota",
+        "median_price_pkr": 5662500.0,
+        "model": "Corolla",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 44,
+        "make": "Toyota",
+        "median_price_pkr": 6200000.0,
+        "model": "Corolla",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 6600000.0,
+        "model": "Corolla",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 12,
+        "make": "Toyota",
+        "median_price_pkr": 7100000.0,
+        "model": "Corolla",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 13,
+        "make": "Toyota",
+        "median_price_pkr": 7500000.0,
+        "model": "Corolla",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 3245000.0,
+        "model": "Corolla Axio",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 8400000.0,
+        "model": "Corolla Cross",
+        "model_year": 2024,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 8650000.0,
+        "model": "Corolla Cross",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 10000000.0,
+        "model": "Fortuner",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 11200000.0,
+        "model": "Fortuner",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 14150000.0,
+        "model": "Fortuner",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Toyota",
+        "median_price_pkr": 15900000.0,
+        "model": "Fortuner",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 7175000.0,
+        "model": "Hilux",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 10800000.0,
+        "model": "Hilux",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 13000000.0,
+        "model": "Hilux",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 65100000.0,
+        "model": "Land Cruiser",
+        "model_year": 2023,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 2050000.0,
+        "model": "Passo",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 2275000.0,
+        "model": "Passo",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 2650000.0,
+        "model": "Passo",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 2650000.0,
+        "model": "Passo",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 3037500.0,
+        "model": "Passo",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 3375000.0,
+        "model": "Passo",
+        "model_year": 2017,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 4492500.0,
+        "model": "Passo",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 7300000.0,
+        "model": "Prado",
+        "model_year": 2004,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 14000000.0,
+        "model": "Prado",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 15000000.0,
+        "model": "Prado",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 19500000.0,
+        "model": "Prado",
+        "model_year": 2016,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 16,
+        "make": "Toyota",
+        "median_price_pkr": 27650000.0,
+        "model": "Prado",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 3705000.0,
+        "model": "Premio",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 3300000.0,
+        "model": "Prius",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 3845000.0,
+        "model": "Prius",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 4150000.0,
+        "model": "Prius",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 8,
+        "make": "Toyota",
+        "median_price_pkr": 4600000.0,
+        "model": "Prius",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 5100000.0,
+        "model": "Prius",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 44,
+        "make": "Toyota",
+        "median_price_pkr": 5575000.0,
+        "model": "Raize",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 32,
+        "make": "Toyota",
+        "median_price_pkr": 5850000.0,
+        "model": "Raize",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 3550000.0,
+        "model": "Surf",
+        "model_year": 1996,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 2200000.0,
+        "model": "Vitz",
+        "model_year": 2005,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 2250000.0,
+        "model": "Vitz",
+        "model_year": 2006,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 2085000.0,
+        "model": "Vitz",
+        "model_year": 2007,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 2400000.0,
+        "model": "Vitz",
+        "model_year": 2009,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 2337500.0,
+        "model": "Vitz",
+        "model_year": 2010,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 2650000.0,
+        "model": "Vitz",
+        "model_year": 2011,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 2845000.0,
+        "model": "Vitz",
+        "model_year": 2012,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 14,
+        "make": "Toyota",
+        "median_price_pkr": 2790000.0,
+        "model": "Vitz",
+        "model_year": 2013,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 19,
+        "make": "Toyota",
+        "median_price_pkr": 3070000.0,
+        "model": "Vitz",
+        "model_year": 2014,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 3150000.0,
+        "model": "Vitz",
+        "model_year": 2015,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 9,
+        "make": "Toyota",
+        "median_price_pkr": 3800000.0,
+        "model": "Vitz",
+        "model_year": 2018,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 17,
+        "make": "Toyota",
+        "median_price_pkr": 4050000.0,
+        "model": "Yaris",
+        "model_year": 2020,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 30,
+        "make": "Toyota",
+        "median_price_pkr": 4325000.0,
+        "model": "Yaris",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 21,
+        "make": "Toyota",
+        "median_price_pkr": 4400000.0,
+        "model": "Yaris",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 10,
+        "make": "Toyota",
+        "median_price_pkr": 4920000.0,
+        "model": "Yaris",
+        "model_year": 2025,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 15,
+        "make": "Toyota",
+        "median_price_pkr": 5080000.0,
+        "model": "Yaris",
+        "model_year": 2026,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 7,
+        "make": "Toyota",
+        "median_price_pkr": 4250000.0,
+        "model": "Yaris Hatchback",
+        "model_year": 2021,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 5,
+        "make": "Toyota",
+        "median_price_pkr": 4550000.0,
+        "model": "Yaris Hatchback",
+        "model_year": 2022,
+        "week": "2026-10-26"
+      },
+      {
+        "listings": 6,
+        "make": "Toyota",
+        "median_price_pkr": 4650000.0,
+        "model": "Yaris Hatchback",
+        "model_year": 2023,
+        "week": "2026-10-26"
       }
     ],
     "per_make": {
-      "Toyota": {
+      "BYD": {
         "points": [],
         "reason": "At least two supported weeks are required",
         "status": "insufficient_data"
+      },
+      "Changan": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Chery": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "DFSK": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Daihatsu": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Haval": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Honda": {
+        "points": [
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.0,
+            "week": "2026-10-19"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 99.57467512777986,
+            "week": "2026-10-26"
+          }
+        ],
+        "reason": null,
+        "status": "ok"
+      },
+      "Hyundai": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Jaecoo": {
+        "points": [
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.0,
+            "week": "2026-10-19"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 98.09493670886076,
+            "week": "2026-10-26"
+          }
+        ],
+        "reason": null,
+        "status": "ok"
+      },
+      "Jetour": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "KIA": {
+        "points": [
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.0,
+            "week": "2026-10-19"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 96.3971297837508,
+            "week": "2026-10-26"
+          }
+        ],
+        "reason": null,
+        "status": "ok"
+      },
+      "MG": {
+        "points": [
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.0,
+            "week": "2026-10-19"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 101.35746606334841,
+            "week": "2026-10-26"
+          }
+        ],
+        "reason": null,
+        "status": "ok"
+      },
+      "Mercedes-Benz": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Mitsubishi": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Nissan": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Peugeot": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Proton": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Suzuki": {
+        "points": [
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.0,
+            "week": "2026-10-19"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 101.24763948753723,
+            "week": "2026-10-26"
+          }
+        ],
+        "reason": null,
+        "status": "ok"
+      },
+      "Tank": {
+        "points": [],
+        "reason": "At least two supported weeks are required",
+        "status": "insufficient_data"
+      },
+      "Toyota": {
+        "points": [
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.0,
+            "week": "2026-10-19"
+          },
+          {
+            "lower": null,
+            "upper": null,
+            "value": 100.83389778694729,
+            "week": "2026-10-26"
+          }
+        ],
+        "reason": null,
+        "status": "ok"
       }
     },
     "quality_adjusted": {
-      "points": [],
-      "reason": "At least two supported weeks are required",
-      "status": "insufficient_data"
+      "points": [
+        {
+          "lower": 100.0,
+          "upper": 100.0,
+          "value": 100.0,
+          "week": "2026-10-19"
+        },
+        {
+          "lower": 99.81111420679221,
+          "upper": 102.43515308238551,
+          "value": 101.11462190551978,
+          "week": "2026-10-26"
+        }
+      ],
+      "reason": null,
+      "status": "ok"
     },
     "raw": {
-      "points": [],
-      "reason": "At least two supported weeks are required",
-      "status": "insufficient_data"
+      "points": [
+        {
+          "lower": null,
+          "upper": null,
+          "value": 100.0,
+          "week": "2026-10-19"
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "value": 100.12065318499657,
+          "week": "2026-10-26"
+        }
+      ],
+      "reason": null,
+      "status": "ok"
     },
-    "reason": "At least two supported weeks are required",
-    "status": "insufficient_data"
+    "reason": null,
+    "status": "ok"
   },
-  "generated_at": "2026-10-24T22:18:29.093374Z",
-  "schema_version": "1.0.0"
+  "generated_at": "2026-10-31T19:16:57.762169Z",
+  "schema_version": "1.1.0"
 }

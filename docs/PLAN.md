@@ -400,3 +400,21 @@ Also write one short blog-style post in `docs/findings.md` explaining the most s
 | 3 | Phases 7 and 8 dashboard on real exported data |
 | 4 | Polish, tests, CI, README, findings write-up, deploy |
 | 5+ | Keep collecting; re-run analysis and update seasonality status |
+
+## 20. Product extension: daily operation, city comparisons and vehicle imagery
+
+Requested after Phase 8: make daily refresh operational at 09:00 Asia/Karachi,
+covering Karachi, Lahore, Islamabad and Rawalpindi. Implement stable collection
+scopes, one-worker locking, backup, failed-run reporting and automatic local export.
+Activate source collection only with access consistent with current source terms.
+Keep the machine-on/logged-on scheduling limitation explicit.
+
+Add current make/model/year/transmission city medians, quartiles, usable counts,
+observation freshness and insufficient-sample states. Support comparing a selected
+car across cities without implying that different trims/conditions are identical.
+Use relevant licensed model-reference images with attribution; listing photos
+require appropriate source permission and must not expose private/contact details.
+Keep synthetic data separate from production. Version changed public contracts,
+regenerate both languages, and run offline, UI, privacy and browser checks before
+committing each completed module. Public hosting and longer collection remain
+separate outstanding goals.

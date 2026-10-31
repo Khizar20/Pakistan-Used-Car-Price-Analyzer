@@ -1,5 +1,5 @@
 {
-  "bundle_id": "68369024cfc6a9a96596cdc3e42c4e50181bfbaf57ca09f8aac3c1c6a8d68d0b",
+  "bundle_id": "427147898827bb2814afcf5157f7b797e4cf69ebe190e0192ec8e5a5d981eca0",
   "data": {
     "caveat": "First-observed counts are not actual posting volume; collection is a selected page window.",
     "reason": "Need at least two observed days of every weekday",
@@ -9,8 +9,8 @@
       "points": [],
       "reason": "At least 18 months of continuous weekly data are required",
       "status": "insufficient_data",
-      "weeks_available": 0,
-      "weeks_remaining": 79,
+      "weeks_available": 2,
+      "weeks_remaining": 77,
       "weeks_required": 79
     },
     "status": "insufficient_data",
@@ -19,10 +19,38 @@
       {
         "date": "2026-10-24",
         "listings": 90
+      },
+      {
+        "date": "2026-10-25",
+        "listings": 1104
+      },
+      {
+        "date": "2026-10-26",
+        "listings": 763
+      },
+      {
+        "date": "2026-10-27",
+        "listings": 977
+      },
+      {
+        "date": "2026-10-28",
+        "listings": 938
+      },
+      {
+        "date": "2026-10-29",
+        "listings": 912
+      },
+      {
+        "date": "2026-10-30",
+        "listings": 949
+      },
+      {
+        "date": "2026-10-31",
+        "listings": 883
       }
     ],
     "weekdays": []
   },
-  "generated_at": "2026-10-24T22:18:29.093374Z",
-  "schema_version": "1.0.0"
+  "generated_at": "2026-10-31T19:16:57.762169Z",
+  "schema_version": "1.1.0"
 }

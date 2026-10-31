@@ -1,15 +1,17 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { money, percent, date, observedDays } from "../src/lib/format";
+import {
+  money,
+  percent,
+  date,
+  observedDays,
+  chartLabel,
+  chartDay,
+} from "../src/lib/format";
 import { headline } from "../src/lib/headline";
 import { cohortIndex } from "../src/lib/cohorts";
 import { fairPrice, verdict } from "../src/lib/fairPrice";
-import {
-  coherent,
-  validate,
-  loadBundle,
-  clearCache,
-  keys,
-} from "../src/lib/data";
+import { loadBundle, clearCache } from "../src/lib/data";
+import { coherent, validate, keys } from "../src/lib/validation";
 import type { Bundle } from "../src/lib/data";
 import type { Car } from "../src/lib/fairPrice";
 import references from "./fixtures/fair-reference.json";
@@ -35,6 +37,14 @@ export const populated: Bundle = {
 const model = validate("fairprice", fairprice).data.model!;
 const car = references.references[0].car;
 describe("formats and truthful headlines", () => {
+  it("keeps chart dates and elapsed-day ticks short without changing raw values", () => {
+    expect(chartLabel("2026-10-31")).toBe("31 Oct");
+    expect(chartLabel("2026-99-99")).toBe("2026-99-99");
+    expect(chartLabel("Karachi")).toBe("Karachi");
+    expect(chartLabel(2020)).toBe("2020");
+    expect(chartDay(6.678884123)).toBe("6.7d");
+    expect(chartDay(0)).toBe("0d");
+  });
   it("formats all money ranges and missing values", () => {
     expect(money(3500000)).toBe("PKR 35 lakh");
     expect(money(12500000)).toBe("PKR 1.25 crore");

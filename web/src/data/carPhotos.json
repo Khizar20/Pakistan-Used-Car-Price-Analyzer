@@ -1,0 +1,26 @@
+{
+  "Honda / Civic": {
+    "path": "images/cars/664cf9f2fc31cee106e5de2eef1d6a8e6ca9257c4b4d6eeb42963c4c21552940.webp",
+    "year": 2007
+  },
+  "Suzuki / Cultus": {
+    "path": "images/cars/c55d0d0515134b16826a01906e52ddedcd49f44303065b0f1fef798a90af01b8.webp",
+    "year": 2015
+  },
+  "Daihatsu / Rocky": {
+    "path": "images/cars/6999a694198611e90274692415e4ab9883d9af6c52c29d5f0e10b5a71aca4bed.webp",
+    "year": 2021
+  },
+  "Toyota / Hilux": {
+    "path": "images/cars/49ec21c6db68b78db5be508853c73f2ef3f9d114e4eaf0a9f6f718f6dca041c8.webp",
+    "year": 2025
+  },
+  "Nissan / Dayz": {
+    "path": "images/cars/05079b225449e3c324a069cd2c0f6f257a60b294e27b553a6a0d7d9fb23b79ec.webp",
+    "year": 2022
+  },
+  "Honda / City": {
+    "path": "images/cars/0c9976637cc7be64409ed8257264f5004698d7d9abb1ba7a50390f9fe9f5bbff.webp",
+    "year": 2017
+  }
+}

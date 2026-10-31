@@ -1,5 +1,134 @@
 {
   "$defs": {
+    "CityPrice": {
+      "additionalProperties": false,
+      "properties": {
+        "city": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "City"
+        },
+        "listing_count": {
+          "minimum": 0,
+          "title": "Listing Count",
+          "type": "integer"
+        },
+        "lower_quartile_pkr": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Lower Quartile Pkr"
+        },
+        "make": {
+          "title": "Make",
+          "type": "string"
+        },
+        "median_mileage_km": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Median Mileage Km"
+        },
+        "median_price_pkr": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Median Price Pkr"
+        },
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "model_year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Model Year"
+        },
+        "observed_through": {
+          "title": "Observed Through",
+          "type": "string"
+        },
+        "priced_listing_count": {
+          "minimum": 0,
+          "title": "Priced Listing Count",
+          "type": "integer"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "transmission": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Transmission"
+        },
+        "upper_quartile_pkr": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Upper Quartile Pkr"
+        }
+      },
+      "required": [
+        "make",
+        "model",
+        "city",
+        "model_year",
+        "transmission",
+        "listing_count",
+        "priced_listing_count",
+        "median_price_pkr",
+        "lower_quartile_pkr",
+        "upper_quartile_pkr",
+        "median_mileage_km",
+        "observed_through",
+        "status"
+      ],
+      "title": "CityPrice",
+      "type": "object"
+    },
     "ModelSummary": {
       "additionalProperties": false,
       "properties": {
@@ -46,6 +175,26 @@
     "ModelsSummary": {
       "additionalProperties": false,
       "properties": {
+        "city_price_parts": {
+          "items": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "title": "City Price Parts",
+          "type": "array"
+        },
+        "city_prices": {
+          "items": {
+            "$ref": "#/$defs/CityPrice"
+          },
+          "title": "City Prices",
+          "type": "array"
+        },
+        "minimum_city_sample": {
+          "default": 5,
+          "title": "Minimum City Sample",
+          "type": "integer"
+        },
         "models": {
           "items": {
             "$ref": "#/$defs/ModelSummary"
@@ -83,6 +232,9 @@
         "status",
         "reason",
         "models",
+        "city_prices",
+        "city_price_parts",
+        "minimum_city_sample",
         "population"
       ],
       "title": "ModelsSummary",
@@ -106,8 +258,8 @@
       "type": "string"
     },
     "schema_version": {
-      "const": "1.0.0",
-      "default": "1.0.0",
+      "const": "1.1.0",
+      "default": "1.1.0",
       "title": "Schema Version",
       "type": "string"
     }

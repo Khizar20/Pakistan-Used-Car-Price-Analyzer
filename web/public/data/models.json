@@ -1,33 +1,1563 @@
 {
-  "bundle_id": "68369024cfc6a9a96596cdc3e42c4e50181bfbaf57ca09f8aac3c1c6a8d68d0b",
+  "bundle_id": "427147898827bb2814afcf5157f7b797e4cf69ebe190e0192ec8e5a5d981eca0",
   "data": {
+    "city_price_parts": [
+      "fa7596e7a7298013d9be9a85a353ca74f0eb8b477bc4ef22352ace9860998ca5",
+      "0ab4ec0d11f16e7b859ce9182aee70e72a57f8dc829a37e751e434f46c707cad",
+      "fa319ddcbb1cd5ebd7065b3895afa2e1c87fc756a5e3fd63619d49ab7cb5c257",
+      "ce8c3325255e9450d3a2915cfc940246f27fbb220591b60638687d0d196b4608",
+      "238d0df06c057f037f90b95ff98f1f62da1107471ae01cc8d04a8ef829b1553a",
+      "0faaae2b89704c0a8b6f575d2704f165948698df7af2e8102ab23bc9ca6db380",
+      "f54f1ee15cab005e2d0fae75feeb45e8ad75c4c82c8eb8a3ff12c061f6b037a8"
+    ],
+    "city_prices": [],
+    "minimum_city_sample": 5,
     "models": [
       {
-        "listing_count": 30,
+        "listing_count": 2,
+        "make": "Audi",
+        "median_price_pkr": 5550000.0,
+        "model": "A3",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 3,
+        "make": "Audi",
+        "median_price_pkr": 9100000.0,
+        "model": "A4",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 2,
+        "make": "Audi",
+        "median_price_pkr": 11200000.0,
+        "model": "A6",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Audi",
+        "median_price_pkr": 13000000.0,
+        "model": "E-Tron",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 2,
+        "make": "Audi",
+        "median_price_pkr": 10500000.0,
+        "model": "Q3",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "BMW",
+        "median_price_pkr": 22000000.0,
+        "model": "2 Series",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "BMW",
+        "median_price_pkr": 6275000.0,
+        "model": "3 Series",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "BMW",
+        "median_price_pkr": 15000000.0,
+        "model": "5 Series",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "BMW",
+        "median_price_pkr": 3250000.0,
+        "model": "7 Series",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "BMW",
+        "median_price_pkr": 18000000.0,
+        "model": "Ix3",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "BMW",
+        "median_price_pkr": 6800000.0,
+        "model": "X1",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 2,
+        "make": "BYD",
+        "median_price_pkr": 7575000.0,
+        "model": "Atto 2",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "BYD",
+        "median_price_pkr": 9837500.0,
+        "model": "Atto 3",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "BYD",
+        "median_price_pkr": 14500000.0,
+        "model": "Seal",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 4,
+        "make": "BYD",
+        "median_price_pkr": 19700000.0,
+        "model": "Shark 6",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 2,
+        "make": "Baic",
+        "median_price_pkr": 7562500.0,
+        "model": "Bj40",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 5,
+        "make": "Baic",
+        "median_price_pkr": 6950000.0,
+        "model": "Bj40 Plus",
+        "priced_listing_count": 5
+      },
+      {
+        "listing_count": 24,
+        "make": "Changan",
+        "median_price_pkr": 3512500.0,
+        "model": "Alsvin",
+        "priced_listing_count": 24
+      },
+      {
+        "listing_count": 1,
+        "make": "Changan",
+        "median_price_pkr": 2000000.0,
+        "model": "Kaghan Xl",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 12,
+        "make": "Changan",
+        "median_price_pkr": 2600000.0,
+        "model": "Karvaan",
+        "priced_listing_count": 12
+      },
+      {
+        "listing_count": 1,
+        "make": "Changan",
+        "median_price_pkr": 2300000.0,
+        "model": "M9",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 22,
+        "make": "Changan",
+        "median_price_pkr": 7345000.0,
+        "model": "Oshan X7",
+        "priced_listing_count": 22
+      },
+      {
+        "listing_count": 1,
+        "make": "Chery",
+        "median_price_pkr": 600000.0,
+        "model": "Qq",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Chery",
+        "median_price_pkr": 9500000.0,
+        "model": "Tiggo 7",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 2,
+        "make": "Chery",
+        "median_price_pkr": 9175000.0,
+        "model": "Tiggo 8",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 4,
+        "make": "Chery",
+        "median_price_pkr": 7000000.0,
+        "model": "Tiggo 8 Pro",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 1,
+        "make": "Chery",
+        "median_price_pkr": 14400000.0,
+        "model": "Tiggo 9",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Chevrolet",
+        "median_price_pkr": 975000.0,
+        "model": "Joy",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "Chevrolet",
+        "median_price_pkr": 1850000.0,
+        "model": "Optra",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 10,
+        "make": "DFSK",
+        "median_price_pkr": 4022500.0,
+        "model": "Glory 580",
+        "priced_listing_count": 10
+      },
+      {
+        "listing_count": 1,
+        "make": "Daihatsu",
+        "median_price_pkr": 1775000.0,
+        "model": "Atrai Wagon",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Daihatsu",
+        "median_price_pkr": 2525000.0,
+        "model": "Boon",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 2,
+        "make": "Daihatsu",
+        "median_price_pkr": 3074500.0,
+        "model": "Cast",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 8,
+        "make": "Daihatsu",
+        "median_price_pkr": 400000.0,
+        "model": "Charade",
+        "priced_listing_count": 8
+      },
+      {
+        "listing_count": 2,
+        "make": "Daihatsu",
+        "median_price_pkr": 2547500.0,
+        "model": "Copen",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 16,
+        "make": "Daihatsu",
+        "median_price_pkr": 937500.0,
+        "model": "Cuore",
+        "priced_listing_count": 16
+      },
+      {
+        "listing_count": 1,
+        "make": "Daihatsu",
+        "median_price_pkr": 1850000.0,
+        "model": "Esse",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 4,
+        "make": "Daihatsu",
+        "median_price_pkr": 1680000.0,
+        "model": "Hijet",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 47,
+        "make": "Daihatsu",
+        "median_price_pkr": 2675000.0,
+        "model": "Mira",
+        "priced_listing_count": 47
+      },
+      {
+        "listing_count": 11,
+        "make": "Daihatsu",
+        "median_price_pkr": 2550000.0,
+        "model": "Move",
+        "priced_listing_count": 11
+      },
+      {
+        "listing_count": 5,
+        "make": "Daihatsu",
+        "median_price_pkr": 5500000.0,
+        "model": "Rocky",
+        "priced_listing_count": 5
+      },
+      {
+        "listing_count": 3,
+        "make": "Daihatsu",
+        "median_price_pkr": 3799000.0,
+        "model": "Taft",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 4,
+        "make": "Daihatsu",
+        "median_price_pkr": 2500000.0,
+        "model": "Tanto",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 2,
+        "make": "Daihatsu",
+        "median_price_pkr": 1847500.0,
+        "model": "Terios Kid",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 4,
+        "make": "Deepal",
+        "median_price_pkr": 10300000.0,
+        "model": "S05",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Dodge",
+        "median_price_pkr": 43000000.0,
+        "model": "Ram",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "FAW",
+        "median_price_pkr": 1300000.0,
+        "model": "V2",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "FAW",
+        "median_price_pkr": 850000.0,
+        "model": "X-Pv",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Ford",
+        "median_price_pkr": 19800000.0,
+        "model": "F 150",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Ford",
+        "median_price_pkr": 45000000.0,
+        "model": "Mustang",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Forthing",
+        "median_price_pkr": 9500000.0,
+        "model": "Friday",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 1,
+        "make": "Gugo",
+        "median_price_pkr": 3500000.0,
+        "model": "Gigi",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 48,
+        "make": "Haval",
+        "median_price_pkr": 9425000.0,
+        "model": "H6",
+        "priced_listing_count": 44
+      },
+      {
+        "listing_count": 10,
+        "make": "Haval",
+        "median_price_pkr": 7485000.0,
+        "model": "Jolion",
+        "priced_listing_count": 10
+      },
+      {
+        "listing_count": 1,
+        "make": "Hino",
+        "median_price_pkr": 6850000.0,
+        "model": "300 Series",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 4,
         "make": "Honda",
-        "median_price_pkr": 3300000.0,
+        "median_price_pkr": 2325000.0,
+        "model": "Accord",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 1,
+        "make": "Honda",
+        "median_price_pkr": 1200000.0,
+        "model": "Acty",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Honda",
+        "median_price_pkr": 2700000.0,
+        "model": "Airwave",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 28,
+        "make": "Honda",
+        "median_price_pkr": 4350000.0,
+        "model": "BR-V",
+        "priced_listing_count": 28
+      },
+      {
+        "listing_count": 250,
+        "make": "Honda",
+        "median_price_pkr": 3297500.0,
         "model": "City",
+        "priced_listing_count": 244
+      },
+      {
+        "listing_count": 368,
+        "make": "Honda",
+        "median_price_pkr": 3825000.0,
+        "model": "Civic",
+        "priced_listing_count": 354
+      },
+      {
+        "listing_count": 1,
+        "make": "Honda",
+        "median_price_pkr": 3950000.0,
+        "model": "Cr-V",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Honda",
+        "median_price_pkr": 3200000.0,
+        "model": "Cr-Z",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 8,
+        "make": "Honda",
+        "median_price_pkr": 3450000.0,
+        "model": "Fit",
+        "priced_listing_count": 8
+      },
+      {
+        "listing_count": 1,
+        "make": "Honda",
+        "median_price_pkr": 3000000.0,
+        "model": "Fit Aria",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "Honda",
+        "median_price_pkr": 4437500.0,
+        "model": "Freed",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 3,
+        "make": "Honda",
+        "median_price_pkr": 4200000.0,
+        "model": "Grace Hybrid",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 3,
+        "make": "Honda",
+        "median_price_pkr": 6500000.0,
+        "model": "Hr-V",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 2,
+        "make": "Honda",
+        "median_price_pkr": 1995000.0,
+        "model": "Life",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 4,
+        "make": "Honda",
+        "median_price_pkr": 2695000.0,
+        "model": "N Box",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 5,
+        "make": "Honda",
+        "median_price_pkr": 2900000.0,
+        "model": "N One",
+        "priced_listing_count": 5
+      },
+      {
+        "listing_count": 7,
+        "make": "Honda",
+        "median_price_pkr": 3512500.0,
+        "model": "N Wgn",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 1,
+        "make": "Honda",
+        "median_price_pkr": 3800000.0,
+        "model": "S660",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 37,
+        "make": "Honda",
+        "median_price_pkr": 4560000.0,
+        "model": "Vezel",
+        "priced_listing_count": 36
+      },
+      {
+        "listing_count": 13,
+        "make": "Hyundai",
+        "median_price_pkr": 5600000.0,
+        "model": "Elantra",
+        "priced_listing_count": 13
+      },
+      {
+        "listing_count": 1,
+        "make": "Hyundai",
+        "median_price_pkr": 12200000.0,
+        "model": "Santa Fe",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 14,
+        "make": "Hyundai",
+        "median_price_pkr": 1000000.0,
+        "model": "Santro",
+        "priced_listing_count": 14
+      },
+      {
+        "listing_count": 11,
+        "make": "Hyundai",
+        "median_price_pkr": 8150000.0,
+        "model": "Sonata",
+        "priced_listing_count": 11
+      },
+      {
+        "listing_count": 34,
+        "make": "Hyundai",
+        "median_price_pkr": 7200000.0,
+        "model": "Tucson",
+        "priced_listing_count": 34
+      },
+      {
+        "listing_count": 1,
+        "make": "Icaur",
+        "median_price_pkr": 13500000.0,
+        "model": "V27",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Isuzu",
+        "median_price_pkr": 9800000.0,
+        "model": "D-Max",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 4,
+        "make": "Jac",
+        "median_price_pkr": 9175000.0,
+        "model": "T9",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 18,
+        "make": "Jaecoo",
+        "median_price_pkr": 7906000.0,
+        "model": "J5",
+        "priced_listing_count": 15
+      },
+      {
+        "listing_count": 11,
+        "make": "Jaecoo",
+        "median_price_pkr": 9800000.0,
+        "model": "J7",
+        "priced_listing_count": 9
+      },
+      {
+        "listing_count": 1,
+        "make": "Jaguar",
+        "median_price_pkr": 4400000.0,
+        "model": "S Type",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Jeep",
+        "median_price_pkr": 2250000.0,
+        "model": "Cj 5",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "Jeep",
+        "median_price_pkr": 3250000.0,
+        "model": "Wrangler",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Jetour",
+        "median_price_pkr": 11600000.0,
+        "model": "T1",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 5,
+        "make": "Jetour",
+        "median_price_pkr": 13700000.0,
+        "model": "T2",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 1,
+        "make": "Jetour",
+        "median_price_pkr": null,
+        "model": "X70 Plus",
+        "priced_listing_count": 0
+      },
+      {
+        "listing_count": 1,
+        "make": "Jw Forland",
+        "median_price_pkr": 1900000.0,
+        "model": "C-10",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "KIA",
+        "median_price_pkr": 9000000.0,
+        "model": "Carnival",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "KIA",
+        "median_price_pkr": 480000.0,
+        "model": "Classic",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 30,
+        "make": "KIA",
+        "median_price_pkr": 2825000.0,
+        "model": "Picanto",
         "priced_listing_count": 29
       },
       {
-        "listing_count": 30,
-        "make": "Honda",
-        "median_price_pkr": 3625000.0,
-        "model": "Civic",
-        "priced_listing_count": 30
+        "listing_count": 12,
+        "make": "KIA",
+        "median_price_pkr": 7700000.0,
+        "model": "Sorento",
+        "priced_listing_count": 11
       },
       {
-        "listing_count": 30,
+        "listing_count": 1,
+        "make": "KIA",
+        "median_price_pkr": 850000.0,
+        "model": "Spectra",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 44,
+        "make": "KIA",
+        "median_price_pkr": 6350000.0,
+        "model": "Sportage",
+        "priced_listing_count": 41
+      },
+      {
+        "listing_count": 2,
+        "make": "KIA",
+        "median_price_pkr": 10150000.0,
+        "model": "Sportage L",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 9,
+        "make": "KIA",
+        "median_price_pkr": 5200000.0,
+        "model": "Stonic",
+        "priced_listing_count": 9
+      },
+      {
+        "listing_count": 1,
+        "make": "Kaiyi",
+        "median_price_pkr": 4490000.0,
+        "model": "E-Qute 04",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Land Rover",
+        "median_price_pkr": 2900000.0,
+        "model": "Discovery",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Lexus",
+        "median_price_pkr": 3700000.0,
+        "model": "Ct200H",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Lexus",
+        "median_price_pkr": 60500000.0,
+        "model": "Lx",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 1,
+        "make": "Lexus",
+        "median_price_pkr": 7400000.0,
+        "model": "Rx Series",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 37,
+        "make": "MG",
+        "median_price_pkr": 5800000.0,
+        "model": "HS",
+        "priced_listing_count": 36
+      },
+      {
+        "listing_count": 6,
+        "make": "MG",
+        "median_price_pkr": 7800000.0,
+        "model": "ZS",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 1,
+        "make": "Mazda",
+        "median_price_pkr": 1190000.0,
+        "model": "929",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Mazda",
+        "median_price_pkr": 2200000.0,
+        "model": "B2200",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "Mazda",
+        "median_price_pkr": 2085000.0,
+        "model": "Carol",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Mazda",
+        "median_price_pkr": 2250000.0,
+        "model": "Rx8",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Mercedes-Benz",
+        "median_price_pkr": 16500000.0,
+        "model": "A Class",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 14,
+        "make": "Mercedes-Benz",
+        "median_price_pkr": 4375000.0,
+        "model": "C Class",
+        "priced_listing_count": 14
+      },
+      {
+        "listing_count": 1,
+        "make": "Mercedes-Benz",
+        "median_price_pkr": 22500000.0,
+        "model": "C Class Cabriolet",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 10,
+        "make": "Mercedes-Benz",
+        "median_price_pkr": 8850000.0,
+        "model": "E Class",
+        "priced_listing_count": 10
+      },
+      {
+        "listing_count": 3,
+        "make": "Mercedes-Benz",
+        "median_price_pkr": 11000000.0,
+        "model": "S Class",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 3,
+        "make": "Mitsubishi",
+        "median_price_pkr": 2435000.0,
+        "model": "Ek Custom",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 6,
+        "make": "Mitsubishi",
+        "median_price_pkr": 1975000.0,
+        "model": "Ek Wagon",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 2,
+        "make": "Mitsubishi",
+        "median_price_pkr": 4199500.0,
+        "model": "Ek X",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Mitsubishi",
+        "median_price_pkr": 1580000.0,
+        "model": "I",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 11,
+        "make": "Mitsubishi",
+        "median_price_pkr": 1675000.0,
+        "model": "Lancer",
+        "priced_listing_count": 11
+      },
+      {
+        "listing_count": 1,
+        "make": "Mitsubishi",
+        "median_price_pkr": 2400000.0,
+        "model": "Mirage",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "Mitsubishi",
+        "median_price_pkr": 2825000.0,
+        "model": "Pajero",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Mitsubishi",
+        "median_price_pkr": 2100000.0,
+        "model": "Pajero Mini",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Mitsubishi",
+        "median_price_pkr": 3600000.0,
+        "model": "Rvr",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Nissan",
+        "median_price_pkr": 1850000.0,
+        "model": "Ad Van",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Nissan",
+        "median_price_pkr": 2850000.0,
+        "model": "Clipper",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 28,
+        "make": "Nissan",
+        "median_price_pkr": 3675000.0,
+        "model": "Dayz",
+        "priced_listing_count": 27
+      },
+      {
+        "listing_count": 2,
+        "make": "Nissan",
+        "median_price_pkr": 2157500.0,
+        "model": "Dayz Roox",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 4,
+        "make": "Nissan",
+        "median_price_pkr": 3072500.0,
+        "model": "Juke",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 4,
+        "make": "Nissan",
+        "median_price_pkr": 6062000.0,
+        "model": "Kicks",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 1,
+        "make": "Nissan",
+        "median_price_pkr": 6500000.0,
+        "model": "Leaf",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Nissan",
+        "median_price_pkr": 2100000.0,
+        "model": "Moco",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 7,
+        "make": "Nissan",
+        "median_price_pkr": 3850000.0,
+        "model": "Note",
+        "priced_listing_count": 7
+      },
+      {
+        "listing_count": 1,
+        "make": "Nissan",
+        "median_price_pkr": null,
+        "model": "Patrol",
+        "priced_listing_count": 0
+      },
+      {
+        "listing_count": 1,
+        "make": "Nissan",
+        "median_price_pkr": 1650000.0,
+        "model": "Pino",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Nissan",
+        "median_price_pkr": 4200000.0,
+        "model": "Roox",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "Nissan",
+        "median_price_pkr": 5037500.0,
+        "model": "Sakura",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Nissan",
+        "median_price_pkr": 7000000.0,
+        "model": "Serena",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 7,
+        "make": "Nissan",
+        "median_price_pkr": 1050000.0,
+        "model": "Sunny",
+        "priced_listing_count": 7
+      },
+      {
+        "listing_count": 1,
+        "make": "Nissan",
+        "median_price_pkr": 1850000.0,
+        "model": "Tiida",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 8,
+        "make": "Peugeot",
+        "median_price_pkr": 5400000.0,
+        "model": "2008",
+        "priced_listing_count": 8
+      },
+      {
+        "listing_count": 2,
+        "make": "Porsche",
+        "median_price_pkr": 18600000.0,
+        "model": "Cayenne",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Porsche",
+        "median_price_pkr": null,
+        "model": "Taycan",
+        "priced_listing_count": 0
+      },
+      {
+        "listing_count": 1,
+        "make": "Prince",
+        "median_price_pkr": 1575000.0,
+        "model": "Pearl",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 6,
+        "make": "Proton",
+        "median_price_pkr": 2725000.0,
+        "model": "Saga",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 4,
+        "make": "Proton",
+        "median_price_pkr": 5800000.0,
+        "model": "X70",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 1,
+        "make": "Range Rover",
+        "median_price_pkr": 59000000.0,
+        "model": "Autobiography",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "Range Rover",
+        "median_price_pkr": 15000000.0,
+        "model": "Vogue",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Rinco",
+        "median_price_pkr": 3000000.0,
+        "model": "Aria",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Ssangyong",
+        "median_price_pkr": 3600000.0,
+        "model": "Rexton",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Subaru",
+        "median_price_pkr": 2375000.0,
+        "model": "Pleo",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 167,
+        "make": "Suzuki",
+        "median_price_pkr": 2480000.0,
+        "model": "Alto",
+        "priced_listing_count": 155
+      },
+      {
+        "listing_count": 1,
+        "make": "Suzuki",
+        "median_price_pkr": 2300000.0,
+        "model": "Alto Lapin",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Suzuki",
+        "median_price_pkr": 2400000.0,
+        "model": "Apv",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 19,
+        "make": "Suzuki",
+        "median_price_pkr": 1150000.0,
+        "model": "Baleno",
+        "priced_listing_count": 19
+      },
+      {
+        "listing_count": 34,
+        "make": "Suzuki",
+        "median_price_pkr": 1390000.0,
+        "model": "Bolan",
+        "priced_listing_count": 34
+      },
+      {
+        "listing_count": 3,
+        "make": "Suzuki",
+        "median_price_pkr": 2824000.0,
+        "model": "Ciaz",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 125,
+        "make": "Suzuki",
+        "median_price_pkr": 1450000.0,
+        "model": "Cultus",
+        "priced_listing_count": 125
+      },
+      {
+        "listing_count": 12,
+        "make": "Suzuki",
+        "median_price_pkr": 1900000.0,
+        "model": "Every",
+        "priced_listing_count": 12
+      },
+      {
+        "listing_count": 7,
+        "make": "Suzuki",
+        "median_price_pkr": 2800000.0,
+        "model": "Every Wagon",
+        "priced_listing_count": 7
+      },
+      {
+        "listing_count": 10,
+        "make": "Suzuki",
+        "median_price_pkr": 6250000.0,
+        "model": "Fronx",
+        "priced_listing_count": 10
+      },
+      {
+        "listing_count": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 350000.0,
+        "model": "Fx",
+        "priced_listing_count": 5
+      },
+      {
+        "listing_count": 3,
+        "make": "Suzuki",
+        "median_price_pkr": 2450000.0,
+        "model": "Hustler",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 5,
+        "make": "Suzuki",
+        "median_price_pkr": 3900000.0,
+        "model": "Jimny",
+        "priced_listing_count": 5
+      },
+      {
+        "listing_count": 1,
+        "make": "Suzuki",
+        "median_price_pkr": 1600000.0,
+        "model": "Kei",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 12,
+        "make": "Suzuki",
+        "median_price_pkr": 485000.0,
+        "model": "Khyber",
+        "priced_listing_count": 12
+      },
+      {
+        "listing_count": 14,
+        "make": "Suzuki",
+        "median_price_pkr": 1310000.0,
+        "model": "Liana",
+        "priced_listing_count": 14
+      },
+      {
+        "listing_count": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 665000.0,
+        "model": "Margalla",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 137,
+        "make": "Suzuki",
+        "median_price_pkr": 982500.0,
+        "model": "Mehran",
+        "priced_listing_count": 136
+      },
+      {
+        "listing_count": 1,
+        "make": "Suzuki",
+        "median_price_pkr": 1600000.0,
+        "model": "Potohar",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 6,
+        "make": "Suzuki",
+        "median_price_pkr": 1200000.0,
+        "model": "Ravi",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 3,
+        "make": "Suzuki",
+        "median_price_pkr": 3150000.0,
+        "model": "Spacia",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 105,
+        "make": "Suzuki",
+        "median_price_pkr": 2490000.0,
+        "model": "Swift",
+        "priced_listing_count": 98
+      },
+      {
+        "listing_count": 1,
+        "make": "Suzuki",
+        "median_price_pkr": 4300000.0,
+        "model": "Vitara",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 88,
+        "make": "Suzuki",
+        "median_price_pkr": 2397500.0,
+        "model": "Wagon R",
+        "priced_listing_count": 86
+      },
+      {
+        "listing_count": 1,
+        "make": "Suzuki",
+        "median_price_pkr": 4000000.0,
+        "model": "Xbee",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 8,
+        "make": "Tank",
+        "median_price_pkr": 21600000.0,
+        "model": "500",
+        "priced_listing_count": 8
+      },
+      {
+        "listing_count": 1,
+        "make": "Tesla",
+        "median_price_pkr": 14000000.0,
+        "model": "Model 3",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 22,
         "make": "Toyota",
-        "median_price_pkr": 3812500.0,
+        "median_price_pkr": 3622500.0,
+        "model": "Aqua",
+        "priced_listing_count": 22
+      },
+      {
+        "listing_count": 5,
+        "make": "Toyota",
+        "median_price_pkr": 2290000.0,
+        "model": "Belta",
+        "priced_listing_count": 5
+      },
+      {
+        "listing_count": 4,
+        "make": "Toyota",
+        "median_price_pkr": 6592500.0,
+        "model": "C-Hr",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 6,
+        "make": "Toyota",
+        "median_price_pkr": 4725000.0,
+        "model": "Camry",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 327,
+        "make": "Toyota",
+        "median_price_pkr": 3750000.0,
         "model": "Corolla",
-        "priced_listing_count": 30
+        "priced_listing_count": 320
+      },
+      {
+        "listing_count": 6,
+        "make": "Toyota",
+        "median_price_pkr": 3297500.0,
+        "model": "Corolla Axio",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 9,
+        "make": "Toyota",
+        "median_price_pkr": 8450000.0,
+        "model": "Corolla Cross",
+        "priced_listing_count": 9
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 5800000.0,
+        "model": "Corolla Fielder",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 2100000.0,
+        "model": "Corona",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 2,
+        "make": "Toyota",
+        "median_price_pkr": 1067500.0,
+        "model": "Duet",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 7200000.0,
+        "model": "Esquire",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 31,
+        "make": "Toyota",
+        "median_price_pkr": 15500000.0,
+        "model": "Fortuner",
+        "priced_listing_count": 28
+      },
+      {
+        "listing_count": 2,
+        "make": "Toyota",
+        "median_price_pkr": 3000000.0,
+        "model": "Harrier",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Toyota",
+        "median_price_pkr": 4500000.0,
+        "model": "Hiace",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 41,
+        "make": "Toyota",
+        "median_price_pkr": 8950000.0,
+        "model": "Hilux",
+        "priced_listing_count": 33
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 2395000.0,
+        "model": "Iq",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 35,
+        "make": "Toyota",
+        "median_price_pkr": 26300000.0,
+        "model": "Land Cruiser",
+        "priced_listing_count": 34
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 1250000.0,
+        "model": "Levin",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 3200000.0,
+        "model": "Mark Ii",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 4,
+        "make": "Toyota",
+        "median_price_pkr": 5025000.0,
+        "model": "Mark X",
+        "priced_listing_count": 4
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 5850000.0,
+        "model": "Noah",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 44,
+        "make": "Toyota",
+        "median_price_pkr": 2995000.0,
+        "model": "Passo",
+        "priced_listing_count": 44
+      },
+      {
+        "listing_count": 6,
+        "make": "Toyota",
+        "median_price_pkr": 2412500.0,
+        "model": "Pixis Epoch",
+        "priced_listing_count": 6
+      },
+      {
+        "listing_count": 2,
+        "make": "Toyota",
+        "median_price_pkr": 2887500.0,
+        "model": "Pixis Van",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 3,
+        "make": "Toyota",
+        "median_price_pkr": 1395000.0,
+        "model": "Platz",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 53,
+        "make": "Toyota",
+        "median_price_pkr": 15400000.0,
+        "model": "Prado",
+        "priced_listing_count": 46
+      },
+      {
+        "listing_count": 13,
+        "make": "Toyota",
+        "median_price_pkr": 3600000.0,
+        "model": "Premio",
+        "priced_listing_count": 13
+      },
+      {
+        "listing_count": 27,
+        "make": "Toyota",
+        "median_price_pkr": 4400000.0,
+        "model": "Prius",
+        "priced_listing_count": 27
+      },
+      {
+        "listing_count": 2,
+        "make": "Toyota",
+        "median_price_pkr": 4425000.0,
+        "model": "Prius Alpha",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 38,
+        "make": "Toyota",
+        "median_price_pkr": 5665000.0,
+        "model": "Raize",
+        "priced_listing_count": 37
+      },
+      {
+        "listing_count": 2,
+        "make": "Toyota",
+        "median_price_pkr": 3745000.0,
+        "model": "Roomy",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 3000000.0,
+        "model": "Rush",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 3,
+        "make": "Toyota",
+        "median_price_pkr": 5480000.0,
+        "model": "Sienta",
+        "priced_listing_count": 3
+      },
+      {
+        "listing_count": 17,
+        "make": "Toyota",
+        "median_price_pkr": 3550000.0,
+        "model": "Surf",
+        "priced_listing_count": 17
+      },
+      {
+        "listing_count": 64,
+        "make": "Toyota",
+        "median_price_pkr": 2635000.0,
+        "model": "Vitz",
+        "priced_listing_count": 62
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 7500000.0,
+        "model": "Voxy",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 59,
+        "make": "Toyota",
+        "median_price_pkr": 4400000.0,
+        "model": "Yaris",
+        "priced_listing_count": 57
+      },
+      {
+        "listing_count": 1,
+        "make": "Toyota",
+        "median_price_pkr": 8500000.0,
+        "model": "Yaris Cross",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 10,
+        "make": "Toyota",
+        "median_price_pkr": 4355000.0,
+        "model": "Yaris Hatchback",
+        "priced_listing_count": 10
+      },
+      {
+        "listing_count": 2,
+        "make": "Volkswagen",
+        "median_price_pkr": 1492500.0,
+        "model": "Beetle",
+        "priced_listing_count": 2
+      },
+      {
+        "listing_count": 1,
+        "make": "Willys",
+        "median_price_pkr": 1900000.0,
+        "model": "M38",
+        "priced_listing_count": 1
+      },
+      {
+        "listing_count": 1,
+        "make": "Xpeng",
+        "median_price_pkr": 12000000.0,
+        "model": "L03",
+        "priced_listing_count": 1
       }
     ],
     "population": "latest_active_nonduplicate",
     "reason": null,
     "status": "ok"
   },
-  "generated_at": "2026-10-24T22:18:29.093374Z",
-  "schema_version": "1.0.0"
+  "generated_at": "2026-10-31T19:16:57.762169Z",
+  "schema_version": "1.1.0"
 }

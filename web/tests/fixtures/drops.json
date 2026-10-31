@@ -1,5 +1,5 @@
 {
-  "bundle_id": "e607458c335404dee0a10cf0805941235fb35a86f75f1ad90c3867210b1b8e52",
+  "bundle_id": "a446eee6631e7cbec082de4c22e32e4d999a227f26457a22b9b42bf1db3c56e7",
   "data": {
     "days_to_first_drop": [
       7.0,
@@ -2438,5 +2438,5 @@
     ]
   },
   "generated_at": "2026-10-25T00:00:00Z",
-  "schema_version": "1.0.0"
+  "schema_version": "1.1.0"
 }

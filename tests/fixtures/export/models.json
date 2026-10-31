@@ -1,6 +1,40 @@
 {
-  "bundle_id": "272b42f3f06ba67e3939f18469c9a129eb3a33f63c5a1a62eca9c4008175b165",
+  "bundle_id": "afad778b9e2eece400e8a23e69b550bc64ba7ad05904e9aebb00d5c0fa654436",
   "data": {
+    "city_price_parts": [],
+    "city_prices": [
+      {
+        "city": null,
+        "listing_count": 1,
+        "lower_quartile_pkr": null,
+        "make": "Honda",
+        "median_mileage_km": null,
+        "median_price_pkr": null,
+        "model": "BR-V",
+        "model_year": null,
+        "observed_through": "2026-10-25",
+        "priced_listing_count": 1,
+        "status": "insufficient_data",
+        "transmission": null,
+        "upper_quartile_pkr": null
+      },
+      {
+        "city": "Karachi",
+        "listing_count": 1,
+        "lower_quartile_pkr": null,
+        "make": "Honda",
+        "median_mileage_km": null,
+        "median_price_pkr": null,
+        "model": "BR-V",
+        "model_year": null,
+        "observed_through": "2026-10-25",
+        "priced_listing_count": 1,
+        "status": "insufficient_data",
+        "transmission": null,
+        "upper_quartile_pkr": null
+      }
+    ],
+    "minimum_city_sample": 5,
     "models": [
       {
         "listing_count": 1,
@@ -15,5 +49,5 @@
     "status": "ok"
   },
   "generated_at": "2026-10-24T00:00:00Z",
-  "schema_version": "1.0.0"
+  "schema_version": "1.1.0"
 }

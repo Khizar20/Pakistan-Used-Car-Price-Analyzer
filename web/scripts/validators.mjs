@@ -13,6 +13,7 @@ const keys = [
   "fairprice",
   "models",
   "listings_sample",
+  "city_prices",
 ];
 const ajv = new Ajv({
   strict: false,

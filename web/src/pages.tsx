@@ -12,6 +12,8 @@ import {
   ScatterChart,
 } from "./components/Chart";
 import { FairPrice } from "./components/FairPrice";
+import { CityExplorer } from "./components/CityExplorer";
+import { DeferredContent } from "./components/DeferredContent";
 
 type Props = { bundle: Bundle; full: boolean };
 export function Market({ bundle, full }: Props) {
@@ -22,6 +24,10 @@ export function Market({ bundle, full }: Props) {
   const index = bundle.index.data;
   const series = index[mode];
   const models = bundle.models.data.models;
+  const [showAllModels, setShowAllModels] = useState(false);
+  const rankedModels = [...models].sort(
+    (a, b) => b.listing_count - a.listing_count,
+  );
   const points =
     model === "All models"
       ? (series?.points ?? [])
@@ -51,99 +57,122 @@ export function Market({ bundle, full }: Props) {
           <span>Latest observation</span>
         </div>
       </div>
-      <div className="section-heading">
-        <h2>Price movement</h2>
-        <label className="inline-label">
-          Model
-          <select
-            value={model}
-            onChange={(event) => {
-              setModel(event.target.value);
-              if (event.target.value !== "All models") setMode("raw");
-            }}
-          >
-            <option>All models</option>
-            {models.map((row) => (
-              <option key={`${row.make}/${row.model}`}>
-                {row.make} / {row.model}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
-      <div className="segmented" aria-label="Price index method">
-        <button
-          aria-pressed={mode === "quality_adjusted"}
-          disabled={model !== "All models"}
-          onClick={() => setMode("quality_adjusted")}
-        >
-          Quality-adjusted
-        </button>
-        <button aria-pressed={mode === "raw"} onClick={() => setMode("raw")}>
-          Matched cohorts
-        </button>
-      </div>
-      {supported ? (
-        <LineChart
-          title="Weekly price index"
-          description="First supported week = 100. Values below 100 indicate lower asking prices than the starting week."
-          unit="Index"
-          rows={points.map((point) => ({
-            label: point.week,
-            value: point.value,
-            lower: point.lower,
-            upper: point.upper,
-          }))}
-        />
-      ) : (
-        <Empty
-          title="A trend needs more observations"
-          detail={
-            model === "All models"
-              ? (series?.reason ??
-                "At least two supported weeks are needed to compare asking prices.")
-              : "This model needs supported, overlapping cohorts in at least two consecutive weeks."
-          }
-        />
-      )}
-      <p className="caption">
-        Quality adjustment accounts for vehicle attributes. Matched cohorts
-        compare the same make, model and year groups. Model views use the
-        exported cohort medians. <a href="#about">Read the method</a>.
-      </p>
-      <div className="section-heading">
-        <h2>Models in the current sample</h2>
-        <a href="#fair">Check a car’s price</a>
-      </div>
-      <div className="model-list">
-        {models.map((row) => (
-          <div className="model-row" key={`${row.make}/${row.model}`}>
-            <div>
-              <h3>
-                {row.make} {row.model}
-              </h3>
-              <span>
-                {row.listing_count} active listings · {row.priced_listing_count}{" "}
-                usable prices
-              </span>
+      <DeferredContent>
+        {() => (
+          <>
+            <CityExplorer data={bundle.models.data} full={full} />
+            <div className="section-heading">
+              <h2>Price movement</h2>
+              <label className="inline-label">
+                Model
+                <select
+                  value={model}
+                  onChange={(event) => {
+                    setModel(event.target.value);
+                    if (event.target.value !== "All models") setMode("raw");
+                  }}
+                >
+                  <option>All models</option>
+                  {models.map((row) => (
+                    <option key={`${row.make}/${row.model}`}>
+                      {row.make} / {row.model}
+                    </option>
+                  ))}
+                </select>
+              </label>
             </div>
-            <div>
-              <strong>{money(row.median_price_pkr, full)}</strong>
-              <span>Median asking price</span>
+            <div className="segmented" aria-label="Price index method">
+              <button
+                aria-pressed={mode === "quality_adjusted"}
+                disabled={model !== "All models"}
+                onClick={() => setMode("quality_adjusted")}
+              >
+                Quality-adjusted
+              </button>
+              <button
+                aria-pressed={mode === "raw"}
+                onClick={() => setMode("raw")}
+              >
+                Matched cohorts
+              </button>
             </div>
-          </div>
-        ))}
-      </div>
-      {!models.length && (
-        <Empty
-          title="No current model summaries"
-          detail="Current active listings need usable make and model attributes."
-        />
-      )}
-      <p className="caption">
-        These medians describe the current active, nonduplicate sample. They do
-        not establish a market trend.
-      </p>
+            {supported ? (
+              <LineChart
+                title="Weekly price index"
+                description="First supported week = 100. Values below 100 indicate lower asking prices than the starting week."
+                unit="Index"
+                rows={points.map((point) => ({
+                  label: point.week,
+                  value: point.value,
+                  lower: point.lower,
+                  upper: point.upper,
+                }))}
+              />
+            ) : (
+              <Empty
+                title="A trend needs more observations"
+                detail={
+                  model === "All models"
+                    ? (series?.reason ??
+                      "At least two supported weeks are needed to compare asking prices.")
+                    : "This model needs supported, overlapping cohorts in at least two consecutive weeks."
+                }
+              />
+            )}
+            <p className="caption">
+              Quality adjustment accounts for vehicle attributes. Matched
+              cohorts compare the same make, model and year groups. Model views
+              use the exported cohort medians.{" "}
+              <a href="#about">Read the method</a>.
+            </p>
+            <div className="section-heading">
+              <h2>Models in the current sample</h2>
+              <a href="#fair">Check a car’s price</a>
+            </div>
+            <div className="model-list">
+              {rankedModels
+                .slice(0, showAllModels ? undefined : 12)
+                .map((row) => (
+                  <div className="model-row" key={`${row.make}/${row.model}`}>
+                    <div>
+                      <h3>
+                        {row.make} {row.model}
+                      </h3>
+                      <span>
+                        {row.listing_count} active listings ·{" "}
+                        {row.priced_listing_count} usable prices
+                      </span>
+                    </div>
+                    <div>
+                      <strong>{money(row.median_price_pkr, full)}</strong>
+                      <span>Median asking price</span>
+                    </div>
+                  </div>
+                ))}
+            </div>
+            {models.length > 12 && (
+              <button
+                aria-expanded={showAllModels}
+                onClick={() => setShowAllModels(!showAllModels)}
+              >
+                {showAllModels
+                  ? "Show twelve most observed models"
+                  : `Show all ${models.length} models`}
+              </button>
+            )}
+            {!models.length && (
+              <Empty
+                title="No current model summaries"
+                detail="Current active listings need usable make and model attributes."
+              />
+            )}
+            <p className="caption">
+              These medians describe the current active, nonduplicate sample.
+              They do not establish a market trend.
+            </p>
+          </>
+        )}
+      </DeferredContent>
     </>
   );
 }
@@ -187,174 +216,190 @@ export function Drops({ bundle, full }: Props) {
           <span>Listings with comparable prices</span>
         </div>
       </div>
-      {drops.status !== "ok" && (
-        <Empty
-          title="Too little comparable follow-up"
-          detail={drops.reason ?? "More repeat observations are required."}
-        />
-      )}
-      <label className="inline-label">
-        Survival grouping
-        <select
-          value={dimension}
-          onChange={(event) => setDimension(event.target.value)}
-        >
-          <option value="all">All listings</option>
-          <option value="bucket">Initial price vs fair value</option>
-          <option value="seller_type">Seller type</option>
-          <option value="city">City</option>
-        </select>
-      </label>
-      {curves
-        .filter((curve) => curve.status === "ok")
-        .map((curve) => (
-          <SurvivalChart
-            key={curve.segment}
-            title={`Still without a price drop: ${curve.segment}`}
-            description={`${curve.listings} listings; ${curve.events} first-drop events. Active observations are censored.`}
-            rows={(curve.points ?? []).map((point) => ({
-              label: `${point.days} days`,
-              value: point.survival * 100,
-              lower: point.lower * 100,
-              upper: point.upper * 100,
-            }))}
-            unit="Percent"
-          />
-        ))}
-      {!curves.some((curve) => curve.status === "ok") && (
-        <p className="caption">
-          Survival curves need enough eligible listings and positive follow-up.
-          Fair-value buckets remain unknown without an independent reference.
-        </p>
-      )}
-      <div className="section-heading">
-        <h2>Recent observed drops</h2>
-        <span className="caption">
-          {rows.length} of {bundle.listings_sample.data.total_events} events
-          shown
-        </span>
-      </div>
-      <div className="filters">
-        <label>
-          City
-          <select
-            value={city}
-            onChange={(event) => setCity(event.target.value)}
-          >
-            <option>All cities</option>
-            {[
-              ...new Set(
-                rows
-                  .map((row) => row.city)
-                  .filter((value): value is string => value != null),
-              ),
-            ]
-              .sort()
-              .map((value) => (
-                <option key={value}>{value}</option>
+      <DeferredContent
+        label="Price drops and listing details"
+        action="Explore price drops"
+      >
+        {() => (
+          <>
+            {drops.status !== "ok" && (
+              <Empty
+                title="Too little comparable follow-up"
+                detail={
+                  drops.reason ?? "More repeat observations are required."
+                }
+              />
+            )}
+            <label className="inline-label">
+              Survival grouping
+              <select
+                value={dimension}
+                onChange={(event) => setDimension(event.target.value)}
+              >
+                <option value="all">All listings</option>
+                <option value="bucket">Initial price vs fair value</option>
+                <option value="seller_type">Seller type</option>
+                <option value="city">City</option>
+              </select>
+            </label>
+            {curves
+              .filter((curve) => curve.status === "ok")
+              .map((curve) => (
+                <SurvivalChart
+                  key={curve.segment}
+                  title={`Still without a price drop: ${curve.segment}`}
+                  description={`${curve.listings} listings; ${curve.events} first-drop events. Active observations are censored.`}
+                  rows={(curve.points ?? []).map((point) => ({
+                    label: `${point.days} days`,
+                    value: point.survival * 100,
+                    lower: point.lower * 100,
+                    upper: point.upper * 100,
+                  }))}
+                  unit="Percent"
+                />
               ))}
-          </select>
-        </label>
-        <label>
-          Sort by
-          <select
-            value={sort}
-            onChange={(event) => setSort(event.target.value)}
-          >
-            <option value="recent">Most recent</option>
-            <option value="largest">Largest percentage drop</option>
-          </select>
-        </label>
-        <button
-          onClick={() => {
-            setCity("All cities");
-            setSort("recent");
-          }}
-        >
-          Reset filters
-        </button>
-      </div>
-      {filtered.length ? (
-        <div className="table-wrap">
-          <table className="responsive-table">
-            <caption>Recent observed asking-price reductions</caption>
-            <thead>
-              <tr>
-                {[
-                  "Car",
-                  "City",
-                  "Previous",
-                  "Current",
-                  "Drop",
-                  "Days observed",
-                ].map((label) => (
-                  <th scope="col" key={label}>
-                    {label}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.map((row, index) => (
-                <tr key={`${row.listing_hash}/${row.observed_at}/${index}`}>
-                  <th scope="row">
-                    {row.make} {row.model} {row.model_year}
-                  </th>
-                  <td data-label="City">{row.city ?? "Unknown"}</td>
-                  <td data-label="Previous">
-                    {money(row.old_price_pkr, full)}
-                  </td>
-                  <td data-label="Current">{money(row.new_price_pkr, full)}</td>
-                  <td data-label="Drop" className="positive">
-                    −{percent(row.drop_percent)}
-                  </td>
-                  <td data-label="Days observed">
-                    {row.days_listed.toFixed(1)}
-                  </td>
-                </tr>
+            {!curves.some((curve) => curve.status === "ok") && (
+              <p className="caption">
+                Survival curves need enough eligible listings and positive
+                follow-up. Fair-value buckets remain unknown without an
+                independent reference.
+              </p>
+            )}
+            <div className="section-heading">
+              <h2>Recent observed drops</h2>
+              <span className="caption">
+                {rows.length} of {bundle.listings_sample.data.total_events}{" "}
+                events shown
+              </span>
+            </div>
+            <div className="filters">
+              <label>
+                City
+                <select
+                  value={city}
+                  onChange={(event) => setCity(event.target.value)}
+                >
+                  <option>All cities</option>
+                  {[
+                    ...new Set(
+                      rows
+                        .map((row) => row.city)
+                        .filter((value): value is string => value != null),
+                    ),
+                  ]
+                    .sort()
+                    .map((value) => (
+                      <option key={value}>{value}</option>
+                    ))}
+                </select>
+              </label>
+              <label>
+                Sort by
+                <select
+                  value={sort}
+                  onChange={(event) => setSort(event.target.value)}
+                >
+                  <option value="recent">Most recent</option>
+                  <option value="largest">Largest percentage drop</option>
+                </select>
+              </label>
+              <button
+                onClick={() => {
+                  setCity("All cities");
+                  setSort("recent");
+                }}
+              >
+                Reset filters
+              </button>
+            </div>
+            {filtered.length ? (
+              <div className="table-wrap">
+                <table className="responsive-table">
+                  <caption>Recent observed asking-price reductions</caption>
+                  <thead>
+                    <tr>
+                      {[
+                        "Car",
+                        "City",
+                        "Previous",
+                        "Current",
+                        "Drop",
+                        "Days observed",
+                      ].map((label) => (
+                        <th scope="col" key={label}>
+                          {label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {filtered.map((row, index) => (
+                      <tr
+                        key={`${row.listing_hash}/${row.observed_at}/${index}`}
+                      >
+                        <th scope="row">
+                          {row.make} {row.model} {row.model_year}
+                        </th>
+                        <td data-label="City">{row.city ?? "Unknown"}</td>
+                        <td data-label="Previous">
+                          {money(row.old_price_pkr, full)}
+                        </td>
+                        <td data-label="Current">
+                          {money(row.new_price_pkr, full)}
+                        </td>
+                        <td data-label="Drop" className="positive">
+                          −{percent(row.drop_percent)}
+                        </td>
+                        <td data-label="Days observed">
+                          {row.days_listed.toFixed(1)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <Empty
+                title={
+                  rows.length
+                    ? "No drops match this city"
+                    : "No usable price drops observed yet"
+                }
+                detail={
+                  rows.length
+                    ? "Choose another city or reset the filters."
+                    : "Repeat observations will reveal comparable asking-price changes."
+                }
+              />
+            )}
+            <p className="caption">
+              Time starts at first observation, not posting. A listing’s
+              disappearance is not proof of a sale.
+            </p>
+            {drops.survival
+              .filter(
+                (curve) =>
+                  curve.outcome === "disappearance" &&
+                  curve.dimension === dimension &&
+                  curve.status === "ok",
+              )
+              .map((curve) => (
+                <SurvivalChart
+                  key={curve.segment}
+                  title={`Still observed in scope: ${curve.segment}`}
+                  description="Absence from the collection window can mean removal, movement outside the window or a sale; the outcome is unknown."
+                  unit="Percent"
+                  rows={(curve.points ?? []).map((point) => ({
+                    label: `${point.days} days`,
+                    value: point.survival * 100,
+                    lower: point.lower * 100,
+                    upper: point.upper * 100,
+                  }))}
+                />
               ))}
-            </tbody>
-          </table>
-        </div>
-      ) : (
-        <Empty
-          title={
-            rows.length
-              ? "No drops match this city"
-              : "No usable price drops observed yet"
-          }
-          detail={
-            rows.length
-              ? "Choose another city or reset the filters."
-              : "Repeat observations will reveal comparable asking-price changes."
-          }
-        />
-      )}
-      <p className="caption">
-        Time starts at first observation, not posting. A listing’s disappearance
-        is not proof of a sale.
-      </p>
-      {drops.survival
-        .filter(
-          (curve) =>
-            curve.outcome === "disappearance" &&
-            curve.dimension === dimension &&
-            curve.status === "ok",
-        )
-        .map((curve) => (
-          <SurvivalChart
-            key={curve.segment}
-            title={`Still observed in scope: ${curve.segment}`}
-            description="Absence from the collection window can mean removal, movement outside the window or a sale; the outcome is unknown."
-            unit="Percent"
-            rows={(curve.points ?? []).map((point) => ({
-              label: `${point.days} days`,
-              value: point.survival * 100,
-              lower: point.lower * 100,
-              upper: point.upper * 100,
-            }))}
-          />
-        ))}
+          </>
+        )}
+      </DeferredContent>
     </>
   );
 }
@@ -612,6 +657,14 @@ export function About({ bundle }: Props) {
         listing.
       </p>
       <h2>How the comparisons work</h2>
+      <p>
+        Local price comparisons use the latest observation of each active,
+        nonduplicate car within seven days of the latest collection. Each city
+        median needs five usable prices. The middle 50% range describes the
+        sample’s spread. Year and gearbox filters improve comparability, while
+        trim and condition can still differ. Reviewed photos show example
+        listings, rather than every car included in an aggregate.
+      </p>
       <p>
         Matched cohorts compare make, model and year groups with at least five
         usable listings. The quality-adjusted index also accounts for mileage,

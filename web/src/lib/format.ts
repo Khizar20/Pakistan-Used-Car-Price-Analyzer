@@ -24,3 +24,19 @@ export function observedDays(start: string | null, end: string | null): number {
   const days = (Date.parse(end) - Date.parse(start)) / 86_400_000;
   return Number.isFinite(days) && days >= 0 ? Math.floor(days) + 1 : 0;
 }
+
+export function chartLabel(value: string | number): string {
+  const label = String(value);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(label) && Number.isFinite(Date.parse(label))) {
+    return new Intl.DateTimeFormat("en-PK", {
+      day: "numeric",
+      month: "short",
+      timeZone: "UTC",
+    }).format(new Date(label));
+  }
+  return label;
+}
+
+export function chartDay(value: number): string {
+  return `${value.toLocaleString("en-PK", { maximumFractionDigits: 1 })}d`;
+}

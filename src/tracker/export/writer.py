@@ -14,8 +14,10 @@ from tempfile import TemporaryDirectory
 import pandas as pd
 from pydantic import BaseModel
 
+from tracker.analysis.cities import city_prices
 from tracker.analysis.common import prepare
 from tracker.analysis.runner import ASSUMPTIONS, analyze_frame
+from tracker.export.parts import encode, partition_models, prune_parts
 from tracker.export.schema import (
     CONTRACTS,
     DIAGNOSTIC_LIMIT,
@@ -99,6 +101,7 @@ def _models(data: pd.DataFrame) -> ModelsSummary:
         status="ok" if models else "insufficient_data",
         reason=None if models else "No current listings with make/model attributes",
         models=models,
+        city_prices=city_prices(data),
     )
 
 
@@ -292,13 +295,18 @@ def serialize_exports(exports: dict[str, Envelope]) -> dict[str, bytes]:
     for filename, model in CONTRACTS.items():
         validated = model.model_validate(exports[filename].model_dump(mode="json"))
         payload = validated.model_dump(mode="json")
+        if filename == "models.json" and payload["data"]["city_price_parts"]:
+            raise ValueError("Export requires full, unpartitioned city cohorts")
         content[filename] = payload["data"]
         identities.add((validated.bundle_id, validated.generated_at))
         assert_public(payload)
-        encoded = (
-            json.dumps(payload, sort_keys=True, indent=2, allow_nan=False) + "\n"
-        ).encode("utf-8")
+        encoded = encode(payload)
         if len(encoded) >= MAX_FILE_BYTES:
+            if filename == "models.json":
+                payloads.update(partition_models(payload))
+                # Digest verification uses the full logical body, including all rows.
+                content[filename] = validated.model_dump(mode="json")["data"]
+                continue
             raise ValueError(
                 f"{filename} exceeds the public file budget ({MAX_FILE_BYTES} bytes)"
             )
@@ -364,4 +372,5 @@ def write_exports(
                     restore.write_bytes(old)
                     os.replace(restore, target)
             raise
+        prune_parts(output, set(payloads), previous.get(output / "models.json"))
     return list(targets)

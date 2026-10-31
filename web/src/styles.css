@@ -418,6 +418,32 @@ thead th {
 .negative {
   color: var(--signal);
 }
+.city-explorer {
+  margin: 34px 0 48px;
+  border-bottom: 1px solid var(--chalk);
+  padding-bottom: 24px;
+}
+.city-filters select {
+  max-width: 260px;
+}
+.local-price {
+  padding: 24px 0 8px;
+  border-top: 1px solid var(--chalk);
+}
+.local-price h3 {
+  font-size: 32px;
+  letter-spacing: -0.03em;
+}
+.local-price p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.local-price .eyebrow {
+  color: var(--motorway);
+}
+.selected-city {
+  background: color-mix(in srgb, var(--motorway) 7%, transparent);
+}
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -765,5 +791,34 @@ footer {
     transition: none !important;
     animation: none !important;
     scroll-behavior: auto !important;
+  }
+}
+.car-reference {
+  float: right;
+  width: min(320px, 100%);
+  margin: 0 0 1rem 1.5rem;
+}
+.car-reference img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.car-reference figcaption {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+.local-price::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media (max-width: 600px) {
+  .car-reference {
+    float: none;
+    margin: 0 0 1rem;
   }
 }

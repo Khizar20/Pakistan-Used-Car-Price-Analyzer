@@ -22,9 +22,12 @@ runs locally; a public deployment and longitudinal market findings are not yet a
 - Phase 7: accessible dashboard design handoff and verified light/dark palettes complete.
 - Phase 8: responsive React dashboard, supported-model price calculator, chart tables,
   runtime data validation, Python/browser parity and browser quality checks implemented.
+- Product extension: four-city daily refresh, local medians with year/gearbox
+  filters, price quartiles, sample/freshness indicators and reviewed model photos.
+  The Windows scheduler installer includes missed-run catch-up.
 - Remaining: longer daily collection, supported real-data models/findings and public hosting.
 
-![The dashboard showing the actual one-day observation sample](web/tests/e2e/dashboard.spec.ts-snapshots/market-light-1280-win32.png)
+![The dashboard showing the actual observation sample](web/tests/e2e/dashboard.spec.ts-snapshots/market-light-1280-win32.png)
 
 ## Run the dashboard
 
@@ -41,6 +44,16 @@ Price drops, Seasons, Drivers, Fair price and About the data all read the commit
 exports. Theme and full-price controls, mobile layouts, keyboard navigation and
 chart data tables are available. The current sparse sample explains unavailable
 analyses; the calculator activates only when the exported model is supported.
+
+On Market, choose a car and buying city to compare local asking prices. Year and
+gearbox refinements appear for supported cohorts; at least five usable prices are
+required per median. Each car contributes its latest observation within seven
+days of the latest collection. Trim, condition and mileage still vary. Photos
+show example listings. Use **Refresh data** after the daily export finishes.
+
+See [daily operation](docs/SCHEDULING.md) for the 09:00 Pakistan-time task,
+failure inspection and photo review. Source permission is required for automation
+and photo reuse; the operator confirmed permission for this local setup.
 
 `make check` now includes the frontend quality gate. Production browser checks,
 visual baselines and performance audits are documented in [web/README.md](web/README.md).

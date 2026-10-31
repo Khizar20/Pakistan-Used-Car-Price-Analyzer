@@ -54,13 +54,17 @@ through the batch cleaner to check compatibility with source records.
 
 ## Export snapshots
 
-`export/*.json` are the eight public version-1.0.0 golden files for a two-day
+`export/*.json` are the eight public version-1.1.0 golden files for a two-day
 fixture database. The mutable offline source retains the first anonymized Honda
 listing. Day two changes both structured and displayed price from PKR 5,900,000
 to 5,800,000; the generation time is fixed at 2026-10-24 00:00 UTC. The single car
 has an observed drop but cannot support population estimates. Expected counts,
 the PKR 100,000 drop and public field exclusions are also asserted independently.
 These are test snapshots, not market findings or live listing records.
+
+Version 1.1 adds current city/year/transmission cohorts and withholds medians
+below five usable prices. Photo tests generate anonymous artwork offline and
+use invented source-shaped thumbnail URLs. Production photos are separate.
 
 The fixtures were captured once with `fixture_frame` from the export test helper
 and `serialize_exports(build_exports(frame, generated_at=NOW))`. Do not regenerate

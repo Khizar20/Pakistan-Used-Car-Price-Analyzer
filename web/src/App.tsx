@@ -166,6 +166,16 @@ export default function App() {
             </span>
           </span>
           <div className="preferences">
+            <button
+              onClick={() => {
+                clearCache();
+                setBundle(undefined);
+                setError("");
+                setAttempt((value) => value + 1);
+              }}
+            >
+              Refresh data
+            </button>
             <label>
               <input
                 type="checkbox"

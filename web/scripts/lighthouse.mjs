@@ -4,6 +4,7 @@ import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { resolve, sep, extname } from "node:path";
 import { chromium } from "@playwright/test";
 import { gzipSync } from "node:zlib";
+import { cpuSlowdown } from "./cpu-profile.mjs";
 
 const root = resolve("dist");
 const server = createServer((request, response) => {
@@ -48,7 +49,55 @@ const server = createServer((request, response) => {
 await new Promise((resolve) => server.listen(4175, "127.0.0.1", resolve));
 mkdirSync("lighthouse-results", { recursive: true });
 const summary = {};
+async function audit(route, output, slowdown) {
+  const args = [
+    process.env.npm_execpath,
+    "exec",
+    "--yes",
+    "--package=node@22.23.4",
+    "--package=lighthouse@13.5.0",
+    "--",
+    "lighthouse",
+    `http://127.0.0.1:4175/#${route}`,
+    "--chrome-flags=--headless --no-sandbox --disable-dev-shm-usage",
+    "--only-categories=performance,accessibility,best-practices",
+    `--throttling.cpuSlowdownMultiplier=${slowdown}`,
+    "--output=json",
+    `--output-path=${output}`,
+    "--quiet",
+  ];
+  const exit = await new Promise((resolve, reject) => {
+    const child = spawn(process.execPath, args, {
+      stdio: "inherit",
+      env: { ...process.env, CHROME_PATH: chromium.executablePath() },
+    });
+    child.on("error", reject);
+    child.on("exit", resolve);
+  });
+  if (exit !== 0) throw new Error(`Lighthouse failed for ${route}`);
+  return JSON.parse(readFileSync(output, "utf8"));
+}
 try {
+  // Calibration depends only on host speed, never on an observed performance score.
+  const calibration = await audit(
+    "market",
+    resolve("lighthouse-results/calibration.json"),
+    4,
+  );
+  const benchmark = calibration.environment.benchmarkIndex;
+  const slowdown = cpuSlowdown(benchmark);
+  const profile = {
+    hostBenchmarkIndex: benchmark,
+    targetBenchmarkIndex: 400,
+    cpuSlowdownMultiplier: slowdown,
+    networkProfile: "default mobile Slow 4G",
+    minimumScore: 95,
+  };
+  writeFileSync(
+    "lighthouse-results/cpu-profile.json",
+    JSON.stringify(profile, null, 2) + "\n",
+  );
+  console.log("Mobile CPU calibration", profile);
   for (const route of [
     "market",
     "drops",
@@ -57,32 +106,11 @@ try {
     "fair",
     "about",
   ]) {
-    const output = resolve(`lighthouse-results/${route}.json`);
-    const args = [
-      process.env.npm_execpath,
-      "exec",
-      "--yes",
-      "--package=node@22.23.4",
-      "--package=lighthouse@13.5.0",
-      "--",
-      "lighthouse",
-      `http://127.0.0.1:4175/#${route}`,
-      "--chrome-flags=--headless --no-sandbox --disable-dev-shm-usage",
-      "--only-categories=performance,accessibility,best-practices",
-      "--output=json",
-      `--output-path=${output}`,
-      "--quiet",
-    ];
-    const exit = await new Promise((resolve, reject) => {
-      const child = spawn(process.execPath, args, {
-        stdio: "inherit",
-        env: { ...process.env, CHROME_PATH: chromium.executablePath() },
-      });
-      child.on("error", reject);
-      child.on("exit", resolve);
-    });
-    if (exit !== 0) throw new Error(`Lighthouse failed for ${route}`);
-    const report = JSON.parse(readFileSync(output, "utf8"));
+    const report = await audit(
+      route,
+      resolve(`lighthouse-results/${route}.json`),
+      slowdown,
+    );
     const scores = Object.fromEntries(
       Object.entries(report.categories).map(([key, value]) => [
         key,

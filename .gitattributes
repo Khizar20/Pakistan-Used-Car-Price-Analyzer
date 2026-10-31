@@ -1,0 +1,2 @@
+# Part filenames hash their exact JSON bytes, so checkouts must preserve LF.
+*.json text eol=lf

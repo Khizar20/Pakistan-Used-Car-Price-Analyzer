@@ -294,7 +294,7 @@ def test_cli_default_outputs_repeated_export_and_missing_database(
         result = CliRunner().invoke(app, ["export", "--database", str(path)])
         assert result.exit_code == 0, result.output
     assert len(list((tmp_path / "web/public/data").glob("*.json"))) == 8
-    assert len(list((tmp_path / "web/src/types").glob("*"))) == 9
+    assert len(list((tmp_path / "web/src/types").glob("*"))) == 10
     assert path.read_bytes() == before
     result = CliRunner().invoke(app, ["export", "--database", "missing.sqlite3"])
     assert result.exit_code == 1 and "Export failed" in result.output

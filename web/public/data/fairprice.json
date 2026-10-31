@@ -1,10 +1,10 @@
 {
-  "bundle_id": "68369024cfc6a9a96596cdc3e42c4e50181bfbaf57ca09f8aac3c1c6a8d68d0b",
+  "bundle_id": "427147898827bb2814afcf5157f7b797e4cf69ebe190e0192ec8e5a5d981eca0",
   "data": {
     "model": null,
     "reason": "Categorical levels need at least five distinct listings",
     "status": "insufficient_data"
   },
-  "generated_at": "2026-10-24T22:18:29.093374Z",
-  "schema_version": "1.0.0"
+  "generated_at": "2026-10-31T19:16:57.762169Z",
+  "schema_version": "1.1.0"
 }

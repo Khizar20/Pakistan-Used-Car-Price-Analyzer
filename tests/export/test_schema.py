@@ -9,6 +9,7 @@ from pydantic import ValidationError
 
 from tracker.export.schema import (
     CONTRACTS,
+    SCHEMA_VERSION,
     Metadata,
     PredictionSpec,
     Residual,
@@ -22,12 +23,12 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_all_contracts_generate_valid_schemas_and_types_without_drift():
     artifacts = contract_artifacts()
-    assert len(CONTRACTS) == 8 and len(artifacts) == 9
+    assert len(CONTRACTS) == 8 and len(artifacts) == 10
     assert artifacts == contract_artifacts()
     for filename, model in CONTRACTS.items():
         schema = json.loads(artifacts[filename.replace(".json", ".schema.json")])
         Draft202012Validator.check_schema(schema)
-        assert schema["properties"]["schema_version"]["const"] == "1.0.0"
+        assert schema["properties"]["schema_version"]["const"] == SCHEMA_VERSION
         assert schema["additionalProperties"] is False
         assert f"export type {model.__name__} =" in artifacts["contracts.ts"]
         for definition in schema.get("$defs", {}).values():
